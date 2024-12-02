@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+.html,
+body {
+  box-sizing: border-box;
+  background-color: #171717;
+  color: white;
+}
+
+:root {
+  ---background: #171717;
+  --textColor: #cc4021;
+}
+
+/* Custom style for pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #bbb !important; /* Grey color for inactive dots */
+  width: 12px !important; /* Smaller size for inactive dots */
+  height: 12px !important; /* Equal height for the dots */
+  border-radius: 50% !important; /* Make the dots circular */
+  opacity: 1 !important; /* Full opacity for inactive dots */
+  transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+/* Custom style for the active pagination dot */
+.swiper-pagination-bullet-active {
+  background-color: var(--textColor) !important; /* Red for active dot */
+}
+
+/* Optional: Add a red bar beneath the active dot */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 30px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  /* Red bar beneath the active dot */
+  border-radius: 5px !important;
+  width: 30px !important; /* Make the active dot's width larger */
+  /* Larger height for active dot */
+}
