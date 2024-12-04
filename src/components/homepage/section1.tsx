@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 const Section1 = () => {
   return (
     <Swiper
-      className="cursor-pointer "
+      className="cursor-pointer"
       // install Swiper modules
       modules={[Pagination, Scrollbar, A11y]}
       spaceBetween={50} // Add space between slides if needed
@@ -37,7 +37,7 @@ const Section1 = () => {
               </div>
               <div className="w-1/3">
                 <Image
-                  src={"/chessImage.jpeg"}
+                  src={"/chess.png"}
                   alt={"chessimage"}
                   height={500}
                   width={500}

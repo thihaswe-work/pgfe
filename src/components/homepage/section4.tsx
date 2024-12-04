@@ -15,7 +15,7 @@ const Section4 = () => {
     };
   });
   return (
-    <div className="h-[300px] bg-red-600 overflow-hidden">
+    <div className="h-[450px] bg-sectionColor overflow-hidden">
       <div className="flex items-center justify-center relative h-full w-full">
         <div className="w-full flex justify-around font-bold ">
           <div className="flex flex-col items-center justify-center">
@@ -32,7 +32,7 @@ const Section4 = () => {
             <span>BRANCH</span>
           </div>
         </div>
-        <div className="w-[900px] h-[900px] border-white border-2 rounded-full border-dashed absolute"></div>
+        <div className="w-[1000px] h-[1000px] border-white border-2 rounded-full border-dashed absolute"></div>
         <div className="w-[600px] h-[600px] border-white border-2 rounded-full border-dashed absolute"></div>
         <div className="w-[200px] h-[200px] border-white border-2 rounded-full border-dashed absolute"></div>
       </div>

@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         textColor: "var(--textColor)",
+        sectionColor: "var(--sectionColor)",
       },
       screens: {
         xxl: "1770px",

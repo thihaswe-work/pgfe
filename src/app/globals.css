@@ -30,7 +30,8 @@ body {
 
 :root {
   ---background: #171717;
-  --textColor: #cc4021;
+  --textColor: #ed1c24;
+  --sectionColor: #ed1c24;
 }
 
 /* Custom style for pagination bullets */
@@ -51,7 +52,8 @@ body {
 /* Optional: Add a red bar beneath the active dot */
 .swiper-pagination {
   position: relative !important;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {

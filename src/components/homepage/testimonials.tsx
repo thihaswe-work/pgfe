@@ -1,28 +1,47 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 // Import Swiper core and required modules
 import {
-  Pagination,
-  Scrollbar,
   A11y,
   Navigation,
+  Pagination,
   Parallax,
+  Scrollbar,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "./homepage.module.css";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar"; // Make sure to include scrollbar style
-import "swiper/css/navigation"; // Add this import for navigation styles
+import "swiper/css/scrollbar";
 
 const Testimonials = () => {
+  // const [isClient, setIsClient] = useState(false);
+
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
+
+  // if (!isClient) {
+  //   return null; // or loading state, since the component will only render on the client
+  // } else {
   return (
     <div className="relative select-none">
-      <h1 className="text-4xl pl-24 font-bold text-transparent">
-        TESTIMONIALS
-      </h1>
+      <div className="my-8 flex justify-between mx-36 ">
+        <h1
+          className={`text-6xl pl-24 font-bold text-transparent ${styles.textShadow} `}
+        >
+          Testimonials
+        </h1>
+        <div className="w-1/3 flex justify-center">
+          <i
+            className="fa-solid fa-quote-left text-textColor text-6xl"
+            aria-hidden
+          ></i>
+        </div>
+      </div>
 
       <Swiper
         className="cursor-pointer"
@@ -41,7 +60,7 @@ const Testimonials = () => {
         {/* swiper slide section */}
         {[1, 2, 3, 4].map((item) => {
           return (
-            <SwiperSlide key={item} className="w-[100vw] cursor-pointer">
+            <SwiperSlide key={item} className="w-[100vw] h-auto cursor-pointer">
               <div className="flex flex-row-reverse justify-center mx-auto gap-20">
                 <div className="w-1/5">
                   <span className="justify-center flex flex-col font-bold mb-3">
@@ -81,5 +100,6 @@ const Testimonials = () => {
     </div>
   );
 };
+// };
 
 export default Testimonials;

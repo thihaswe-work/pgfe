@@ -21,7 +21,7 @@ const Navbar = () => {
           return (
             <Link href={item.href} key={item.id}>
               <div
-                className={`hover:text-textColor ${
+                className={`hover:text-textColor font-bold ${
                   PATHNAME === item.href ? "text-textColor" : ""
                 }`}
               >

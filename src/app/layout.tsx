@@ -1,12 +1,12 @@
+import Footer from "@/components/footer/footer";
+import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  variable: "--geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
@@ -27,6 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          src="https://kit.fontawesome.com/d6f07bc8a3.js"
+          crossOrigin="anonymous"
+          async
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
