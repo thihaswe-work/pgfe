@@ -18,15 +18,6 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Testimonials = () => {
-  // const [isClient, setIsClient] = useState(false);
-
-  // useEffect(() => {
-  //   setIsClient(true);
-  // }, []);
-
-  // if (!isClient) {
-  //   return null; // or loading state, since the component will only render on the client
-  // } else {
   return (
     <div className="relative select-none">
       <div className="my-8 flex justify-between md:mx-36 ">
