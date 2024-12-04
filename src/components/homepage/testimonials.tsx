@@ -19,13 +19,9 @@ import "swiper/css/scrollbar";
 
 const Testimonials = () => {
   return (
-    <div className="relative select-none">
-      <div className="my-8 flex justify-between md:mx-36 ">
-        <h1
-          className={`text-6xl md:pl-24 font-bold text-transparent ${styles.textShadow} `}
-        >
-          Testimonials
-        </h1>
+    <div className="relative select-none bg-secondBgColor">
+      <div className="py-8 flex justify-between md:mx-36  ">
+        <h1 className={`   ${styles.testimonials} `}>Testimonials</h1>
         <div className="w-1/3 flex justify-center">
           <i
             className="fa-solid fa-quote-left text-textColor text-6xl"
@@ -52,11 +48,11 @@ const Testimonials = () => {
         {[1, 2, 3, 4].map((item) => {
           return (
             <SwiperSlide key={item} className="w-[100vw] h-auto cursor-pointer">
-              <div className="flex flex-row-reverse justify-center mx-auto gap-20">
-                <div className="w-1/5">
-                  <span className="justify-center flex flex-col font-bold mb-3">
-                    <span className="text-3xl">Carolynn Willms</span>
-                    <span>Octobai Accountantable By Officer</span>
+              <div className="flex justify-center mx-auto gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start">
+                <div className="md:w-1/5 w-4/5">
+                  <span className="justify-center flex flex-col mb-3">
+                    <span className="text-3xl font-bold">Carolyn Willms</span>
+                    <span> Global Accountability Officer</span>
                   </span>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -65,10 +61,10 @@ const Testimonials = () => {
                     consequuntur assumenda, at vero culpa et minus id est.
                   </p>
                 </div>
-                <div className="">
+                <div className="flex justify-center items-center">
                   <Image
-                    src={"/chessImage.jpeg"}
-                    alt={"chessimage"}
+                    src={"/unplash.png"}
+                    alt={"unplash"}
                     height={300}
                     width={300}
                   />
@@ -80,11 +76,11 @@ const Testimonials = () => {
       </Swiper>
 
       {/* Navigation buttons */}
-      <div className="absolute top-1/2 left-0 right-0 flex justify-between w-[80%] mx-auto z-10">
+      <div className="absolute top-1/2 md:left-0 md:right-0 flex justify-between w-[90%] -left-3 -right-3 md:w-[80%] mx-auto z-10 ">
         <button className="prev bg-gray-500 text-white p-2 rounded-full">
           {"<"}
         </button>
-        <button className="next bg-gray-500 text-white p-2 rounded-full">
+        <button className="next bg-gray-500 text-white p-2 rounded-full ">
           {">"}
         </button>
       </div>

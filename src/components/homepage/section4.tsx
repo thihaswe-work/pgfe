@@ -15,9 +15,9 @@ const Section4 = () => {
     };
   });
   return (
-    <div className="h-[450px] bg-sectionColor overflow-hidden">
+    <div className="h-[580px] md:h-[450px] bg-sectionColor  overflow-hidden">
       <div className="flex items-center justify-center relative h-full w-full">
-        <div className="w-full flex justify-around font-bold ">
+        <div className="w-full flex flex-col md:flex-row justify-around font-bold h-full ">
           <div className="flex flex-col items-center justify-center">
             <span className="text-4xl">2023</span>
             <span>ESTABLISH</span>
@@ -32,9 +32,9 @@ const Section4 = () => {
             <span>BRANCH</span>
           </div>
         </div>
-        <div className="w-[1000px] h-[1000px] border-white border-2 rounded-full border-dashed absolute"></div>
-        <div className="w-[600px] h-[600px] border-white border-2 rounded-full border-dashed absolute"></div>
-        <div className="w-[200px] h-[200px] border-white border-2 rounded-full border-dashed absolute"></div>
+        <div className="w-[556px] h-[556px] lg:w-[750px] lg:h-[750px] xl:w-[900px] xl:h-[900px] border-white border-2 rounded-full border-dashed absolute"></div>
+        <div className="w-[366px] h-[366px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px] border-white border-2 rounded-full border-dashed absolute"></div>
+        <div className="w-[176px] h-[176px] lg:w-[200px] lg:h-[200px] xl:w-[300px] xl:h-[300px] border-white border-2 rounded-full border-dashed absolute"></div>
       </div>
     </div>
   );

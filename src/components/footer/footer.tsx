@@ -30,33 +30,14 @@ const Footer = () => {
   ];
   return (
     <div className="">
-      <div className="flex flex-col gap-5 px-10 mb-10">
+      <div className="flex gap-5 my-5 lg:px-[50px] px-[13px] flex-col lg:flex-row">
         {/* {left side} */}
-        <div className="flex justify-between">
+        <div className="flex flex-1 flex-col gap-10 ">
           <div className="flex gap-2">
             <span className="text-3xl">PassionGeek</span>
             <span className="flex items-start">&#129109;</span>
           </div>
-          <span className=" ">
-            <p className="text-black p-2 bg-white rounded-full text-sm">
-              &#129033;
-            </p>
-          </span>
-        </div>
-        {/* {mid side} */}
-        <div className="flex justify-between px-1">
-          <span className="flex-1"></span>
-          <div className="flex flex-col flex-1">
-            <span className="text-[12px] text-gray-600">CONTACT US</span>
-            <span className="">+09998876554</span>
-          </div>
-          <div className="flex flex-col flex-1">
-            <span className="text-[12px] text-gray-600">ADDRESS</span>
-            <span className="">2118 </span>
-          </div>
-        </div>
-        {/* {right side} */}
-        <div className="flex justify-between px-1">
+          <span className="lg:flex-1"></span>
           <div className="flex flex-1 flex-wrap">
             {FOOTER_LINK.map((item) => {
               return (
@@ -66,18 +47,44 @@ const Footer = () => {
               );
             })}
           </div>
+        </div>
+
+        {/* {mid side} */}
+        <div className="flex flex-1">
+          <div className="flex flex-1 flex-col gap-10 ">
+            <span className="lg:flex-1 "></span>
+            <div className="flex flex-col flex-1">
+              <span className="text-[12px] text-gray-600">CONTACT US</span>
+              <span className="">+09998876554</span>
+            </div>
+            <div className="flex flex-col flex-1">
+              <span className="text-[12px] text-gray-600">EMAIL</span>
+              <span className="">passiongeek@logoipsum.com</span>
+            </div>
+          </div>
+        </div>
+
+        {/* {right side} */}
+        <div className="flex  flex-1 flex-col gap-10 ">
+          <span className=" justify-end hidden lg:flex">
+            <p className="text-black p-2 bg-white rounded-full text-md w-10 flex justify-center items-center">
+              &#129033;
+            </p>
+          </span>
           <div className="flex flex-col flex-1">
-            <span className="text-[12px] text-gray-600">EMAIL</span>
-            <span className="">passiongeek@logoipsum.com</span>
+            <span className="text-[12px] text-gray-600">ADDRESS</span>
+            <span className="">
+              2118 Thornridge Cir. Syracuse, Connecticut 35624{" "}
+            </span>
           </div>
           <div className="flex flex-col flex-1">
             <span className="text-[12px] text-gray-600">OPENING HOURS</span>
-            <span className="">9am-6pm</span>
+            <span className="">9am—6pm</span>
           </div>
         </div>
       </div>
       <span className="bg-sectionColor h-10 w-full  flex items-center justify-center">
-        Copyright © PassionGeek Powered by Dohmein
+        Copyright © PassionGeek | Powered by PassionGeek
       </span>
     </div>
   );

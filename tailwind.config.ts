@@ -13,9 +13,11 @@ export default {
         foreground: "var(--foreground)",
         textColor: "var(--textColor)",
         sectionColor: "var(--sectionColor)",
+        secondBgColor: "var(--secondBgColor)",
       },
       screens: {
-        xxl: "1770px",
+        "1xl": "1440px",
+        "4xl": "2560px",
       },
     },
   },

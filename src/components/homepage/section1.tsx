@@ -15,7 +15,7 @@ const Section1 = () => {
       className="cursor-pointer"
       // install Swiper modules
       modules={[Pagination, Scrollbar, A11y]}
-      spaceBetween={50} // Add space between slides if needed
+      spaceBetween={100} // Add space between slides if needed
       slidesPerView={1} // Only show one slide at a time (each is 100vw)
       pagination={{ clickable: true }} // Pagination dots are clickable
       // scrollbar={{ draggable: true }} // Make the scrollbar draggable
@@ -25,23 +25,22 @@ const Section1 = () => {
       {/* swiper slide section */}
       {[1, 2, 3, 4].map((item) => {
         return (
-          <SwiperSlide key={item} className="w-[100vw] px-10">
-            <div className="flex">
-              <div className="w-2/3">
-                <span className="text-textColor text-8xl flex flex-col font-bold">
+          <SwiperSlide key={item} className="w-[100vw] px-[13px] lg:px-[50px]">
+            <div className="flex flex-col md:flex-row items-center md:justify-center justify-between">
+              <div className="  w-full md:w-2/3">
+                <span className="text-textColor text-5xl  lg:text-7xl 1xl:text-8xl 2xl:text-[150px] flex flex-col font-bold">
                   <span className="text-white">SIMPLE </span>
                   <span className="">SOLLUTIONS</span>
                   <span className="text-white">FOR COMPLEX </span>
                   <span>PROBLEMS</span>
                 </span>
               </div>
-              <div className="w-1/3">
-                <Image
-                  src={"/chess.png"}
-                  alt={"chessimage"}
-                  height={500}
-                  width={500}
-                />
+              <div className=" w-full md:w-1/3 ">
+                <div className="">
+                  <div className="relative w-[250px] h-[250px] xl:w-[400px] xl:h-[400px] lg:w-[350px] lg:h-[350px] 1xl:w-[450px] 1xl:h-[450px]  2xl:w-[600px] 2xl:h-[600px]   ">
+                    <Image src={"/chess.png"} alt={"chessimage"} fill />
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>

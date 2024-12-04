@@ -24,12 +24,13 @@ body {
 .html,
 body {
   box-sizing: border-box;
-  background-color: #171717;
+  background-color: #06090d;
   color: white;
 }
 
 :root {
-  ---background: #171717;
+  ---background: #06090d;
+  --secondBgColor: #101010;
   --textColor: #ed1c24;
   --sectionColor: #ed1c24;
 }
@@ -62,3 +63,5 @@ body {
   width: 30px !important; /* Make the active dot's width larger */
   /* Larger height for active dot */
 }
+
+/* Testimonials */
