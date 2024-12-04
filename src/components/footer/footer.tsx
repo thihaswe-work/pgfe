@@ -50,9 +50,9 @@ const Footer = () => {
         </div>
 
         {/* {mid side} */}
-        <div className="flex flex-1">
-          <div className="flex flex-1 flex-col gap-10 ">
-            <span className="lg:flex-1 "></span>
+        <div className="flex flex-1 lg:gap-10">
+          <div className="flex flex-1 flex-col gap:10 ">
+            <span className="lg:flex-1"></span>
             <div className="flex flex-col flex-1">
               <span className="text-[12px] text-gray-600">CONTACT US</span>
               <span className="">+09998876554</span>
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
 
         {/* {right side} */}
-        <div className="flex  flex-1 flex-col gap-10 ">
+        <div className="flex  flex-1 flex-col  ">
           <span className=" justify-end hidden lg:flex">
             <p className="text-black p-2 bg-white rounded-full text-md w-10 flex justify-center items-center">
               &#129033;

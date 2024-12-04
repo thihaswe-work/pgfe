@@ -21,7 +21,7 @@ const Testimonials = () => {
   return (
     <div className="relative select-none bg-secondBgColor">
       <div className="py-8 flex justify-between md:mx-36  ">
-        <h1 className={`   ${styles.testimonials} `}>Testimonials</h1>
+        <h1 className={` ${styles.testimonials} `}>Testimonials</h1>
         <div className="w-1/3 flex justify-center">
           <i
             className="fa-solid fa-quote-left text-textColor text-6xl"

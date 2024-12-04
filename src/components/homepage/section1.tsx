@@ -26,8 +26,8 @@ const Section1 = () => {
       {[1, 2, 3, 4].map((item) => {
         return (
           <SwiperSlide key={item} className="w-[100vw] px-[13px] lg:px-[50px]">
-            <div className="flex flex-col md:flex-row items-center md:justify-center justify-between">
-              <div className="  w-full md:w-2/3">
+            <div className="flex flex-col md:flex-row items-center md:justify-center justify-between py-10 md:py-0">
+              <div className=" md:w-2/3 flex ">
                 <span className="text-textColor text-5xl  lg:text-7xl 1xl:text-8xl 2xl:text-[150px] flex flex-col font-bold">
                   <span className="text-white">SIMPLE </span>
                   <span className="">SOLLUTIONS</span>
@@ -35,7 +35,7 @@ const Section1 = () => {
                   <span>PROBLEMS</span>
                 </span>
               </div>
-              <div className=" w-full md:w-1/3 ">
+              <div className="  md:w-1/3 ">
                 <div className="">
                   <div className="relative w-[250px] h-[250px] xl:w-[400px] xl:h-[400px] lg:w-[350px] lg:h-[350px] 1xl:w-[450px] 1xl:h-[450px]  2xl:w-[600px] 2xl:h-[600px]   ">
                     <Image src={"/chess.png"} alt={"chessimage"} fill />
