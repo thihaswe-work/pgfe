@@ -29,9 +29,9 @@ const Testimonials = () => {
   // } else {
   return (
     <div className="relative select-none">
-      <div className="my-8 flex justify-between mx-36 ">
+      <div className="my-8 flex justify-between md:mx-36 ">
         <h1
-          className={`text-6xl pl-24 font-bold text-transparent ${styles.textShadow} `}
+          className={`text-6xl md:pl-24 font-bold text-transparent ${styles.textShadow} `}
         >
           Testimonials
         </h1>

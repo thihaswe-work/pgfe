@@ -7,16 +7,16 @@ const Section2 = () => {
         HOW CAN WE DO
       </h1>
 
-      <div className="relative flex justify-between">
-        <div className="w-[25vw] h-[25vw] rounded-full xxl:w-[35vw] xxl:h-[35vw] xxl:text-4xl border-dashed border-white border-2 flex justify-center items-center  left-3/3">
+      <div className=" md:h-auto relative h-[612px]  flex flex-col md:flex-row  justify-between items-center md:items-start">
+        <div className="text-xl w-[230px] h-[230px] rounded-full lg:w-[24vw] lg:h-[24vw] xl:w-[28vw] xl:h-[28vw]  smxxl:w-[30vw] smxxl:h-[30vw] xxl:w-[32vw] xxl:h-[32vw] xxl:text-4xl border-dashed border-white border-2 flex justify-center items-center  left-3/3">
           WEB DEVELOPMENT
         </div>
 
-        <div className="w-[25vw] h-[25vw] rounded-full xxl:w-[35vw] xxl:h-[35vw] xxl:text-4xl border-dashed border-white border-2 flex justify-center items-center absolute left-1/3 -translate-x-4">
+        <div className="text-xl w-[230px] h-[230px] rounded-full lg:w-[24vw] lg:h-[24vw] xl:w-[28vw] xl:h-[28vw]  smxxl:w-[30vw] smxxl:h-[30vw] xxl:w-[32vw] xxl:h-[32vw] xxl:text-4xl border-dashed border-white border-2 flex justify-center items-center absolute bottom-48 md:bottom-0 md:left-1/3 md:-translate-x-4">
           UX/UI
         </div>
 
-        <div className="w-[25vw] h-[25vw] rounded-full xxl:w-[35vw] xxl:h-[35vw] xxl:text-4xl border-dashed border-white border-2 flex justify-center items-center  left-2/3">
+        <div className="text-xl w-[230px] h-[230px] rounded-full lg:w-[24vw] lg:h-[24vw] xl:w-[28vw] xl:h-[28vw]  smxxl:w-[30vw] smxxl:h-[30vw] xxl:w-[32vw] xxl:h-[32vw] xxl:text-4xl border-dashed border-white border-2 flex justify-center items-center  left-2/3">
           APP DEVELOPMENT
         </div>
       </div>
