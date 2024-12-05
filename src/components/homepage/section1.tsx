@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 // Import Swiper core and required modules
-import { Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -13,8 +13,12 @@ const Section1 = () => {
   return (
     <Swiper
       className="cursor-pointer"
+      loop
       // install Swiper modules
-      modules={[Pagination, Scrollbar, A11y]}
+      modules={[Pagination, Scrollbar, A11y, Autoplay]}
+      autoplay={{
+        delay: 3000,
+      }}
       spaceBetween={100} // Add space between slides if needed
       slidesPerView={1} // Only show one slide at a time (each is 100vw)
       pagination={{ clickable: true }} // Pagination dots are clickable

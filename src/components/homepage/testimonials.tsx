@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 // Import Swiper core and required modules
+import {} from "swiper";
 import {
   A11y,
   Navigation,
@@ -35,6 +36,7 @@ const Testimonials = () => {
         // install Swiper modules
         modules={[Pagination, Scrollbar, A11y, Navigation, Parallax]} // Ensure Navigation is included
         spaceBetween={50}
+        loop
         slidesPerView={1}
         pagination={{ clickable: true }}
         navigation={{
