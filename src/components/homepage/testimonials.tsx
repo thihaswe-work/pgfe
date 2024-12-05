@@ -21,11 +21,14 @@ import "swiper/css/scrollbar";
 const Testimonials = () => {
   return (
     <div className="relative select-none bg-secondBgColor">
-      <div className="py-8 flex justify-between md:mx-36  ">
-        <h1 className={` ${styles.testimonials} `}>Testimonials</h1>
-        <div className="w-1/3 flex justify-center">
+      <div className="py-8 flex justify-between lg:justify-around w-full px-[13px] md:px-[40px] lg:px-[50px] items-center">
+        {/* <h1 className={` ${styles.testimonials} `}>Testimonials</h1> */}
+        <div className="w-3/5 md:w-3/5 lg:w-2/5 h-9 md:h-10 lg:h-14 relative">
+          <Image src={"/testimonials.png"} alt="testimonials" fill />
+        </div>
+        <div className="w-1/3 flex justify-end">
           <i
-            className="fa-solid fa-quote-left text-textColor text-6xl"
+            className="fa-solid fa-quote-left text-textColor text-2xl lg:text-4xl"
             aria-hidden
           ></i>
         </div>

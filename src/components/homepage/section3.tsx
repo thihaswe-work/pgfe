@@ -4,7 +4,7 @@ import React from "react";
 const Section3 = () => {
   return (
     <div className="flex flex-col items-center">
-      <div className="mx-[40px] flex justify-center items-center  text-2xl text-center md:text-4xl my-14">
+      <div className="mx-[40px] flex justify-center items-center text-md text-center lg:text-2xl 2xl:text-3xl 4xl:text-4xl my-14 lg:tracking-widest font-bold">
         ANYALYTICS TO GROW YOUR BUSINESS
       </div>
       <div className=" h-56 md:h-72 lg:h-80 xl:h-96 1xl:h-[450px] w-full flex overflow-hidden justify-center">

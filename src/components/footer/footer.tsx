@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import FooterNav from "./footerNav";
 
 const Footer = () => {
   const FOOTER_LINK = [
@@ -16,8 +17,8 @@ const Footer = () => {
       label: "Product /",
     },
     {
-      href: "/carrier",
-      label: "Carrier /",
+      href: "/careers",
+      label: "Careers /",
     },
     {
       href: "/blogs",
@@ -67,9 +68,7 @@ const Footer = () => {
         {/* {right side} */}
         <div className="flex  flex-1 flex-col  ">
           <span className=" justify-end hidden lg:flex">
-            <p className="text-black p-2 bg-white rounded-full text-md w-10 flex justify-center items-center">
-              &#129033;
-            </p>
+            <FooterNav />
           </span>
           <div className="flex flex-col flex-1">
             <span className="text-[12px] text-gray-600">ADDRESS</span>
@@ -82,12 +81,9 @@ const Footer = () => {
             <span className="">9am—6pm</span>
           </div>
         </div>
-
-        <span className="justify-end flex lg:hidden">
-          <p className="text-black p-2 bg-white rounded-full text-md w-10 flex justify-center items-center">
-            &#129033;
-          </p>
-        </span>
+        <div className="justify-end flex lg:hidden">
+          <FooterNav />
+        </div>
       </div>
       <span className="bg-sectionColor h-10 w-full  flex items-center justify-center">
         Copyright © PassionGeek | Powered by PassionGeek
