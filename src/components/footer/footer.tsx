@@ -82,6 +82,12 @@ const Footer = () => {
             <span className="">9am—6pm</span>
           </div>
         </div>
+
+        <span className="justify-end flex lg:hidden">
+          <p className="text-black p-2 bg-white rounded-full text-md w-10 flex justify-center items-center">
+            &#129033;
+          </p>
+        </span>
       </div>
       <span className="bg-sectionColor h-10 w-full  flex items-center justify-center">
         Copyright © PassionGeek | Powered by PassionGeek

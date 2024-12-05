@@ -48,8 +48,8 @@ const Testimonials = () => {
         {[1, 2, 3, 4].map((item) => {
           return (
             <SwiperSlide key={item} className="w-[100vw] h-auto cursor-pointer">
-              <div className="flex justify-center mx-auto gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start">
-                <div className="md:w-1/5 w-4/5">
+              <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start lg:items-center">
+                <div className="md:w-2/5 lg:w-1/5 w-4/5">
                   <span className="justify-center flex flex-col mb-3">
                     <span className="text-3xl font-bold">Carolyn Willms</span>
                     <span> Global Accountability Officer</span>
@@ -61,7 +61,7 @@ const Testimonials = () => {
                     consequuntur assumenda, at vero culpa et minus id est.
                   </p>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex relative justify-center items-center md:h-[200px] md:w-[200px] lg:h-[400px] lg:w-[400px] ">
                   <Image
                     src={"/unplash.png"}
                     alt={"unplash"}

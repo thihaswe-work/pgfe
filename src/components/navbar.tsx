@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
-  const PATHNAME = usePathname();
+  const pathname = usePathname();
   const NAVBAR_LIST = [
     { id: 1, label: "Home", href: "/" },
     { id: 2, label: "About Us", href: "about-us" },
@@ -41,7 +41,7 @@ const Navbar = () => {
             <Link href={item.href} key={item.id}>
               <div
                 className={`hover:text-textColor font-bold ${
-                  PATHNAME === item.href ? "text-textColor" : ""
+                  pathname === item.href ? "text-textColor" : ""
                 }`}
               >
                 {item.label}
