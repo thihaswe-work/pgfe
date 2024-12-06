@@ -3,7 +3,6 @@ import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 
-import localFont from "next/font/local";
 import "./globals.css";
 
 const archivo = Archivo({
