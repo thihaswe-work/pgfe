@@ -1,9 +1,15 @@
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
+import { Archivo } from "next/font/google";
 
 import localFont from "next/font/local";
 import "./globals.css";
+
+const archivo = Archivo({
+  weight: ["100", "800"],
+  subsets: ["latin"],
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,9 +41,7 @@ export default function RootLayout({
           async
         ></script>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
-      >
+      <body className={` ${archivo.className} antialiased `}>
         <div>
           <Navbar />
         </div>

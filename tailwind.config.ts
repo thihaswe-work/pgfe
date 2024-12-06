@@ -17,7 +17,7 @@ export default {
       "1xl": "2.062rem",
       "2xl": "2.500rem",
       "3xl": "3.000rem",
-      "4xl": "88px",
+      "4xl": "5.5rem",
     },
     extend: {
       colors: {

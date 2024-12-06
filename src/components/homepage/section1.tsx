@@ -31,8 +31,8 @@ const Section1 = () => {
         return (
           <SwiperSlide key={item} className="w-[100vw] px-[13px] lg:px-[50px]">
             <div className="flex flex-col md:flex-row md:justify-center justify-between py-10 md:py-0">
-              <div className=" md:w-2/3 flex ">
-                <span className="text-textColor text-2xl flex flex-col font-bold">
+              <div className=" md:w-2/3 flex">
+                <span className="text-textColor text-2xl md:text-3xl lg:text-3xl 1xl:text-4xl flex flex-col font-bold">
                   <span className="text-white">SIMPLE </span>
                   <span className="">SOLLUTIONS</span>
                   <span className="text-white">FOR COMPLEX </span>
@@ -41,7 +41,7 @@ const Section1 = () => {
               </div>
               <div className=" md:w-1/3 flex justify-center">
                 <div className="">
-                  <div className="relative w-[250px] h-[250px] xl:w-[400px] xl:h-[400px] lg:w-[350px] lg:h-[350px] 1xl:w-[450px] 1xl:h-[450px]  2xl:w-[600px] 2xl:h-[600px]   ">
+                  <div className="relative w-[250px] h-[250px] md:w-[270px] md:h-[270px]  lg:w-[330px] lg:h-[330px] xl:w-[400px] xl:h-[400px] 1xl:w-[600px] 1xl:h-[600px]  2xl:w-[600px] 2xl:h-[600px]   ">
                     <Image src={"/chess.png"} alt={"chessimage"} fill />
                   </div>
                 </div>
