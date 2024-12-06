@@ -17,19 +17,21 @@ const Section4 = () => {
   return (
     <div className="h-[550px] md:h-[450px] lg:h-[620px] bg-sectionColor overflow-hidden">
       <div className="flex items-center justify-center relative h-full w-full">
-        <div className="w-full flex flex-col md:flex-row justify-around font-bold h-full 4xl:w-[50%]">
+        <div className="w-full flex flex-col md:flex-row justify-around font-bold h-full 4xl:w-[50%] ">
           <div className="flex flex-col items-center justify-center ">
-            <span className="text-2xl">2023</span>
-            <span>ESTABLISH</span>
+            <span className="text-2xl  xl:text-2xl">2023</span>
+            <span className="text-base md:text-md xl:text-xl">ESTABLISH</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <span className="text-2xl">{state}+</span>
-            <span>EXPERT MEMBER</span>
+            <span className=" text-2xl xl:text-2xl">{state}+</span>
+            <span className="text-base md:text-md xl:text-xl">
+              EXPERT MEMBER
+            </span>
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <span className="text-2xl">1</span>
-            <span>BRANCH</span>
+            <span className="text-2xl xl:text-2xl">1</span>
+            <span className="text-base md:text-md xl:text-xl">BRANCH</span>
           </div>
         </div>
         <div className="w-[556px] h-[556px] lg:w-[750px] lg:h-[750px] xl:w-[900px] xl:h-[900px] border-white border-2 rounded-full border-dashed absolute"></div>
