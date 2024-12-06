@@ -11,7 +11,7 @@ const Section3 = () => {
         <div className="w-[60%] h-full md:w-[50%] md:h-72 lg:h-96 xl:h-full -rotate-[20deg] md:-rotate-10 lg:-rotate-12 translate-x-11 md:translate-x-28 lg:translate-x-36 translate-y-7  md:translate-y-6  lg:translate-y-8 1xl:translate-y-10 2xl:translate-y-20 4xl:translate-y-28 relative flex-shrink-0">
           <Image src={"/photo1.png"} alt={""} layout="fill" objectFit="cover" />
         </div>
-        <div className="w-[60%] h-full md:w-[45%] md:h-72 lg:h-96 xl:h-full relative  flex-shrink-0 z-50">
+        <div className="w-[60%] h-full md:w-[45%] md:h-72 lg:h-96 xl:h-full relative  flex-shrink-0 z-10">
           <Image src={"/photo2.png"} alt={""} layout="fill" objectFit="cover" />
         </div>
 

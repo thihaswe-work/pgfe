@@ -45,8 +45,8 @@ const Testimonials = () => {
           prevEl: ".prev", // Specify class for prev button
           nextEl: ".next", // Specify class for next button
         }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
       >
         {/* swiper slide section */}
         {[1, 2, 3, 4].map((item) => {

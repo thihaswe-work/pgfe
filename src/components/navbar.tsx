@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -13,8 +12,11 @@ const Navbar = () => {
     { id: 5, label: "Blogs", href: "blogs" },
     { id: 6, label: "Contact", href: "contact" },
   ];
+
   return (
-    <div className="border-b border-gray-600 h-20 items-center flex justify-between px-[13px] lg:px-[50px]">
+    <div
+      className={`border-b border-gray-600 h-20 items-center flex justify-between px-[13px] lg:px-[50px] bg-[rgba(17,25,40,0.75)]  border-[rgba(255,255,255,0.125)] backdrop-blur-[16px] backdrop-saturate-[180%]" `}
+    >
       <h3 className="text-textColor font-bold text-2xl w-1/2 ">PassionGeek</h3>
       <div className="lg:hidden cursor-pointer">
         <button id="menu-button" className="text-white">

@@ -30,7 +30,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={` ${archivo.className} antialiased `}>
-        <div>
+        <div className="sticky top-0 z-50">
           <Navbar />
         </div>
         {children}

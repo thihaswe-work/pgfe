@@ -23,8 +23,8 @@ const Section1 = () => {
       slidesPerView={1} // Only show one slide at a time (each is 100vw)
       pagination={{ clickable: true }} // Pagination dots are clickable
       // scrollbar={{ draggable: true }} // Make the scrollbar draggable
-      onSwiper={(swiper) => console.log(swiper)} // Optional: log the swiper instance
-      onSlideChange={() => console.log("slide change")} // Optional: log slide change
+      // onSwiper={(swiper) => console.log(swiper)} // Optional: log the swiper instance
+      // onSlideChange={() => console.log("slide change")} // Optional: log slide change
     >
       {/* swiper slide section */}
       {[1, 2, 3, 4].map((item) => {
