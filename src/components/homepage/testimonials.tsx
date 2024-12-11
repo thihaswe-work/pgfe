@@ -12,7 +12,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import { testimonialsData } from "@/app/lib/data";
+import { testimonialsData } from "@/lib/data";
 import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";

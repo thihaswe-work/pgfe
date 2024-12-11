@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import FooterNav from "./footerNav";
-import { footerData } from "@/app/lib/data";
+import { footerData } from "@/lib/data";
 
 const Footer = async () => {
   const FOOTER_LINK = [

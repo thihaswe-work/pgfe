@@ -1,4 +1,4 @@
-import { sectionTwoData } from "@/app/lib/data";
+import { sectionTwoData } from "@/lib/data";
 import React from "react";
 
 const Section2 = async () => {
