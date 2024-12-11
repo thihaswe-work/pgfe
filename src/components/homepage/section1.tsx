@@ -32,7 +32,7 @@ const Section1 = () => {
           <SwiperSlide key={item} className="w-[100vw] px-[13px] lg:px-[50px]">
             <div className="flex flex-col md:flex-row md:justify-center justify-between py-10 md:py-0">
               <div className=" md:w-2/3 flex">
-                <span className="text-textColor text-2xl md:text-3xl lg:text-3xl 1xl:text-4xl flex flex-col font-bold">
+                <span className="text-textColor text-xl md:text-3xl lg:text-3xl 1xl:text-4xl flex flex-col font-bold">
                   <span className="text-white">SIMPLE </span>
                   <span className="">SOLLUTIONS</span>
                   <span className="text-white">FOR COMPLEX </span>

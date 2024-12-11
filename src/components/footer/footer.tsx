@@ -1,8 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import FooterNav from "./footerNav";
+import { footerData } from "@/app/lib/data";
 
-const Footer = () => {
+const Footer = async () => {
   const FOOTER_LINK = [
     {
       href: "/",
@@ -29,6 +30,9 @@ const Footer = () => {
       label: "Contacts  /",
     },
   ];
+
+  const response = await footerData();
+
   return (
     <div className="">
       <div className="flex gap-5 my-5 lg:px-[50px] px-[13px] flex-col lg:flex-row">
@@ -56,11 +60,15 @@ const Footer = () => {
             <span className="lg:flex-1"></span>
             <div className="flex flex-col flex-1">
               <span className="text-[12px] text-gray-600">CONTACT US</span>
-              <span className="">+09998876554</span>
+              <span className="">
+                {response.data.contact ?? "+09998876554"}
+              </span>
             </div>
             <div className="flex flex-col flex-1">
               <span className="text-[12px] text-gray-600">EMAIL</span>
-              <span className="">passiongeek@logoipsum.com</span>
+              <span className="">
+                {response.data.email ?? "passiongeek@logoipsum.com"}
+              </span>
             </div>
           </div>
         </div>
@@ -73,12 +81,13 @@ const Footer = () => {
           <div className="flex flex-col flex-1">
             <span className="text-[12px] text-gray-600">ADDRESS</span>
             <span className="">
-              2118 Thornridge Cir. Syracuse, Connecticut 35624{" "}
+              {response.data.address ??
+                " 2118 Thornridge Cir. Syracuse, Connecticut 35624"}
             </span>
           </div>
           <div className="flex flex-col flex-1">
             <span className="text-[12px] text-gray-600">OPENING HOURS</span>
-            <span className="">9am—6pm</span>
+            <span className="">{response.data.openhour ?? "9am—6pm"}</span>
           </div>
         </div>
         <div className="justify-end flex lg:hidden">
