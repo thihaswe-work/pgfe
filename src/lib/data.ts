@@ -21,8 +21,3 @@ export const footerData = async () => {
   const data = response.data;
   return data;
 };
-
-// export const sectionTwoData = async () => {
-//   const response = await apiBaseUrl.get("/sectiontwo");
-//   const data = response.data;
-// };

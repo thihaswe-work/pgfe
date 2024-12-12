@@ -6,13 +6,14 @@ const Navbar = () => {
   const pathname = usePathname();
   const NAVBAR_LIST = [
     { id: 1, label: "Home", href: "/" },
-    { id: 2, label: "About Us", href: "about-us" },
-    { id: 3, label: "Product", href: "product" },
-    { id: 4, label: "Careers", href: "careers" },
-    { id: 5, label: "Blogs", href: "blogs" },
-    { id: 6, label: "Contact", href: "contact" },
+    { id: 2, label: "About Us", href: "/about-us" },
+    { id: 3, label: "Product", href: "/product" },
+    { id: 4, label: "Careers", href: "/careers" },
+    { id: 5, label: "Blogs", href: "/blogs" },
+    { id: 6, label: "Contact", href: "/contact" },
   ];
 
+  console.log(pathname);
   return (
     <div
       className={`border-b border-gray-600 h-20 items-center flex justify-between px-[13px] lg:px-[50px] bg-[rgba(17,25,40,0.75)]  border-[rgba(255,255,255,0.125)] backdrop-blur-[16px] backdrop-saturate-[180%]" `}
