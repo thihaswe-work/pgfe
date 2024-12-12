@@ -11,6 +11,7 @@ const YearSection = () => {
             <span>2017-2024</span>
           </div>
           <Image
+            className="md:w-[250px] h-[150px]"
             src={"/g-year.png"}
             alt="year photo"
             width={250}

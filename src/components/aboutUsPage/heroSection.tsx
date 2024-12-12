@@ -27,7 +27,7 @@ const HeroSection = ({ layout, image, title, desc }: Prop) => {
       // }}
     >
       <div
-        className={`flex justify-center gap-[24px] h-[439px] lg:h-[439px] ${
+        className={`flex justify-center gap-[24px] h-[439px] lg:h-[439px]  ${
           layout === "right" ? "" : "flex-row-reverse"
         }`}
       >

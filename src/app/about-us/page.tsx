@@ -1,7 +1,7 @@
 import HeroSection from "@/components/aboutUsPage/heroSection";
 import IconSection from "@/components/aboutUsPage/iconSection";
 import ProfileAndYear from "@/components/aboutUsPage/profileAndYear";
-import Testimonials from "@/components/aboutUsPage/testimonials";
+import Testimonials from "@/components/homepage/testimonials";
 
 import Image from "next/image";
 
@@ -17,7 +17,7 @@ const AboutPage = () => {
       </div>
 
       {/* hero section */}
-      <div className="p-[45px] flex flex-col lg:gap-[120px] my-[120px] relative overflow-hidden">
+      <div className="p-[45px] flex flex-col lg:gap-[120px] my-[120px] relative overflow-hidden ">
         <HeroSection
           layout={"right"}
           image={rectangleImage}
@@ -48,14 +48,21 @@ const AboutPage = () => {
         <Image
           src={"/gradient.png"}
           alt={"gradient image"}
-          className="w-[945px] h-[386px] absolute -right-5 -bottom-8"
+          className="w-[945px] h-[386px] absolute -right-52 -bottom-10"
           width={0}
           height={0}
         />
       </div>
 
-      <div>
+      <div className="relative ">
         <ProfileAndYear />
+        <Image
+          src={"/gradientLeft.png"}
+          alt="gradient left"
+          width={0}
+          height={0}
+          className=" w-[945px] h-[386px] absolute top-32 -left-56"
+        />
       </div>
       <div className="px-[45px] w-full h-full">
         <Testimonials />

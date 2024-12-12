@@ -4,7 +4,7 @@ import React from "react";
 const ProfileSection = () => {
   return (
     <div className="w-full h-full flex ">
-      <div className="flex-1 relative ">
+      <div className="w-[273px] relative ">
         <Image
           style={{
             clipPath:

@@ -16,22 +16,22 @@ const Card = ({ name, image, point, desc }: Prop) => {
       <div className="justify-center flex">
         <Image src={image} alt="avatar" width={101} height={116} />
       </div>
-      <div className="">
+      <div className="flex items-center flex-col">
         <h1 className="text-xl font-bold">{name}</h1>
         <div className="mt-2 flex items-center">
           {/* Loop to display 5 stars */}
           {[...Array(5)].map((_, index) => (
             <span
               key={index}
-              className={` text-lg ${index < point ? "text-textColor" : ""}`}
+              className={` text-lg ${index < 4 ? "text-textColor" : ""}`}
             >
               ★
             </span>
           ))}
         </div>
       </div>
-      <div>
-        <p className="text-sm">{desc}</p>
+      <div className="flex justify-center">
+        <p className="text-sm ">{desc}</p>
       </div>
     </div>
   );
