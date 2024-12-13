@@ -44,7 +44,6 @@ export default function AboutPage() {
                 Proin at id vulputate pulvinar. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat 
                 viverra duis.`}
         />
-
         <Image
           src={"/gradient.png"}
           alt={"gradient image"}
@@ -54,6 +53,7 @@ export default function AboutPage() {
         />
       </div>
 
+      {/* profile and year section */}
       <div className="relative ">
         <ProfileAndYear />
         <Image
@@ -64,9 +64,13 @@ export default function AboutPage() {
           className=" w-[945px] h-[386px] absolute top-32 -left-56"
         />
       </div>
+
+      {/* {testimonials section} */}
       <div className=" px-[14px] lg:px-[45px] w-full h-full">
         <Testimonials />
       </div>
+
+      {/* {icon section} */}
       <IconSection />
     </div>
   );
