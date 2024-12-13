@@ -6,8 +6,8 @@ const YearSection = () => {
     <div className="w-full h-full flex flex-col items-end justify-end ">
       <div className="flex flex-col">
         <div className="flex items-center overflow-hidden">
-          <div className="text-center">
-            <h3 className=" md:text-xl font-bold">Since From</h3>
+          <div className="text-center text-sm md:text-lg  ">
+            <h3 className=" font-bold">Since From</h3>
             <span>2017-2024</span>
           </div>
           <Image

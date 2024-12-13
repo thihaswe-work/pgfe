@@ -39,10 +39,8 @@ const ProfileSection = () => {
           height={87}
         />
       </div>
-      <div className="flex text-center flex-col flex-1 justify-center">
-        <div className="text-md md:text-lg  font-bold">
-          Get Rating 9 out of 10.
-        </div>
+      <div className="flex text-center flex-col flex-1 justify-center text-sm md:text-lg  font-bold">
+        <div className="">Get Rating 9 out of 10.</div>
         <div className="text-base">Review from 5.6 k</div>
       </div>
     </div>
