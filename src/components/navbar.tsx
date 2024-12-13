@@ -17,7 +17,7 @@ const Navbar = () => {
 
       {/* MenuBar for mobile view */}
       <div className={`flex justify-center `}>
-        <MenuBar open={open} />
+        <MenuBar open={open} setOpen={setOpen} />
       </div>
 
       {/* {menu bar button} */}

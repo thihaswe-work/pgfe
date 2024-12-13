@@ -4,19 +4,23 @@ import { usePathname } from "next/navigation";
 
 interface Prop {
   open: boolean;
+  setOpen: (para: boolean) => void;
 }
 
-const MenuBar = ({ open }: Prop) => {
+const MenuBar = ({ open, setOpen }: Prop) => {
   const navbarList = NAVBAR_LIST;
   const pathname = usePathname();
   return (
     <div
       className={`${
-        open ? "left-0 " : "left-[100%]"
-      } absolute block lg:hidden top-[80px] w-full bg-[rgba(17,25,40,0.85)] z-20 rounded-[50px] px-16`}
+        open ? "left-0 " : "left-[150%]"
+      } absolute block lg:hidden top-[80px] w-full bg-[rgba(17,25,40,0.85)] z-20 rounded-[50px] px-16 transition-all duration-300 ease-in-out `}
     >
       {navbarList.map((item) => (
         <Link
+          onClick={() => {
+            setOpen(!open);
+          }}
           key={item.id}
           href={item.href}
           className={`hover:text-textColor font-bold ${
