@@ -27,11 +27,11 @@ const HeroSection = ({ layout, image, title, desc }: Prop) => {
       // }}
     >
       <div
-        className={`flex justify-center gap-[24px] h-[439px] lg:h-[439px]  ${
+        className={`flex flex-col lg:flex-row justify-center gap-[24px] items-center  lg:h-[439px]  ${
           layout === "right" ? "" : "flex-row-reverse"
         }`}
       >
-        <div className="w-[583px] lg:w-[583px] h-full">
+        <div className="w-full md:w-[583px] lg:w-[583px] h-full">
           <div className="flex flex-col gap-[37px] ">
             <div className="flex">
               <p className="w-[8px] h-[38px] rounded-[4px] bg-textColor"></p>
@@ -40,7 +40,7 @@ const HeroSection = ({ layout, image, title, desc }: Prop) => {
             <p>{desc}</p>
           </div>
         </div>
-        <div className="w-[583px] h-full lg:w-[583px] relative">
+        <div className="w-[347px] h-[240px] md:w-[635px] md:h-[439px]  lg:w-[583px] lg:h-full relative">
           <Image src={image} alt={"heroSection Image"} fill />
         </div>
       </div>

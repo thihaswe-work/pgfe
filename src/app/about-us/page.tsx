@@ -17,7 +17,7 @@ const AboutPage = () => {
       </div>
 
       {/* hero section */}
-      <div className="p-[45px] flex flex-col lg:gap-[120px] my-[120px] relative overflow-hidden ">
+      <div className="px-[14px] md:px-[56px] lg:p-[45px] flex flex-col lg:gap-[120px] my-[120px] relative overflow-hidden ">
         <HeroSection
           layout={"right"}
           image={rectangleImage}
@@ -64,7 +64,7 @@ const AboutPage = () => {
           className=" w-[945px] h-[386px] absolute top-32 -left-56"
         />
       </div>
-      <div className="px-[45px] w-full h-full">
+      <div className=" px-[14px] lg:px-[45px] w-full h-full">
         <Testimonials />
       </div>
       <IconSection />

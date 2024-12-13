@@ -5,17 +5,17 @@ const YearSection = () => {
   return (
     <div className="w-full h-full flex flex-col items-end justify-end ">
       <div className="flex flex-col">
-        <div className="flex items-center">
+        <div className="flex items-center overflow-hidden">
           <div className="text-center">
-            <h3 className="text-xl font-bold">Since From</h3>
+            <h3 className=" md:text-xl font-bold">Since From</h3>
             <span>2017-2024</span>
           </div>
           <Image
             className="md:w-[250px] h-[150px]"
             src={"/g-year.png"}
             alt="year photo"
-            width={250}
-            height={150}
+            width={150}
+            height={100}
           />
         </div>
 
@@ -35,7 +35,7 @@ const YearSection = () => {
               alt="2024 image"
               width={167}
               height={192}
-              className="absolute right-10 -top-3"
+              className="absolute -right-4  md:right-10 md:-top-3"
             />
           </div>
         </div>

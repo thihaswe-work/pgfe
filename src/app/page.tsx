@@ -10,7 +10,9 @@ export default function Home() {
       <Section2 />
       <Section3 />
       <Section4 />
-      <Testimonials />
+      <div className="px-[13px] md:px-[40px] lg:px-[50px]">
+        <Testimonials />
+      </div>
     </div>
   );
 }

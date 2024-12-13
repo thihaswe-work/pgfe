@@ -51,7 +51,7 @@ const Testimonials = () => {
         pathname === "/" ? "bg-secondBgColor" : ""
       }`}
     >
-      <div className="py-8 flex justify-between lg:justify-around w-full px-[13px] md:px-[40px] lg:px-[50px] items-center">
+      <div className="py-8 flex justify-between lg:justify-around w-full  items-center">
         {/* <h1 className={` ${styles.testimonials} `}>Testimonials</h1> */}
         <div className="w-3/5 md:w-3/5 lg:w-2/5 h-9 md:h-10 lg:h-14 xl:h-20 relative">
           <Image src={"/testimonials.png"} alt="testimonials" fill />
