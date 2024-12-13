@@ -12,11 +12,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false); // Start with the menu closed
 
   return (
-    <div className={`relative  h-20 items-center flex justify-between `}>
+    <div
+      className={`${!open ? "" : ""}   h-20 items-center flex justify-between `}
+    >
       <h3 className="text-textColor font-bold text-2xl w-1/2 ">PassionGeek</h3>
 
       {/* MenuBar for mobile view */}
-      <div className={`flex justify-center `}>
+      <div className={`text-center`}>
         <MenuBar open={open} setOpen={setOpen} />
       </div>
 

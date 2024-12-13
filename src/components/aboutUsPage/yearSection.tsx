@@ -14,7 +14,7 @@ const YearSection = () => {
             className="md:w-[250px] h-[150px]"
             src={"/g-year.png"}
             alt="year photo"
-            width={150}
+            width={200}
             height={100}
           />
         </div>
@@ -35,7 +35,7 @@ const YearSection = () => {
               alt="2024 image"
               width={167}
               height={192}
-              className="absolute -right-4  md:right-10 md:-top-3"
+              className="absolute right-4 -top-3 md:right-10 md:-top-3"
             />
           </div>
         </div>

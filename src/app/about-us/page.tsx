@@ -5,7 +5,7 @@ import Testimonials from "@/components/homepage/testimonials";
 
 import Image from "next/image";
 
-const AboutPage = () => {
+export default function AboutPage() {
   const rectangleImage = "/rectangle.png";
   const maskGroupImage = "/mask-group.png";
 
@@ -70,6 +70,4 @@ const AboutPage = () => {
       <IconSection />
     </div>
   );
-};
-
-export default AboutPage;
+}

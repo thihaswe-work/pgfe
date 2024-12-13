@@ -1,3 +1,3 @@
 export default function CareersPage() {
-  return <div></div>;
+  return <div>CareersPage</div>;
 }

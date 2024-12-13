@@ -8,7 +8,7 @@ const FooterNav = () => {
     });
   };
   return (
-    <span>
+    <span className="cursor-pointer">
       <p
         onClick={scrollToTop}
         className="text-black p-2 bg-white rounded-full text-md w-10 flex justify-center items-center"
