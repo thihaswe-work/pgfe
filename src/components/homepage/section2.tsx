@@ -1,8 +1,8 @@
-import { sectionTwoData } from "@/lib/data";
+import { homeSectionTwoData } from "@/lib/data";
 import React from "react";
 
 const Section2 = async () => {
-  const response = await sectionTwoData();
+  const response = await homeSectionTwoData();
 
   return (
     <div className="bg-secondBgColor lg:px-[170px] xl:px-44 2xl:48 py-16 ">

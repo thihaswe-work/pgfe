@@ -12,7 +12,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import { testimonialsData } from "@/lib/data";
+import { homeTestimonialsData } from "@/lib/data";
 import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -35,7 +35,7 @@ const Testimonials = () => {
   useEffect(() => {
     const apiRequest = async () => {
       try {
-        const response = await testimonialsData();
+        const response = await homeTestimonialsData();
         console.log(response.data);
         setData(response.data);
       } catch (error) {
