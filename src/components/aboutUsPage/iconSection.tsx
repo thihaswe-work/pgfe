@@ -12,6 +12,7 @@ interface Icon {
 const IconSection = async () => {
   const response = await aboutIcons();
   const icons: Icon[] = response.data;
+  console.log(icons[0]);
   return (
     <div className="w-full flex justify-center flex-wrap my-[44px] md:my-[64px]">
       {icons.map((icon, index) => {
@@ -21,7 +22,11 @@ const IconSection = async () => {
             key={icon.id}
           >
             <Image
-              src={icon.image ?? "/xdistburite.png"}
+              src={
+                icon.image
+                  ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${icon.image}`
+                  : "/xdistburite.png"
+              }
               alt={""}
               width={147}
               height={65}
