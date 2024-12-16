@@ -12,7 +12,7 @@ interface Icon {
 const IconSection = async () => {
   const response = await aboutIcons();
   const icons: Icon[] = response.data;
-  console.log(icons[0]);
+
   return (
     <div className="w-full flex justify-center flex-wrap my-[44px] md:my-[64px]">
       {icons.map((icon, index) => {
