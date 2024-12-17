@@ -11,9 +11,10 @@ export default function GlobalError() {
   return (
     // global-error must include html and body tags
     <html>
-      <body className="w-full h-screen flex flex-col justify-center items-center">
-        <h2>Something went wrong!</h2>
+      <body className="w-full h-screen flex flex-col justify-center items-center gap-3">
+        <h2 className="text-md">Oops!Something went wrong!</h2>
         <button
+          className="border-2 border-white p-2 rounded-lg"
           onClick={() => {
             window.location.reload();
           }}
