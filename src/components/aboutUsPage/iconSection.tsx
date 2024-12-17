@@ -1,5 +1,4 @@
 import { aboutIcons } from "@/lib/data";
-import { cookies } from "next/headers";
 import Image from "next/image";
 
 interface Icon {
@@ -32,7 +31,7 @@ const IconSection = async () => {
               </div>
             );
           })
-        : icons.map((icon, index) => {
+        : icons.map((icon) => {
             return (
               <div
                 className="text-center text-gray-50 font-semibold tracking-wide"
