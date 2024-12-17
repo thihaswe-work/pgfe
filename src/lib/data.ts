@@ -66,7 +66,7 @@ export const homeSectionTwoData = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching homeSectionTwoData:", error);
-    throw error;
+    // throw error;
   }
 };
 
@@ -77,7 +77,7 @@ export const homeTestimonialsData = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching homeTestimonialsData:", error);
-    throw error;
+    // throw error;
   }
 };
 
@@ -90,7 +90,7 @@ export const aboutSectionOneData = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching aboutSectionOneData:", error);
-    throw error;
+    // throw error;
   }
 };
 
@@ -101,7 +101,7 @@ export const aboutSectionTwoData = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching aboutSectionTwoData:", error);
-    throw error;
+    // throw error;
   }
 };
 
@@ -112,7 +112,7 @@ export const aboutSectionThreeData = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching aboutSectionThreeData:", error);
-    throw error;
+    // throw error;
   }
 };
 
@@ -123,7 +123,7 @@ export const aboutIcons = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching aboutIcons:", error);
-    throw error;
+    // throw error;
   }
 };
 
@@ -134,7 +134,7 @@ export const aboutTestimonialsData = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching aboutTestimonialsData:", error);
-    throw error;
+    // throw error;
   }
 };
 
@@ -147,6 +147,6 @@ export const footerData = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching footerData:", error);
-    throw error;
+    // throw error;
   }
 };

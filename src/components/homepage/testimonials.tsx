@@ -27,19 +27,20 @@ interface Data {
   content: string;
   created_at: string;
   updated_at: string;
+  image: string;
 }
 
 const Testimonials = () => {
-  const [data, setData] = useState<Data[]>([]);
+  const [data, setData] = useState<Data[] | undefined>([]);
   const pathname = usePathname();
   useEffect(() => {
     const apiRequest = async () => {
       try {
         const response = await homeTestimonialsData();
-        console.log(response.data);
         setData(response.data);
       } catch (error) {
-        console.error("Error fetching testimonials data:", error);
+        console.log("Error fetching testimonials data:", error);
+        setData(undefined);
       }
     };
     apiRequest();
@@ -81,7 +82,32 @@ const Testimonials = () => {
       >
         {/* swiper slide section */}
 
-        {data.length === 0 ? (
+        {!data ? (
+          <SwiperSlide className="w-[100vw] h-auto cursor-pointer">
+            <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start lg:items-center">
+              <div className="md:w-2/5 lg:w-1/5 w-4/5">
+                <span className="justify-center flex flex-col mb-3">
+                  <span className="text-3xl font-bold">{"Carolyn Willms"}</span>
+                  <span>{"Global Accountability Officer"}</span>
+                </span>
+                <p>
+                  {`Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Velit quidem nulla excepturi necessitatibus. Dolore, odit
+                      aut? Necessitatibus, facere incidunt, quibusdam a
+                      consequuntur assumenda, at vero culpa et minus id est.`}
+                </p>
+              </div>
+              <div className="flex relative justify-center items-center md:h-[200px] md:w-[200px] lg:h-[400px] lg:w-[400px] ">
+                <Image
+                  src={"/unplash.png"}
+                  alt={"unplash"}
+                  height={300}
+                  width={300}
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+        ) : data.length === 0 ? (
           <SwiperSlide className="w-[100vw] h-auto cursor-pointer">
             <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start lg:items-center">
               {/* Skeleton for text */}
@@ -114,15 +140,18 @@ const Testimonials = () => {
                   <div className="md:w-2/5 lg:w-1/5 w-4/5">
                     <span className="justify-center flex flex-col mb-3">
                       <span className="text-3xl font-bold">
-                        {item.name ?? "Carolyn Willms"}
+                        {item?.name ? item.name : "Carolyn Willms"}
                       </span>
                       <span>
-                        {item.role ?? "Global Accountability Officer"}
+                        {item?.role
+                          ? item.role
+                          : "Global Accountability Officer"}
                       </span>
                     </span>
                     <p>
-                      {item.content ??
-                        `
+                      {item.content
+                        ? item.content
+                        : `
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Velit quidem nulla excepturi necessitatibus. Dolore, odit
                       aut? Necessitatibus, facere incidunt, quibusdam a
@@ -131,7 +160,7 @@ const Testimonials = () => {
                   </div>
                   <div className="flex relative justify-center items-center md:h-[200px] md:w-[200px] lg:h-[400px] lg:w-[400px] ">
                     <Image
-                      src={"/unplash.png"}
+                      src={item?.image ? item.image : "/unplash.png"}
                       alt={"unplash"}
                       height={300}
                       width={300}

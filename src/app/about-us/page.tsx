@@ -44,10 +44,15 @@ export default async function AboutPage() {
               ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${sectionTwoResponse.data.image}`
               : rectangleImage
           }
-          title={sectionTwoResponse?.data?.title ?? "What We’re Doing?"}
+          title={
+            sectionTwoResponse?.data?.title
+              ? sectionTwoResponse.data.ttile
+              : "What We’re Doing?"
+          }
           desc={
-            sectionTwoResponse?.data?.desc ??
-            `Lorem ipsum dolor sit amet consectetur. Natoque phasellus ultricies sed habitant malesuada in.
+            sectionTwoResponse?.data?.desc
+              ? sectionTwoResponse.data.desc
+              : `Lorem ipsum dolor sit amet consectetur. Natoque phasellus ultricies sed habitant malesuada in.
       Lectus eu imperdiet in at sed. Vel nunc tortor adipiscing ultrices id. Dis imperdiet egestas non
       faucibus quis fames cras. Lorem ac tellus tincidunt tempor nam odio imperdiet. Neque parturient
       vestibulum vestibulum in turpis urna cursus est cras. Proin at id vulputate pulvinar. Fames sapien ac quis suscipit.
@@ -68,11 +73,14 @@ export default async function AboutPage() {
               : maskGroupImage
           }
           title={
-            sectionThreeResponse?.data?.title ?? "How Did We Build Our Team?"
+            sectionThreeResponse?.data?.title
+              ? sectionThreeResponse.data.ttile
+              : "How Did We Build Our Team?"
           }
           desc={
-            sectionThreeResponse?.data?.desc ??
-            `Lorem ipsum dolor sit amet consectetur. Natoque phasellus ultricies sed habitant malesuada in. Lectus eu
+            sectionThreeResponse?.data?.desc
+              ? sectionThreeResponse.data.desc
+              : `Lorem ipsum dolor sit amet consectetur. Natoque phasellus ultricies sed habitant malesuada in. Lectus eu
         imperdiet in at sed. Vel nunc tortor adipiscing ultrices id. Dis imperdiet egestas non faucibus quis fames cras.
         Lorem ac tellus tincidunt tempor nam odio imperdiet. Neque parturient vestibulum vestibulum in turpis urna cursus est cras.
         Proin at id vulputate pulvinar. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat
