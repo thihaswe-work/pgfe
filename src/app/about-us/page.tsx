@@ -1,6 +1,7 @@
 import HeroSection from "@/components/aboutUsPage/heroSection";
 import IconSection from "@/components/aboutUsPage/iconSection";
 import ProfileAndYear from "@/components/aboutUsPage/profileAndYear";
+import Banner from "@/components/banner";
 import Testimonials from "@/components/homepage/testimonials";
 import {
   aboutSectionOneData,
@@ -20,20 +21,14 @@ export default async function AboutPage() {
 
   return (
     <div>
-      <div className="w-full h-[198px] relative flex justify-center items-center ">
-        <span className="z-10 text-1xl font-bold">
-          {sectionOneResponse?.data?.title ?? "About Us"}
-        </span>
-        <Image
-          src={
-            sectionOneResponse?.data?.image
-              ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${sectionOneResponse.data.image}`
-              : maskGroupImage
-          }
-          alt="about-us photo"
-          fill
-        />
-      </div>
+      <Banner
+        image={
+          sectionOneResponse?.data?.image
+            ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${sectionOneResponse.data.image}`
+            : maskGroupImage
+        }
+        title={sectionOneResponse?.data?.title ?? "About Us"}
+      />
       {/* hero section */}
 
       <div className="px-[14px] md:px-[56px] lg:p-[45px] flex flex-col lg:gap-[120px] my-[120px] relative overflow-hidden ">
