@@ -12,15 +12,19 @@ const Section2 = async () => {
 
       <div className=" md:h-auto w-full relative h-[612px] font-bold  flex flex-col md:flex-row  justify-between items-center md:items-start lg:[text-23px] 2xl:text-[35px]">
         <div className=" flex-shrink-0 w-[230px] h-[230px] md:w-[36vw] md:h-[36vw]  rounded-full lg:w-[25vw] lg:h-[25vw] xl:w-[27vw] xl:h-[27vw]  1xl:w-[30vw] 1xl:h-[30vw] border-dashed border-white border-2 flex justify-center items-center  left-3/3">
-          {response?.data?.titleone ?? "WEB DEVELOPMENT"}
+          {response?.data?.titleone
+            ? response.data.titleone
+            : "WEB DEVELOPMENT"}
         </div>
 
         <div className=" w-[230px] h-[230px] rounded-full  md:w-[36vw] md:h-[36vw] lg:w-[25vw] lg:h-[25vw] xl:w-[27vw] xl:h-[27vw]  1xl:w-[30vw] 1xl:h-[30vw] border-dashed border-white border-2 flex justify-center items-center absolute bottom-48 md:bottom-0 md:left-1/3 lg:-translate-x-2 xl:-translate-x-4 1xl:-translate-x-7 md:-translate-x-3">
-          {response?.data?.titletwo ?? "UX/UI"}
+          {response?.data?.titletwo ? response.data.titletwo : "UX/UI"}
         </div>
 
         <div className=" flex-shrink-0 w-[230px] h-[230px] md:w-[36vw] md:h-[36vw]  rounded-full lg:w-[25vw] lg:h-[25vw] xl:w-[27vw] xl:h-[27vw]  1xl:w-[30vw] 1xl:h-[30vw] border-dashed border-white border-2 flex justify-center items-center  left-2/3">
-          {response?.data?.titlethree ?? "APP DEVELOPMENT"}
+          {response?.data?.titlethree
+            ? response.data.titlethree
+            : "APP DEVELOPMENT"}
         </div>
       </div>
     </div>
