@@ -1,7 +1,9 @@
 "use client";
+import { handleContactData } from "@/lib/action";
+import { error } from "console";
 // import { handleContactData } from "@/lib/action";
 import Image from "next/image";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useActionState, useState } from "react";
 
 const InputField = () => {
   const [message, setMessage] = useState("");
@@ -16,14 +18,14 @@ const InputField = () => {
   //   const formData = new FormData(e.target as HTMLFormElement);
   //   console.log(formData);
   // }
-  // const [state, formAction, pending] = useActionState(handleContactData, null);
+  const [state, formAction, pending] = useActionState(handleContactData, null);
   return (
     <div className="flex flex-col lg:flex-row gap-[64px] items-center lg:justify-between 1xl:justify-center lg:gap-0  px-[14px] lg:px-[45px]  ">
       {/* form section */}
       <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
         <form
           className="flex flex-col items-start w-[450px] 1xl:w-[610px] gap-2 box-border"
-          // action={formAction}
+          action={formAction}
         >
           <label htmlFor="fullname" className="text-lg font-semibold">
             Full Name
@@ -65,6 +67,10 @@ const InputField = () => {
           >
             Send Message
           </button>
+          <span className="text-green-500">
+            {state?.success && state?.success}
+          </span>
+          <span className="text-red-500">{state?.error && state?.error}</span>
         </form>
       </div>
 
