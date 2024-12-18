@@ -1,6 +1,5 @@
 "use client";
 import { handleContactData } from "@/lib/action";
-import { error } from "console";
 // import { handleContactData } from "@/lib/action";
 import Image from "next/image";
 import { ChangeEvent, useActionState, useState } from "react";
@@ -18,7 +17,7 @@ const InputField = () => {
   //   const formData = new FormData(e.target as HTMLFormElement);
   //   console.log(formData);
   // }
-  const [state, formAction, pending] = useActionState(handleContactData, null);
+  const [state, formAction] = useActionState(handleContactData, null);
   return (
     <div className="flex flex-col lg:flex-row gap-[64px] items-center lg:justify-between 1xl:justify-center lg:gap-0  px-[14px] lg:px-[45px]  ">
       {/* form section */}
