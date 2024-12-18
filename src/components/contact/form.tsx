@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { handleContactData } from "@/lib/action";
 
 import { ChangeEvent, useActionState, useState } from "react";
@@ -12,7 +12,31 @@ const FormField = () => {
     setMessage(e.target.value);
   };
 
+  // State to control visibility of success and error messages
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
   const [state, formAction] = useActionState(handleContactData, null);
+
+  useEffect(() => {
+    if (state?.success) {
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000); // Hide after 5 seconds
+    }
+
+    if (state?.error) {
+      setShowError(true);
+      setTimeout(() => {
+        setShowError(false);
+      }, 5000); // Hide after 5 seconds
+    }
+
+    return () => {
+      setShowError(false);
+      setShowSuccess(false);
+    };
+  }, [state]);
   return (
     <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
       <form
@@ -59,10 +83,21 @@ const FormField = () => {
         >
           Send Message
         </button>
-        <span className="text-green-500">
+        {/* <span className="text-green-500">
           {state?.success && state?.success}
         </span>
-        <span className="text-red-500">{state?.error && state?.error}</span>
+        <span className="text-red-500">{state?.error && state?.error}</span> */}
+        {/* Success Message */}
+        {showSuccess && (
+          <span className="text-green-500">Message sent successfully!</span>
+        )}
+
+        {/* Error Message */}
+        {showError && (
+          <span className="text-red-500">
+            There was an error sending your message.
+          </span>
+        )}
       </form>
     </div>
   );
