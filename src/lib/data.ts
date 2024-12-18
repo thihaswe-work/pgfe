@@ -138,6 +138,19 @@ export const aboutTestimonialsData = async () => {
   }
 };
 
+// data for contact page
+
+export const contactSectionOneData = async () => {
+  try {
+    const response = await apiBaseUrl.get("/api/contactus/sectionone");
+    const data = response.data;
+    return data;
+  } catch (error) {
+    console.error("Error fetching aboutSectionOneData:", error);
+    throw error;
+  }
+};
+
 //data for footer
 
 export const footerData = async () => {

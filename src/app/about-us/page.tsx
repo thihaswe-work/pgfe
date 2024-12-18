@@ -27,7 +27,11 @@ export default async function AboutPage() {
             ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${sectionOneResponse.data.image}`
             : maskGroupImage
         }
-        title={sectionOneResponse?.data?.title ?? "About Us"}
+        title={
+          sectionOneResponse?.data?.title
+            ? sectionOneResponse.data.title
+            : "About Us"
+        }
       />
       {/* hero section */}
 

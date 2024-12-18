@@ -160,7 +160,11 @@ const Testimonials = () => {
                   </div>
                   <div className="flex relative justify-center items-center md:h-[200px] md:w-[200px] lg:h-[400px] lg:w-[400px] ">
                     <Image
-                      src={item?.image ? item.image : "/unplash.png"}
+                      src={
+                        item?.image
+                          ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${item.image}`
+                          : "/unplash.png"
+                      }
                       alt={"unplash"}
                       height={300}
                       width={300}

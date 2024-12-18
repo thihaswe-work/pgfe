@@ -1,21 +1,30 @@
 "use client";
+// import { handleContactData } from "@/lib/action";
 import Image from "next/image";
-import React, { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 const InputField = () => {
   const [message, setMessage] = useState("");
   const maxLength = 175; // Maximum number of characters
 
   // Handle input change
-  const handleMessageChange = (e: any) => {
+  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
   };
-
+  // async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  //   e.preventDefault();
+  //   const formData = new FormData(e.target as HTMLFormElement);
+  //   console.log(formData);
+  // }
+  // const [state, formAction, pending] = useActionState(handleContactData, null);
   return (
     <div className="flex flex-col lg:flex-row gap-[64px] items-center lg:justify-between 1xl:justify-center lg:gap-0  px-[14px] lg:px-[45px]  ">
       {/* form section */}
       <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-        <form className="flex flex-col items-start w-[450px] 1xl:w-[610px] gap-2 box-border">
+        <form
+          className="flex flex-col items-start w-[450px] 1xl:w-[610px] gap-2 box-border"
+          // action={formAction}
+        >
           <label htmlFor="fullname" className="text-lg font-semibold">
             Full Name
           </label>
@@ -91,3 +100,9 @@ const InputField = () => {
 };
 
 export default InputField;
+
+// async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+//   e.preventDefault();
+//   const formData = new FormData(e.target as HTMLFormElement);
+//   console.log(formData);
+// }

@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   // next.config.js or next.config.ts
 
   images: {
-    domains: ["192.168.50.248", "https://dev-api.passiongeek.tech"], // Add the hostname of your server here
+    domains: ["192.168.50.248", "dev-api.passiongeek.tech"], // Add the hostname of your server here
   },
 };
 
