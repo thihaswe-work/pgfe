@@ -13,12 +13,8 @@ export const handleContactData = async (
       formData
     );
 
-    // Handle the response (you can return it or process it as needed)
     return { success: "Message sent successfully!", data: response.data };
   } catch (error) {
-    // Log the error for debugging (optional)
-
-    // Return a user-friendly error message
     console.log(error);
     return { error: "Can't send message, please try again!" };
   }
