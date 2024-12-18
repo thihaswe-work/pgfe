@@ -19,6 +19,7 @@ export const handleContactData = async (
     // Log the error for debugging (optional)
 
     // Return a user-friendly error message
+    console.log(error);
     return { error: "Can't send message, please try again!" };
   }
 };
