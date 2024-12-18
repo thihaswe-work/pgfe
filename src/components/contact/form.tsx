@@ -38,7 +38,7 @@ const FormField = () => {
     };
   }, [state]);
   return (
-    <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+    <div className="w-full lg:w-1/2 flex justify-center lg:justify-start ">
       <form
         className="flex flex-col items-start w-[450px] 1xl:w-[610px] gap-2 box-border"
         action={formAction}

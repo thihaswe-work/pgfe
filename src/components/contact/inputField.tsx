@@ -5,7 +5,7 @@ const InputField = async () => {
   const sectionTwoData = await contactSectionTwoData();
 
   return (
-    <div className="flex flex-col lg:flex-row gap-[64px] items-center lg:justify-between 1xl:justify-center lg:gap-0  px-[14px] lg:px-[45px]  ">
+    <div className="flex flex-col lg:flex-row gap-[64px] items-center lg:justify-between 1xl:justify-center lg:gap-0  px-[14px] lg:px-[45px] mb-[64px] lg:mb-[120px] ">
       {/* form section */}
       <FormField />
       {/* map section */}
