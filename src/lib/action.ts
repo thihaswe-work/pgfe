@@ -8,10 +8,7 @@ export const handleContactData = async (
 ) => {
   try {
     // Await the API request and get the response
-    const response = await apiBaseUrl.post(
-      "/api/contactus/sectintwo",
-      formData
-    );
+    const response = await apiBaseUrl.post("/api/contactus/inquiry", formData);
 
     return { success: "Message sent successfully!", data: response.data };
   } catch (error) {

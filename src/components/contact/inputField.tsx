@@ -1,84 +1,31 @@
-"use client";
-import { handleContactData } from "@/lib/action";
-// import { handleContactData } from "@/lib/action";
-import Image from "next/image";
-import { ChangeEvent, useActionState, useState } from "react";
+import { contactSectionTwoData } from "@/lib/data";
+import FormField from "./form";
 
-const InputField = () => {
-  const [message, setMessage] = useState("");
-  const maxLength = 175; // Maximum number of characters
+const InputField = async () => {
+  const sectionTwoData = await contactSectionTwoData();
 
-  // Handle input change
-  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(e.target.value);
-  };
-
-  const [state, formAction] = useActionState(handleContactData, null);
   return (
     <div className="flex flex-col lg:flex-row gap-[64px] items-center lg:justify-between 1xl:justify-center lg:gap-0  px-[14px] lg:px-[45px]  ">
       {/* form section */}
-      <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-        <form
-          className="flex flex-col items-start w-[450px] 1xl:w-[610px] gap-2 box-border"
-          action={formAction}
-        >
-          <label htmlFor="fullname" className="text-lg font-semibold">
-            Full Name
-          </label>
-          <input
-            name="fullname"
-            placeholder="Enter Your Name"
-            className="w-full p-5 bg-transparent border-[1px] border-gray-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-          />
-          <label htmlFor="email" className="text-lg font-semibold">
-            E-Mail Address
-          </label>
-          <input
-            name="email"
-            placeholder=".....@gmail.com"
-            className="w-full p-5 bg-transparent border-[1px] border-gray-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-          />
-
-          <label htmlFor="message" className="text-lg font-semibold">
-            Message
-          </label>
-          <div className="relative w-full">
-            <textarea
-              className=" w-full p-4 bg-transparent border-[1px] border-gray-500 rounded-md resize-none h-[253px] focus:outline-none focus:ring-2 focus:ring-blue-500"
-              id="message"
-              name="message"
-              placeholder="You can sent whatever you want"
-              onChange={handleMessageChange}
-              maxLength={maxLength}
-            ></textarea>
-            <span className="absolute bottom-3 right-3 text-sm">
-              {message.length}/{maxLength}
-            </span>
-          </div>
-
-          <button
-            type="submit"
-            className=" px-[24px] py-[18px] bg-textColor rounded-md"
-          >
-            Send Message
-          </button>
-          <span className="text-green-500">
-            {state?.success && state?.success}
-          </span>
-          <span className="text-red-500">{state?.error && state?.error}</span>
-        </form>
-      </div>
-
+      <FormField />
       {/* map section */}
       <div className="w-full lg:w-1/2 gap-[28px] max-w-[500px] flex j flex-col ">
         <div className=" flex justify-center lg:items-end  lg:justify-start">
-          <Image
-            src={"/map.png"}
-            alt={"map photo"}
-            width={347}
-            height={323}
-            className="lg:w-[450px] lg:h-[466px] xl:w-full xl:h-[486px]"
-          />
+          <div className="w-[347px] h-[323px] lg:w-[450px] lg:h-[466px] xl:w-full xl:h-[486px]">
+            <iframe
+              src={
+                sectionTwoData.data.mapdata
+                  ? sectionTwoData.data.mapdata
+                  : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8327.325991258751!2d96.18144807885693!3d16.871150904193325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193b35ec087ff%3A0x3cf7ae6febbebfe2!2sMajjhima%20Janapada%20Mini%20Condo!5e0!3m2!1sen!2smm!4v1734509006793!5m2!1sen!2smm"
+              }
+              style={{ border: "none" }}
+              loading="lazy"
+              width={"100%"}
+              height={"100%"}
+              className="outline-none rounded-lg"
+            ></iframe>
+          </div>
+          {/* <Image src={"/map.png"} alt={"map photo"} width={347} height={323} /> */}
         </div>
 
         <div className="flex gap-5">
@@ -86,14 +33,22 @@ const InputField = () => {
             <span className="label">Address</span>
             <span>:</span>
           </div>
-          <span>2118 Thornridge Cir. Syracuse, Connecticut 35624</span>
+          <span>
+            {sectionTwoData.data.address
+              ? sectionTwoData.data.address
+              : "2118 Thornridge Cir. Syracuse, Connecticut 35624"}
+          </span>
         </div>
         <div className="flex gap-5">
           <div className="flex gap-7">
             <span className="label">Hotline</span>
             <span>:</span>
           </div>
-          <span>+09998876554</span>
+          <span>
+            {sectionTwoData.data.hotline
+              ? sectionTwoData.data.hotline
+              : "+09998876554"}
+          </span>
         </div>
       </div>
     </div>
