@@ -95,7 +95,7 @@ export const contactSectionOneData = async () => {
 
 export const contactSectionTwoData = async () => {
   try {
-    const response = await apiBaseUrl.get("/api/contactus/sectiontwodata");
+    const response = await apiBaseUrl.get("/api/contactus/sectintwo");
     const data = response.data;
     return data;
   } catch (error) {
