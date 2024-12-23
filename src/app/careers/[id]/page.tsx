@@ -2,7 +2,7 @@ import MiniList, { MiniCard } from "@/components/careers/CustomMini";
 
 // After
 type Params = Promise<{ id: string }>;
-type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+// type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
 // export async function generateMetadata(props: {
 //   params: Params;
@@ -16,11 +16,11 @@ type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
 export default async function Page(props: {
   params: Params;
-  searchParams: SearchParams;
+  // searchParams: SearchParams;/
 }) {
-  const params = await props.params;
-  const searchParams = await props.searchParams;
-  const id = params.id;
+  // const params = await props.params;
+  // const searchParams = await props.searchParams;
+  // const id = params.id;
 
   return (
     <div className=" px-[43px] md:px-[87px] lg:px-[90px] flex justify-center ">
