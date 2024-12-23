@@ -31,6 +31,7 @@ body {
 :root {
   ---background: #06090d;
   --secondBgColor: #101010;
+  --thirdBgColor: #424242;
   --textColor: #ed1c24;
   --sectionColor: #ed1c24;
 }
@@ -62,4 +63,22 @@ body {
   border-radius: 5px !important;
   width: 30px !important; /* Make the active dot's width larger */
   /* Larger height for active dot */
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+ul {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 20px; /* Add padding for custom bullets */
+}
+
+li::before {
+  content: "\2022"; /* Unicode for bullet character */
+  color: white; /* Set the color of the bullet */
+  font-size: 20px; /* Adjust size of the bullet */
+  margin-right: 10px; /* Space between the bullet and text */
 }

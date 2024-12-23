@@ -1,6 +1,6 @@
-import HeroSection from "@/components/aboutUsPage/heroSection";
-import IconSection from "@/components/aboutUsPage/iconSection";
-import ProfileAndYear from "@/components/aboutUsPage/profileAndYear";
+import HeroSection from "@/components/aboutus/heroSection";
+import IconSection from "@/components/aboutus/iconSection";
+import ProfileAndYear from "@/components/aboutus/profileAndYear";
 import Banner from "@/components/banner";
 import Testimonials from "@/components/homepage/testimonials";
 import {

@@ -17,7 +17,7 @@ const Section4 = () => {
   return (
     <div className="h-[550px] md:h-[450px] lg:h-[620px] bg-sectionColor overflow-hidden">
       <div className="flex items-center justify-center relative h-full w-full">
-        <div className="w-full flex flex-col md:flex-row justify-around font-bold h-full 2xl:w-[65%] 4xl:w-[50%] ">
+        <div className="w-full flex flex-col md:flex-row justify-around font-bold h-full 2xl:w-[65%] 3xl:w-[50%] ">
           <div className="flex flex-col items-center justify-center ">
             <span className="text-2xl  xl:text-2xl">2023</span>
             <span className="text-base md:text-md xl:text-xl">ESTABLISH</span>
