@@ -16,9 +16,11 @@ const Navbar = () => {
     <div
       className={`${!open ? "" : ""}   h-20 items-center flex justify-between `}
     >
-      <h3 className="relative h-12 w-40 ">
-        <Image src={"/logo.png"} alt="logo" fill />
-      </h3>
+      <Link href={"/"}>
+        <h3 className="relative h-12 w-40 cursor-pointer">
+          <Image src={"/logo.png"} alt="logo" fill />
+        </h3>
+      </Link>
 
       {/* MenuBar for mobile view */}
       <div className={`text-center`}>
