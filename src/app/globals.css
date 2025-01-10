@@ -29,7 +29,7 @@ body {
 }
 
 :root {
-  ---background: #06090d;
+  --background: #06090d;
   --secondBgColor: #101010;
   --thirdBgColor: #424242;
   --textColor: #ed1c24;

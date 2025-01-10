@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import MenuBar from "./menuBar";
 import { NAVBAR_LIST } from "@/util/navbarList";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -15,7 +16,9 @@ const Navbar = () => {
     <div
       className={`${!open ? "" : ""}   h-20 items-center flex justify-between `}
     >
-      <h3 className="text-textColor font-bold text-2xl w-1/2 ">PassionGeek</h3>
+      <h3 className="relative h-12 w-40 ">
+        <Image src={"/logo.png"} alt="logo" fill />
+      </h3>
 
       {/* MenuBar for mobile view */}
       <div className={`text-center`}>
@@ -26,11 +29,11 @@ const Navbar = () => {
       <div className="lg:hidden cursor-pointer">
         <button
           id="menu-button"
-          className="text-white"
+          className="text-background"
           onClick={() => setOpen(!open)} // Toggle open state
         >
           {open ? (
-            <div className="text-2xl">X</div>
+            <div className="text-xl font-semibold">X</div>
           ) : (
             <svg
               className="w-6 h-6"
@@ -54,7 +57,7 @@ const Navbar = () => {
         {navbarList.map((item) => (
           <Link href={item.href} key={item.id}>
             <div
-              className={`hover:text-textColor font-bold ${
+              className={`hover:text-textColor text-background font-bold ${
                 pathname === item.href ? "text-textColor" : ""
               }`}
             >
