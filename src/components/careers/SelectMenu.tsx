@@ -49,7 +49,7 @@ export function SelectMenu() {
         onValueChange={handleValueChange}
         defaultValue={searchParams.get("filter")?.toString() ?? selectedValue}
       >
-        <SelectTrigger className="overflow-hidden w-[100px] lg:w-[177px] rounded-lg">
+        <SelectTrigger className="overflow-hidden w-[100px] lg:w-[177px] bg-[#424242] border-0 rounded-xl">
           <SelectValue />
           {/* Displays selected value */}
         </SelectTrigger>

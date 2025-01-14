@@ -6,7 +6,7 @@ import { Archivo } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({
-  weight: ["100", "800"],
+  weight: ["200", "800"],
   subsets: ["latin"],
 });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={` ${archivo.className} antialiased `}>
-        <div className="fixed w-full top-0 z-30 px-[13px] lg:px-[50px] bg-[#E8E8E8] border border-[#424242]">
+        <div className="fixed w-full top-0 z-30 px-[13px] lg:px-[50px] bg-white border border-[#424242]">
           <Navbar />
         </div>
         <div className="mt-20">{children}</div>

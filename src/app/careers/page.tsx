@@ -51,9 +51,9 @@ export default function CareersPage() {
         </div>
 
         {/* card part */}
-        <div className="flex justify-center">
-          <div className="grid lg:grid-cols-2  lg:p-2.5 gap-10">
-            <Link href={`/careers/${id}`}>
+        <div className="flex justify-center ">
+          <div className="flex flex-col w-full gap-10 max-w-[1000px]">
+            <Link href={`/careers/${id}`} className="w-full ">
               <JobCard
                 title={"Frontend Developer"}
                 companyName={"FreshMoe Company"}
