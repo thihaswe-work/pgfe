@@ -14,7 +14,9 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${!open ? "" : ""}   h-20 items-center flex justify-between `}
+      className={`${
+        !open ? "" : ""
+      }   h-20 items-center flex justify-between container mx-auto`}
     >
       <Link href={"/"}>
         <h3 className="relative h-12 w-40 cursor-pointer">

@@ -10,7 +10,7 @@ const Banner = ({ title, image }: Prop) => {
   return (
     <div className="w-full h-[198px] relative flex justify-center items-center ">
       <span className="z-10 text-1xl font-bold">{title}</span>
-      <Image src={image} alt="about-us photo" fill />
+      <Image src={image} alt="about-us photo" fill className="object-cover" />
     </div>
   );
 };

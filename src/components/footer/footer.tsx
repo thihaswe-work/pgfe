@@ -34,8 +34,11 @@ const Footer = async () => {
   const response = await footerData();
 
   return (
-    <div className="">
-      <div className="flex gap-5 my-5 lg:px-[50px] px-[13px] flex-col lg:flex-row">
+    <div
+      className="
+    "
+    >
+      <div className="flex gap-5 my-5  flex-col lg:flex-row container mx-auto">
         {/* {left side} */}
         <div className="flex flex-1 flex-col gap-10 ">
           <div className="flex gap-2">

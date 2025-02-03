@@ -30,7 +30,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={` ${archivo.className} antialiased `}>
-        <div className="fixed w-full top-0 z-30 px-[13px] lg:px-[50px] bg-white border border-[#424242]">
+        <div className="fixed w-full top-0 z-30  bg-white border border-[#424242]">
           <Navbar />
         </div>
         <div className="mt-20">{children}</div>
@@ -40,3 +40,6 @@ export default function RootLayout({
   );
 }
 // border-b border-gray-600  bg-[rgba(17,25,40,0.75)]  border-[rgba(255,255,255,0.125)] backdrop-blur-[16px] backdrop-saturate-[180%]
+
+// original padding
+// px-[13px] lg:px-[50px]

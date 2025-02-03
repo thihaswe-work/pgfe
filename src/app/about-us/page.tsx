@@ -12,8 +12,8 @@ import {
 import Image from "next/image";
 
 export default async function AboutPage() {
-  const rectangleImage = "/rectangle.png";
-  const maskGroupImage = "/mask-group.png";
+  const rectangleImage = "/about1.png";
+  const maskGroupImage = "/about2.png";
 
   const sectionOneResponse = await aboutSectionOneData();
   const sectionTwoResponse = await aboutSectionTwoData();

@@ -12,7 +12,7 @@ export default async function ContactPage() {
         image={
           sectionOneData?.data?.image
             ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${sectionOneData.data.image}`
-            : "/keyboard-contact.png"
+            : "/contact.png"
         }
         title={
           sectionOneData?.data?.name ? sectionOneData.data.name : "Contact us"

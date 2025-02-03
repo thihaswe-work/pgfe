@@ -5,12 +5,12 @@ import Section4 from "@/components/homepage/section4";
 import Testimonials from "@/components/homepage/testimonials";
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Section1 />
       <Section2 />
       <Section3 />
       <Section4 />
-      <div className="px-[13px] md:px-[40px] lg:px-[50px]">
+      <div className=" bg-secondBgColor">
         <Testimonials />
       </div>
     </div>

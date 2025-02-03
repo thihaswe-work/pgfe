@@ -47,12 +47,8 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div
-      className={`relative select-none ${
-        pathname === "/" ? "bg-secondBgColor" : ""
-      }`}
-    >
-      <div className="py-8 flex justify-between lg:justify-around w-full  items-center">
+    <div className={`relative select-none ${pathname === "/" ? "" : ""}`}>
+      <div className="py-8 flex justify-between lg:justify-around w-full items-center container mx-auto">
         {/* <h1 className={` ${styles.testimonials} `}>Testimonials</h1> */}
         <div className="w-3/5 md:w-3/5 lg:w-2/5 h-9 md:h-10 lg:h-14 xl:h-20 relative">
           <Image src={"/testimonials.png"} alt="testimonials" fill />
@@ -66,7 +62,7 @@ const Testimonials = () => {
       </div>
 
       <Swiper
-        className="cursor-pointer"
+        className="cursor-pointer px-[13px] md:px-[40px] lg:px-[50px]"
         // install Swiper modules
         modules={[Pagination, Scrollbar, A11y, Navigation, Parallax]} // Ensure Navigation is included
         spaceBetween={50}
@@ -83,7 +79,7 @@ const Testimonials = () => {
         {/* swiper slide section */}
 
         {!data ? (
-          <SwiperSlide className="w-[100vw] h-auto cursor-pointer">
+          <SwiperSlide className="w-[100vw] h-auto cursor-pointer ">
             <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start lg:items-center">
               <div className="md:w-2/5 lg:w-1/5 w-4/5">
                 <span className="justify-center flex flex-col mb-3">
