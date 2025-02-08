@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -28,6 +29,7 @@ export default {
         sectionColor: "var(--sectionColor)",
         secondBgColor: "var(--secondBgColor)",
         thirdBgColor: "var(--thirdBgColor)",
+        navbarBgColor: "var(--navbarBgColor)",
       },
       screens: {
         "1xl": "1440px",
@@ -40,5 +42,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

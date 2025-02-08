@@ -1,67 +1,74 @@
+// "use client";
 import Banner from "@/components/banner";
 import BlogCard from "@/components/blogs/card";
+import FirstCard from "@/components/blogs/firstcard";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 
 export default function BlogsPage() {
   const blogsdata = Array.from({ length: 7 }, (_, index) => ({
     id: index + 1,
-    header: "Features",
-    title: "What are the signs of hormonal imbalance in women?",
-    desc: "Figma ipsum component variant  main layer. Comment device invite follower figjam fill. Scrolling move library fill link italic export image. Flows font layer inspect scale. Comment bu main layer. Comment device invite follower figjam fill. Scrolling move library fill link italic export image. Flows font layer inspect scale. Comment bu main layer. Comment device invite follower figjam fill. Scrolling move library fill link italic export image. Flows font layer inspect scale. Comment bu main layer. Comment device invite follower figjam fill. Scrolling move library fill link italic export image. Flows font layer inspect scale. Comment bu main layer. Comment device invite follower figjam fill. Scrolling move library fill link italic export image. Flows font layer inspect scale. Comment bullet team union link component boolean font. Plugin scrolling subtract device variant stroke image image star. Shadow fill list frame auto line.",
+    header: "8-8-2021",
+    title: "The Future of Web Development: Trends Shaping 2025 and Beyond",
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed eu
+    ismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing e
+    lit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra 
+    duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scele
+    risque etiam viverra consequat 
+    viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae 
+    at sed euismSee moreLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames
+     sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consec
+     tetur
+      adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverr
+      a duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nun
+      c. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendiss
+      e varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismSee more`,
     img: `/blog${index + 1}.svg`,
+
     first: index === 0 ? true : false,
   }));
   return (
     <div>
       <Banner image={"/blogs.svg"} title={"Blogs"} />
 
-      <div className="mt-36 mb-[120px] container mx-auto">
+      <div className="mt-36 mb-[120px] container mx-auto px-2 md:px-3 lg:px-0">
         <div>
-          <Card
-            className={`flex rounded-none bg-transparent shadow-none border-0 p-0 m-0 ${"flex-col"}  `}
-          >
-            <CardHeader className={` relative w-full p-0  m-0 ${"h-[300px]"} `}>
-              <Image
-                src={blogsdata[0].img}
-                alt="image"
-                fill
-                className="object-cover rounded-xl"
-              />
-            </CardHeader>
-            <CardContent
-              className={`flex-1 p-0 m-0 flex flex-col gap-3 mt-5 overflow-hidden ${""}`}
-            >
-              <h6>{blogsdata[0].header}</h6>
-              <CardTitle className="text-lg fotn-bold">
-                {blogsdata[0].title}
-              </CardTitle>
-              <CardDescription className="text-sm">
-                {blogsdata[0].desc}
-              </CardDescription>
-            </CardContent>
-          </Card>
+          <FirstCard
+            header={blogsdata[0].header}
+            title={blogsdata[0].title}
+            desc={`${blogsdata[0].desc} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. 
+            
+            Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Suspendisse varius enim in eros. 
+            Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat 
+            viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. 
+            Scelerisque etiam viverra consequat 
+            
+            viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit.
+             Vitae at sed euismSee moreLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+             varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien a
+             c quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet
+            , consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam
+             viverra consequat viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. S
+            uspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismSee more`}
+            img={blogsdata[0].img}
+          />
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-10 mb-24 mt-16 ">
+        <div className="grid  lg:grid-cols-3 justify-center gap-10 mb-24 mt-16 ">
+          <div className="font-semibold text-lg  lg:col-span-3">
+            Popular Topics
+          </div>
+
           {blogsdata.slice(1).map((item, index) => {
             return (
               <Link
-                href={`/blog/${item.id}`}
+                href={`/blogs/${item.id}`}
                 className={`${"col-span-1 max-h-[510px]"} overflow-hidden`}
                 key={item.id}
               >
                 <BlogCard
                   header={item.header}
-                  title={item.title}
+                  title={index === 5 ? "hello" : item.title}
                   desc={item.desc}
                   img={item.img}
                 />

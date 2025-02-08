@@ -30,7 +30,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={` ${archivo.className} antialiased `}>
-        <div className="fixed w-full top-0 z-30  bg-white border border-[#424242]">
+        <div className="fixed w-full top-0 z-30 bg-navbarBgColor border border-[#424242]">
           <Navbar />
         </div>
         <div className="mt-20">{children}</div>
