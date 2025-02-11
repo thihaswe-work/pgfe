@@ -16,7 +16,7 @@ interface Prop {
 }
 
 const BlogCard = ({ header, title, desc, img }: Prop) => {
-  const maxLength = 250;
+  const maxLength = 220;
   return (
     <Card
       className={`flex rounded-none bg-transparent shadow-none border-0 p-0 m-0 ${"flex-col"}  `}
@@ -35,7 +35,7 @@ const BlogCard = ({ header, title, desc, img }: Prop) => {
           {`${desc.slice(0, maxLength)}${desc.length > maxLength ? "..." : ""}`}
           {desc.length > maxLength && (
             <span className="text-red-500 cursor-pointer ml-1">
-              {` ${desc.length > maxLength ? "Read more..." : "Show less"}`}
+              {` ${desc.length > maxLength && "Read more..."}`}
             </span>
           )}
         </CardDescription>
