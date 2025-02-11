@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Banner from "@/components/banner";
 import Image from "next/image";
 export const dynamic = "force-dynamic";
@@ -74,10 +75,10 @@ export default async function Page({
               <div className="flex gap-2">
                 <span className="h-6 w-[2px] bg-navbarBgColor"></span>
                 <span className="">
-                  "Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim
+                  Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim
                   mauris id. Non pellentesque congue eget consectetur turpis.
                   Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt
-                  aenean tempus."
+                  aenean tempus.
                 </span>
               </div>
             </div>
