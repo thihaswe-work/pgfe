@@ -1,7 +1,6 @@
 "use client";
 
-import Banner from "@/components/banner";
-
+import BannerCareer from "@/components/careers/bannerCareer";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 
@@ -9,6 +8,7 @@ export default function CareersPage() {
   const pathname = usePathname();
   const { replace } = useRouter();
   const searchParams = useSearchParams();
+
   const handleSearch = useDebouncedCallback((term) => {
     const params = new URLSearchParams(searchParams);
     if (term) {
@@ -21,7 +21,7 @@ export default function CareersPage() {
 
   return (
     <div>
-      <Banner image={"/career.png"} title="Careers" />
+      <BannerCareer />
     </div>
   );
 }
