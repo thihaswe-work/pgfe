@@ -18,6 +18,7 @@ export default function CareersPage() {
     useState<{ id: number; label: string; category: string }[]>();
   const [category, setCategory] = useState<{ id: number; label: string }[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [currentJob, setCurrentJob] = useState();
   const jobsPerPage = 10; // Number of jobs per page
 
   const handleSearch = useDebouncedCallback((term) => {
@@ -310,11 +311,11 @@ export default function CareersPage() {
       );
     }
 
+    setJob(filteredJobs);
     // Paginate the filtered jobs
     const indexOfLastJob = currentPage * jobsPerPage;
     const indexOfFirstJob = indexOfLastJob - jobsPerPage;
     const currentJobs = filteredJobs.slice(indexOfFirstJob, indexOfLastJob);
-    setJob(currentJobs);
 
     // Recalculate total pages when filtered jobs change
     const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
