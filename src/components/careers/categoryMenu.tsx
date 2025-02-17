@@ -10,10 +10,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { StaticImageData } from "next/image";
 
 interface Prop {
-  categories: { id: number; label: string }[];
-  setCategory: (para?: { id: number; label: string }[]) => void;
+  categories: { id: number; label: string; img?: string | StaticImageData }[];
+  setCategory: (
+    value: { id: number; label: string; img?: string | StaticImageData }[]
+  ) => void;
 }
 
 export function CategoryMenu({ setCategory, categories }: Prop) {
@@ -23,23 +26,41 @@ export function CategoryMenu({ setCategory, categories }: Prop) {
     },
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: {
+    items: {
+      id: number;
+      label: string;
+      img?: string | StaticImageData;
+    }[];
+  }) => {
     setCategory(data.items); // Now sending [{ id, label }, { id, label }]
   };
 
   return (
     <Form {...form}>
       <form
-        onChange={form.handleSubmit(onSubmit)}
-        className="space-y-8 w-[270px] rounded-md border border-thirdBgColor p-4"
+        onChange={form.handleSubmit(
+          (e: {
+            items: {
+              id: number;
+              label: string;
+              img?: string | StaticImageData;
+            }[];
+          }) => {
+            onSubmit(e);
+          }
+        )}
+        className="space-y-8 w-[270px] rounded-md border border-thirdBgColor p-4 "
       >
         <FormField
           control={form.control}
           name="items"
           render={({ field }) => (
             <FormItem>
-              <div className="mb-4">
-                <FormLabel className="text-md">Career Categories</FormLabel>
+              <div className="mb-4 ">
+                <FormLabel className="text-lg font-semibold text-thirdBgColor ">
+                  Career Categories
+                </FormLabel>
               </div>
               {categories.map((item) => {
                 const isChecked = field.value.some((i) => i.id === item.id);
@@ -47,7 +68,7 @@ export function CategoryMenu({ setCategory, categories }: Prop) {
                 return (
                   <FormItem
                     key={item.id}
-                    className="flex flex-row items-center space-x-3"
+                    className="flex flex-row items-center space-x-3 "
                   >
                     <FormControl>
                       <Checkbox
@@ -59,9 +80,21 @@ export function CategoryMenu({ setCategory, categories }: Prop) {
                               : field.value.filter((i) => i.id !== item.id) // Remove by id
                           );
                         }}
+                        className={`${
+                          isChecked
+                            ? "data-[state=checked]:text-textColor border-red-500"
+                            : "border-white "
+                        }`}
                       />
                     </FormControl>
-                    <FormLabel className="font-normal">{item.label}</FormLabel>
+                    <FormLabel
+                      className={`-translate-y-1
+                         font-normal text-base ${
+                           isChecked ? "text-textColor" : ""
+                         }`}
+                    >
+                      {item.label}
+                    </FormLabel>
                   </FormItem>
                 );
               })}
