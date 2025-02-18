@@ -144,11 +144,11 @@ export default function CareersPage() {
     { id: 84, label: "Motion Graphics Designer", category: "Designer" },
     { id: 85, label: "Brand Identity Designer", category: "Designer" },
 
-    // { id: 86, label: "Agile Project Manager", category: "Project Manager" },
-    // { id: 87, label: "Scrum Master", category: "Project Manager" },
-    // { id: 88, label: "IT Project Manager", category: "Project Manager" },
-    // { id: 89, label: "Technical Project Manager", category: "Project Manager" },
-    // { id: 90, label: "Software Project Manager", category: "Project Manager" },
+    { id: 86, label: "Agile Project Manager", category: "Project Manager" },
+    { id: 87, label: "Scrum Master", category: "Project Manager" },
+    { id: 88, label: "IT Project Manager", category: "Project Manager" },
+    { id: 89, label: "Technical Project Manager", category: "Project Manager" },
+    { id: 90, label: "Software Project Manager", category: "Project Manager" },
 
     // { id: 91, label: "Manual QA Tester", category: "QA Tester" },
     // { id: 92, label: "Automation QA Engineer", category: "QA Tester" },
@@ -358,10 +358,10 @@ export default function CareersPage() {
   };
 
   return (
-    <div>
+    <div className="mb-20">
       <BannerCareer />
       <div className="container mx-auto w-full">
-        <div className=" sticky top-20  z-10">
+        <div className=" sticky top-20 z-10">
           <div className="bg-background h-4 w-full "></div>
           <div className="absolute  w-full bg-background ">
             <Input
@@ -392,10 +392,16 @@ export default function CareersPage() {
                         ?.img as string | StaticImageData
                     }
                     title={jobItem.label}
-                    desc={
-                      "lorem ipsum lorem lsfjasklfjalskjf kjfkalsnfasn jskjfaskljflsfjasklfjalskjf kjfkalsnfasn jskjfaskljf       kdsfjasfasjfksajfkjas  fdksjfksjdfkjwfkasjlfajsljfilsfjasklfjalskjf kjfkalsnfasn jskjfaskljf       kdsfjasfasjfksajfkjas  fdksjfksjdfkjwfkasjlfajsljfilsfjasklfjalskjf kjfkalsnfasn jskjfaskljf       kdsfjasfasjfksajfkjas  fdksjfksjdfkjwfkasjlfajsljfi       kdsfjasfasjfksajfkjas  fdksjfksjdfkjwfkasjlfajsljfi"
-                    }
+                    desc={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed eu
+    ismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing e
+    lit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra 
+    duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scele
+    risque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae 
+    at sed euismSee moreLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames
+    sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consec
+    tetur`}
                   />
+
                   {index !== currentJob.length - 1 && (
                     <span className="w-full h-[1px] bg-thirdBgColor"></span>
                   )}
@@ -412,7 +418,7 @@ export default function CareersPage() {
             onClick={handlePrevPage}
             disabled={currentPage === 1}
             className={`p-2  text-white rounded-md mr-2 ${
-              1 === currentPage && "text-gray-800"
+              1 === currentPage && "text-gray-700"
             }`}
           >
             {"<"}
@@ -424,7 +430,7 @@ export default function CareersPage() {
               <button
                 key={number}
                 onClick={() => handlePageClick(number)}
-                className={`p-2 rounded-md ${
+                className={`py-2 px-3 rounded-md ${
                   currentPage === number ? "bg-textColor text-white" : ""
                 }`}
               >
@@ -437,7 +443,7 @@ export default function CareersPage() {
             onClick={handleNextPage}
             disabled={currentPage === totalPages}
             className={`p-2  text-white rounded-md ml-2 ${
-              totalPages === currentPage && "text-gray-800"
+              totalPages === currentPage && "text-gray-700"
             }`}
           >
             {">"}

@@ -8,20 +8,33 @@ interface Prop {
   image?: string | StaticImageData;
 }
 export function JobCard({ image, title, desc }: Prop) {
+  const maxLength = 220;
+
   return (
-    <div className={"w-full flex h-[150px] gap-3"}>
-      <div className="h-full translate-y-[10px]">
+    <div
+      className={
+        "w-full flex h-[150px] gap-3 hover:border-l-[3px] hover:pl-3 hover:border-textColor transition-all duration-300"
+      }
+    >
+      <div className="h-full translate-y-[10px] flex-shrink-0">
         <Image
           src={image ?? "/developer.svg"}
           alt="category image"
-          width={46}
-          height={52}
+          width={31}
+          height={24}
           className="object-cover"
         />
       </div>
       <div className="h-full flex flex-col">
-        <h3 className={"font-bold text-xl"}>{title}</h3>
-        <span className={""}>{desc}</span>
+        <h3 className={"font-bold text-lg"}>{title}</h3>
+        <span className={"text-secondary"}>
+          {`${desc.slice(0, maxLength)}`}
+          {desc.length > maxLength && (
+            <span className=" cursor-pointer ml-1">
+              {` ${desc.length > maxLength && "..."}`}
+            </span>
+          )}
+        </span>
 
         <div className="mt-8 flex gap-11">
           <div className="w-[150px] flex gap-2">
