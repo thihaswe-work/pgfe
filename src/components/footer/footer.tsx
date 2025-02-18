@@ -38,7 +38,10 @@ const Footer = async () => {
       className="
     "
     >
-      <div className="flex gap-5 my-5  flex-col lg:flex-row container mx-auto">
+      <div
+        className="flex gap-5 my-5  flex-col lg:flex-row container mx-auto px-3 md:px-2 lg:px-0
+      "
+      >
         {/* {left side} */}
         <div className="flex flex-1 flex-col gap-10 ">
           <div className="flex gap-2">

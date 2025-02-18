@@ -11,15 +11,17 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { StaticImageData } from "next/image";
+import { useEffect } from "react";
 
 interface Prop {
   categories: { id: number; label: string; img?: string | StaticImageData }[];
   setCategory: (
     value: { id: number; label: string; img?: string | StaticImageData }[]
   ) => void;
+  category?: { id: number; label: string; img?: string | StaticImageData }[];
 }
 
-export function CategoryMenu({ setCategory, categories }: Prop) {
+export function CategoryMenu({ setCategory, categories, category }: Prop) {
   const form = useForm({
     defaultValues: {
       items: [] as { id: number; label: string }[], // Store full objects
@@ -36,6 +38,12 @@ export function CategoryMenu({ setCategory, categories }: Prop) {
     setCategory(data.items); // Now sending [{ id, label }, { id, label }]
   };
 
+  useEffect(() => {
+    if (category && category.length === 0) {
+      form.reset({ items: [] }); // Reset to empty array
+    }
+  }, [category, form]);
+
   return (
     <Form {...form}>
       <form
@@ -50,7 +58,7 @@ export function CategoryMenu({ setCategory, categories }: Prop) {
             onSubmit(e);
           }
         )}
-        className="space-y-8 w-[270px] rounded-md border border-thirdBgColor p-4 "
+        className="space-y-8 p-4 md:p-2 lg:p-4"
       >
         <FormField
           control={form.control}
@@ -58,7 +66,7 @@ export function CategoryMenu({ setCategory, categories }: Prop) {
           render={({ field }) => (
             <FormItem>
               <div className="mb-4 ">
-                <FormLabel className="text-lg font-semibold text-thirdBgColor ">
+                <FormLabel className="text-lg md:text-md lg:text-lg font-semibold text-thirdBgColor ">
                   Career Categories
                 </FormLabel>
               </div>
@@ -89,7 +97,7 @@ export function CategoryMenu({ setCategory, categories }: Prop) {
                     </FormControl>
                     <FormLabel
                       className={`-translate-y-1
-                         font-normal text-base ${
+                         font-normal text-sm lg:text-base ${
                            isChecked ? "text-textColor" : ""
                          }`}
                     >

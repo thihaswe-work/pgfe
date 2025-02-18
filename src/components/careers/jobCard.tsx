@@ -8,7 +8,7 @@ interface Prop {
   image?: string | StaticImageData;
 }
 export function JobCard({ image, title, desc }: Prop) {
-  const maxLength = 220;
+  const maxLength = 150;
 
   return (
     <div
@@ -36,17 +36,17 @@ export function JobCard({ image, title, desc }: Prop) {
           )}
         </span>
 
-        <div className="mt-8 flex gap-11">
-          <div className="w-[150px] flex gap-2">
-            <SlLocationPin className="text-lg" />
+        <div className="mt-8 flex w-full text-sm sm:text-base md:text-base gap-2 md:gap-0">
+          <div className=" w-fit sm:w-[110px]  md:w-[140px] flex gap-2">
+            <SlLocationPin className="md:text-md" />
             <p>Remote</p>
           </div>
-          <div className="w-[150px] flex gap-2">
-            <FaRegClock className="text-lg" />
+          <div className="  w-fit sm:w-[110px] md:w-[140px] flex gap-2 ">
+            <FaRegClock className="md:text-md" />
             <p>Full Time</p>
           </div>
-          <div className="w-[150px] flex gap-2">
-            <FaRegCalendar className="text-lg" />
+          <div className=" w-fit sm:w-[130px] md:w-[140px] flex gap-2">
+            <FaRegCalendar className="md:text-md" />
             <p>04 March 2025</p>
           </div>
         </div>

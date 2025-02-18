@@ -6,6 +6,7 @@ import { CategoryMenu } from "@/components/careers/categoryMenu";
 import { JobCard } from "@/components/careers/jobCard";
 import { Input } from "@/components/ui/input";
 import { Item } from "@radix-ui/react-dropdown-menu";
+import { GiSettingsKnobs } from "react-icons/gi";
 import { Search } from "lucide-react";
 import { StaticImageData } from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -26,6 +27,8 @@ export default function CareersPage() {
   const [currentJob, setCurrentJob] =
     useState<{ id: number; label: string; category: string }[]>();
   const jobsPerPage = 10; // Number of jobs per page
+
+  const [open, setOpen] = useState<boolean>(false);
 
   const handleSearch = useDebouncedCallback((term) => {
     const params = new URLSearchParams(searchParams);
@@ -358,11 +361,11 @@ export default function CareersPage() {
   };
 
   return (
-    <div className="mb-20">
+    <div className="mb-20 w-full relative">
       <BannerCareer />
-      <div className="container mx-auto w-full">
+      <div className="container mx-auto w-full px-2 md:px-3 lg:px-0">
         <div className=" sticky top-20 z-10">
-          <div className="bg-background h-4 w-full "></div>
+          <div className={`bg-background h-4 w-full`}></div>
           <div className="absolute  w-full bg-background ">
             <Input
               onChange={(e) => {
@@ -375,17 +378,28 @@ export default function CareersPage() {
             />
             {/* Magnifying glass icon */}
             <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm" />
+            <GiSettingsKnobs
+              className="absolute md:hidden right-2 top-1/2 transform -translate-y-1/2 text-textColor text-md"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            />
           </div>
         </div>
 
         <div className="flex h-auto min-h-screen mt-24 ">
-          <div className="w-[310px] h-full flex-shrink-0 sticky top-44 ">
-            <CategoryMenu categories={categories} setCategory={setCategory} />
+          <div className="hidden md:block w-[223px] lg:w-[310px] flex-shrink-0 h-full sticky top-44 ">
+            <div className="w-[193px] lg:w-[270px]  rounded-md border border-thirdBgColor ">
+              <CategoryMenu categories={categories} setCategory={setCategory} />
+            </div>
           </div>
           <div className="flex flex-col w-full  gap-11 ">
             {currentJob?.length ? (
               currentJob.map((jobItem, index) => (
-                <div key={jobItem.id} className="flex flex-col gap-5 w-full">
+                <div
+                  key={jobItem.id}
+                  className="flex flex-col gap-14 lg:gap-5 w-full"
+                >
                   <JobCard
                     image={
                       categories.find((c) => c.label === jobItem.category)
@@ -418,7 +432,7 @@ export default function CareersPage() {
             onClick={handlePrevPage}
             disabled={currentPage === 1}
             className={`p-2  text-white rounded-md mr-2 ${
-              1 === currentPage && "text-gray-700"
+              currentPage === 1 && "text-gray-700"
             }`}
           >
             {"<"}
@@ -443,12 +457,41 @@ export default function CareersPage() {
             onClick={handleNextPage}
             disabled={currentPage === totalPages}
             className={`p-2  text-white rounded-md ml-2 ${
-              totalPages === currentPage && "text-gray-700"
+              currentPage === totalPages && "text-gray-700"
             }`}
           >
             {">"}
           </button>
         </div>
+      </div>
+      <div
+        className={`fixed md:hidden inset-0 w-full h-full bg-background z-40 transition-transform duration-300 ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="h-11 p-4 py-[10px] flex justify-between border-b border-thirdBgColor">
+          <div
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            {"< Filters"}
+          </div>
+          <div
+            className="text-textColor"
+            onClick={() => {
+              setCategory([]);
+              setOpen(!open);
+            }}
+          >
+            Clear
+          </div>
+        </div>
+        <CategoryMenu
+          categories={categories}
+          setCategory={setCategory}
+          category={category}
+        />
       </div>
     </div>
   );

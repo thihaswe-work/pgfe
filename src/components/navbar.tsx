@@ -25,7 +25,7 @@ const Navbar = () => {
       </Link>
 
       {/* MenuBar for mobile view */}
-      <div className={`text-center`}>
+      <div className={`text-center block lg:hidden`}>
         <MenuBar open={open} setOpen={setOpen} />
       </div>
 
