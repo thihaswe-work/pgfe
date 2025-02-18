@@ -5,7 +5,7 @@ import BannerCareer from "@/components/careers/bannerCareer";
 import { CategoryMenu } from "@/components/careers/categoryMenu";
 import { JobCard } from "@/components/careers/jobCard";
 import { Input } from "@/components/ui/input";
-import { Item } from "@radix-ui/react-dropdown-menu";
+import { FaAngleLeft } from "react-icons/fa6";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { Search } from "lucide-react";
 import { StaticImageData } from "next/image";
@@ -374,7 +374,7 @@ export default function CareersPage() {
               defaultValue={searchParams.get("search")?.toString()}
               type="email"
               placeholder="Find your passionate careers"
-              className="w-full pl-10 h-12 " // Add padding to the left for the icon
+              className="w-full pl-10 h-10 md:h-12 " // Add padding to the left for the icon
             />
             {/* Magnifying glass icon */}
             <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm" />
@@ -471,11 +471,13 @@ export default function CareersPage() {
       >
         <div className="h-11 p-4 py-[10px] flex justify-between border-b border-thirdBgColor">
           <div
+            className="flex items-center"
             onClick={() => {
               setOpen(!open);
             }}
           >
-            {"< Filters"}
+            <FaAngleLeft className="text-navbarBgColor" />
+            {"Filters"}
           </div>
           <div
             className="text-textColor"
