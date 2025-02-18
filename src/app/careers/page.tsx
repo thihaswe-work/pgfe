@@ -13,6 +13,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import * as React from "react";
 import { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
+import Link from "next/link";
 
 export default function CareersPage() {
   const pathname = usePathname();
@@ -400,13 +401,14 @@ export default function CareersPage() {
                   key={jobItem.id}
                   className="flex flex-col gap-14 lg:gap-5 w-full"
                 >
-                  <JobCard
-                    image={
-                      categories.find((c) => c.label === jobItem.category)
-                        ?.img as string | StaticImageData
-                    }
-                    title={jobItem.label}
-                    desc={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed eu
+                  <Link href={`careers/${jobItem.id}`}>
+                    <JobCard
+                      image={
+                        categories.find((c) => c.label === jobItem.category)
+                          ?.img as string | StaticImageData
+                      }
+                      title={jobItem.label}
+                      desc={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed eu
     ismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing e
     lit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra 
     duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scele
@@ -414,7 +416,8 @@ export default function CareersPage() {
     at sed euismSee moreLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames
     sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consec
     tetur`}
-                  />
+                    />
+                  </Link>
 
                   {index !== currentJob.length - 1 && (
                     <span className="w-full h-[1px] bg-thirdBgColor"></span>
