@@ -14,7 +14,7 @@ export function JobCard({ image, title, desc }: Prop) {
   return (
     <div
       className={
-        "w-full flex h-[150px] gap-3 hover:border-l-[3px] hover:pl-3 hover:border-textColor transition-all duration-300"
+        "w-full flex h-[150px] gap-3 hover:border-l-[3px] hover:pl-3 border-textColor transition-all duration-300"
       }
     >
       <div className="h-full translate-y-[10px] flex-shrink-0">
