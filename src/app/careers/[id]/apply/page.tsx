@@ -13,7 +13,7 @@ export default function Page() {
           <h3 className="text-lg md:text-2xl lg:text-3xl font-bold">
             Frontend Developer
           </h3>
-          <div className="text-textColor flex gap-[6px] items-cente text-md">
+          <div className="text-textColor flex md:hidden lg:flex gap-[6px] items-cente text-base lg:text-md">
             <MdOutlineComputer className="translate-y-1 " />
             <span className="font-semibold">Developer</span>
           </div>

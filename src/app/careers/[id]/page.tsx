@@ -5,6 +5,7 @@ import { FaRegCalendar } from "react-icons/fa6";
 import { SlLocationPin } from "react-icons/sl";
 import { MdOutlineComputer } from "react-icons/md";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Page() {
   return (
@@ -39,7 +40,7 @@ export default async function Page() {
       {/* requirement */}
       <div className="flex mt-16 flex-col md:flex-row justify-between h-full gap-10 relative">
         <div className="flex flex-col gap-16 ">
-          <div>
+          <div className="text-secondary">
             Lorem ipsum dolor sit amet consectetur. Natoque phasellus ultricies
             sed habitant malesuada in. Lectus eu imperdiet in at sed. . Cras
             mauris feugiat fusce eget dolor eu a dui consequat. Nisl maecenas
@@ -81,13 +82,18 @@ export default async function Page() {
           />
         </div>
         <div className="md:w-[2px] h-[2px] w-full md:h-auto bg-thirdBgColor block "></div>
-        <div className="w-full md:w-[300px] flex-shrink-0 flex justify-center md:justify-end">
-          <div className="w-full md:w-64 md:h-64 flex flex-col items-center gap-16">
-            <Button className="text-navbarBgColor bg-textColor w-[90%] fixed bottom-10 md:static mx-5 md:mx-0">
-              Apply Now
-            </Button>
+        <div className="w-full md:w-[300px] flex-shrink-0 flex sticky top-24 justify-center md:justify-end h-fit">
+          <div className="w-full md:w-64 md:h-64 flex flex-col gap-12">
+            <Link
+              className="  fixed bottom-10 md:static mx-5 md:mx-0 w-[90%] md:w-full"
+              href={`/careers/${1}/apply`}
+            >
+              <Button className=" w-full  text-navbarBgColor bg-textColor hover:bg-textColor hover:text-navbarBgColor">
+                Apply Now
+              </Button>
+            </Link>
             <div className="flex flex-col gap-7">
-              <span className="text-thirdBgColor font-semibold">
+              <span className="text-thirdBgColor font-semibold md:text-md lg:text-lg">
                 Share with
               </span>
               <span className="text-sm flex gap-1">

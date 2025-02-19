@@ -84,3 +84,10 @@ li::before {
   font-size: 20px; /* Adjust size of the bullet */
   margin-right: 10px; /* Space between the bullet and text */
 }
+
+.careers li::before {
+  content: "\2022"; /* Unicode for bullet character */
+  color: var(--secondary); /* Set the color of the bullet */
+  font-size: 20px; /* Adjust size of the bullet */
+  margin-right: 10px; /* Space between the bullet and text */
+}
