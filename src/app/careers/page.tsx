@@ -5,7 +5,6 @@ export default function CareersPage() {
   return (
     <div className="mb-20 w-full relative">
       <BannerCareer />
-
       <Paginated />
     </div>
   );

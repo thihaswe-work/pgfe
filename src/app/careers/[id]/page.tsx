@@ -36,7 +36,7 @@ export default function Page() {
             Frontend Developer
           </h3>
           <div className="text-textColor flex gap-[6px] items-center text-md">
-            <MdOutlineComputer className="translate-y-1" />
+            <MdOutlineComputer className="" />
             <span className="font-semibold">Developer</span>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function Page() {
               className={`w-[90%] ${
                 isSticky
                   ? "md:static md:w-full md:translate-x-0 w-full"
-                  : "fixed left-1/2 bottom-10 transform -translate-x-1/2"
+                  : "fixed left-1/2 bottom-10 transform -translate-x-1/2 md:static md:translate-x-0"
               }`}
               href={`/careers/${1}/apply`}
             >
@@ -142,10 +142,10 @@ export default function Page() {
               </span>
               <span className="text-sm flex gap-1">
                 <Image
-                  src={"/facebook.svg"}
+                  src={"/facebook.png"}
                   alt="Facebook"
-                  width={15}
-                  height={15}
+                  width={18}
+                  height={13}
                 />
                 <span>Facebook</span>
               </span>

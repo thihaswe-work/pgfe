@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { CategoryMenu } from "@/components/careers/categoryMenu";
 import { JobCard } from "@/components/careers/jobCard";
 import { Input } from "@/components/ui/input";
@@ -185,6 +186,24 @@ const Paginated = () => {
     setTotalPages(totalPages);
   }, [job, currentPage]);
 
+  const [sticky, setSticky] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const targetDiv = document.getElementById("idref");
+      if (!targetDiv) return;
+
+      const targetPosition = targetDiv.getBoundingClientRect().bottom;
+      console.log(targetPosition);
+
+      setSticky(targetPosition <= window.innerHeight);
+      // Adjust threshold if needed
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // Total pages for pagination
   const [totalPages, setTotalPages] = useState(1);
 
@@ -211,10 +230,10 @@ const Paginated = () => {
   }
   const pages = pageNumbers();
   return (
-    <div>
-      <div className="container mx-auto w-full px-2 md:px-3 lg:px-0">
+    <div id="idref" className={`relative ${sticky ? "overflow-hidden" : ""}`}>
+      <div className="container mx-auto w-full px-2 md:px-3 lg:px-0 ">
         <div className=" sticky top-20 z-10">
-          <div className={`bg-background h-4 w-full`}></div>
+          <div className={`bg-background h-4 w-full `}></div>
           <div className="absolute  w-full bg-background ">
             <Input
               onChange={(e) => {
@@ -355,6 +374,24 @@ const Paginated = () => {
           category={category}
         />
       </div>
+      <Image
+        src={"/gradient.png"}
+        alt={"gradient image"}
+        className={`w-[945px] h-[386px]  -right-52 ${
+          sticky ? `fixed top-13 lg:top-[140px]` : "fixed top-[240px]"
+        }`}
+        width={0}
+        height={0}
+      />
+      <Image
+        src={"/gradientLeft.png"}
+        alt="gradient left"
+        width={0}
+        height={0}
+        className={` w-[945px] h-[386px]   -left-56 ${
+          sticky ? "absolute bottom-0" : "fixed  bottom-0 "
+        }`}
+      />
     </div>
   );
 };
