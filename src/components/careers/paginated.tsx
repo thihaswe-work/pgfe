@@ -283,7 +283,6 @@ const Paginated = () => {
           <button
             onClick={() => {
               handlePrevPage();
-              console.log("prev", currentPage, totalPages);
             }}
             disabled={currentPage === 1}
             className={`p-2   rounded-md mr-2 ${
@@ -313,7 +312,6 @@ const Paginated = () => {
           <button
             onClick={() => {
               handleNextPage();
-              console.log("next", currentPage, totalPages);
             }}
             disabled={currentPage === totalPages}
             className={`p-2  rounded-md ml-2 ${

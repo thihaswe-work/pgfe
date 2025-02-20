@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-"use client";
-
 import BannerCareer from "@/components/careers/bannerCareer";
 import Paginated from "@/components/careers/paginated";
 

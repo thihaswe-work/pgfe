@@ -4,7 +4,13 @@ import { FaRegCalendar } from "react-icons/fa6";
 import { MdOutlineComputer } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
 
-export default function Page() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const slug = (await params).id;
+  console.log(slug);
   return (
     <div className=" py-16 container mx-auto px-3 md:px-2 lg:px-0 ">
       {/* role */}
