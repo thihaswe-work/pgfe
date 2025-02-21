@@ -1,9 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import FooterNav from "./footerNav";
-import { footerData } from "@/lib/data";
 
-const Footer = async () => {
+const Footer = ({ data }: { data?: any }) => {
   const FOOTER_LINK = [
     {
       href: "/",
@@ -30,9 +29,7 @@ const Footer = async () => {
       label: "Contacts  /",
     },
   ];
-
-  const response = await footerData();
-
+  const response = data;
   return (
     <div
       className="
@@ -67,13 +64,13 @@ const Footer = async () => {
             <div className="flex flex-col flex-1">
               <span className="text-[12px] text-gray-600">CONTACT US</span>
               <span className="">
-                {response.data.contact ?? "+09998876554"}
+                {response?.data?.contact ?? "+09998876554"}
               </span>
             </div>
             <div className="flex flex-col flex-1">
               <span className="text-[12px] text-gray-600">EMAIL</span>
               <span className="">
-                {response.data.email ?? "passiongeek@logoipsum.com"}
+                {response?.data?.email ?? "passiongeek@logoipsum.com"}
               </span>
             </div>
           </div>
@@ -87,13 +84,13 @@ const Footer = async () => {
           <div className="flex flex-col flex-1">
             <span className="text-[12px] text-gray-600">ADDRESS</span>
             <span className="">
-              {response.data.address ??
+              {response?.data?.address ??
                 " 2118 Thornridge Cir. Syracuse, Connecticut 35624"}
             </span>
           </div>
           <div className="flex flex-col flex-1">
             <span className="text-[12px] text-gray-600">OPENING HOURS</span>
-            <span className="">{response.data.openhour ?? "9am—6pm"}</span>
+            <span className="">{response?.data?.openhour ?? "9am—6pm"}</span>
           </div>
         </div>
         <div className="justify-end flex lg:hidden">

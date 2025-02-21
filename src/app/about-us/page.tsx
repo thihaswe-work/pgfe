@@ -2,7 +2,7 @@ import HeroSection from "@/components/aboutus/heroSection";
 import IconSection from "@/components/aboutus/iconSection";
 import ProfileAndYear from "@/components/aboutus/profileAndYear";
 import Banner from "@/components/banner";
-import Testimonials from "@/components/homepage/testimonials";
+import Testimonials from "@/components/home/testimonials";
 import {
   aboutSectionOneData,
   aboutSectionThreeData,

@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import { CategoryMenu } from "@/components/careers/categoryMenu";
 import { JobCard } from "@/components/careers/jobCard";
 import { Input } from "@/components/ui/input";
@@ -12,6 +12,7 @@ import * as React from "react";
 import { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import Link from "next/link";
+import BannerCareer from "./bannerCareer";
 
 const Paginated = () => {
   const pathname = usePathname();
@@ -21,12 +22,15 @@ const Paginated = () => {
   const [job, setJob] = useState<
     { id: number; label: string; category: string }[]
   >([]);
+
   const [category, setCategory] = useState<{ id: number; label: string }[]>([]);
+
   const [currentPage, setCurrentPage] = useState(1);
+
   const [currentJob, setCurrentJob] =
     useState<{ id: number; label: string; category: string }[]>();
-  const jobsPerPage = 10; // Number of jobs per page
 
+  const jobsPerPage = 10;
   const [open, setOpen] = useState<boolean>(false);
 
   const handleSearch = useDebouncedCallback((term) => {
@@ -229,11 +233,12 @@ const Paginated = () => {
     return [startPage, startPage + 1, startPage + 2];
   }
   const pages = pageNumbers();
+
   return (
-    <div id="idref" className={`relative ${sticky ? "overflow-hidden" : ""}`}>
-      <div className="container mx-auto w-full px-2 md:px-3 lg:px-0 ">
-        <div className=" sticky top-20 z-10">
-          <div className={`bg-background h-4 w-full `}></div>
+    <div className={``}>
+      <div className="container mx-auto w-full px-2 md:px-3 lg:px-0 relative">
+        <div className=" sticky top-0 z-10">
+          <BannerCareer />
           <div className="absolute  w-full bg-background ">
             <Input
               onChange={(e) => {
@@ -242,7 +247,7 @@ const Paginated = () => {
               defaultValue={searchParams.get("search")?.toString()}
               type="email"
               placeholder="Find your passionate careers"
-              className="w-full pl-10 h-10 md:h-12 " // Add padding to the left for the icon
+              className="w-full pl-10 h-8 md:h-12 " // Add padding to the left for the icon
             />
             {/* Magnifying glass icon */}
             <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm" />
@@ -255,8 +260,8 @@ const Paginated = () => {
           </div>
         </div>
 
-        <div className="flex h-auto min-h-screen mt-24 ">
-          <div className="hidden md:block w-[223px] lg:w-[310px] flex-shrink-0 h-full sticky top-44 ">
+        <div className={`flex h-auto min-h-screen mt-24  ${sticky ? "" : ""}`}>
+          <div className="hidden md:block w-[223px] lg:w-[310px] flex-shrink-0 h-full sticky top-[306px] ">
             <div className="w-[193px] lg:w-[270px]  rounded-md border border-thirdBgColor ">
               <CategoryMenu categories={categories} setCategory={setCategory} />
             </div>
@@ -295,6 +300,24 @@ const Paginated = () => {
               <p>Not found</p>
             )}
           </div>
+          {/* <Image
+            src={"/gradient.png"}
+            alt={"gradient image"}
+            className={`w-[945px] h-[386px] -right-72 ${
+              sticky ? `fixed top-14 lg:top-[140px]` : "fixed top-[240px]"
+            }`}
+            width={0}
+            height={0}
+          />
+          <Image
+            src={"/gradientLeft.png"}
+            alt="gradient left"
+            width={0}
+            height={0}
+            className={` w-[945px] h-[386px]   -left-56 ${
+              sticky ? "absolute bottom-0" : "fixed  bottom-0 "
+            }`}
+          /> */}
         </div>
 
         {/* Pagination Controls */}
@@ -374,24 +397,6 @@ const Paginated = () => {
           category={category}
         />
       </div>
-      <Image
-        src={"/gradient.png"}
-        alt={"gradient image"}
-        className={`w-[945px] h-[386px]  -right-52 ${
-          sticky ? `fixed top-13 lg:top-[140px]` : "fixed top-[240px]"
-        }`}
-        width={0}
-        height={0}
-      />
-      <Image
-        src={"/gradientLeft.png"}
-        alt="gradient left"
-        width={0}
-        height={0}
-        className={` w-[945px] h-[386px]   -left-56 ${
-          sticky ? "absolute bottom-0" : "fixed  bottom-0 "
-        }`}
-      />
     </div>
   );
 };

@@ -1,9 +1,8 @@
-import Footer from "@/components/footer/footer";
-import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 
 import "./globals.css";
+import ClientLayout from "@/components/provider/clientLayout";
 
 const archivo = Archivo({
   weight: ["200", "800"],
@@ -30,11 +29,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={` ${archivo.className} antialiased `}>
-        <div className="fixed w-full top-0 z-30 bg-navbarBgColor border border-[#424242]">
-          <Navbar />
-        </div>
-        <div className="mt-20">{children}</div>
-        <Footer />
+        <ClientLayout> {children}</ClientLayout>
       </body>
     </html>
   );

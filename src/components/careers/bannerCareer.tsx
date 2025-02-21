@@ -1,6 +1,6 @@
 const BannerCareer = () => {
   return (
-    <div className="w-full h-[100px] md:h-[198px] relative flex items-center">
+    <div className="w-full h-[100px] md:h-[198px] relative flex items-center z-10 bg-background">
       <div className=" container mx-auto">
         <strong className=" text-lg sm:text-1xl md:text-3xl lg:text-[64px]  md:leading-[1] ">
           <h1>BECOME</h1>
