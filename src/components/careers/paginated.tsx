@@ -190,24 +190,6 @@ const Paginated = () => {
     setTotalPages(totalPages);
   }, [job, currentPage]);
 
-  const [sticky, setSticky] = useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const targetDiv = document.getElementById("idref");
-      if (!targetDiv) return;
-
-      const targetPosition = targetDiv.getBoundingClientRect().bottom;
-      console.log(targetPosition);
-
-      setSticky(targetPosition <= window.innerHeight);
-      // Adjust threshold if needed
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   // Total pages for pagination
   const [totalPages, setTotalPages] = useState(1);
 
@@ -236,7 +218,7 @@ const Paginated = () => {
 
   return (
     <div className={``}>
-      <div className="container mx-auto w-full px-2 md:px-3 lg:px-0 relative">
+      <div className="container mx-auto w-full px-2 md:px-3 lg:px-0 ">
         <div className=" sticky top-0 z-10">
           <BannerCareer />
           <div className="absolute  w-full bg-background ">
@@ -247,7 +229,7 @@ const Paginated = () => {
               defaultValue={searchParams.get("search")?.toString()}
               type="email"
               placeholder="Find your passionate careers"
-              className="w-full pl-10 h-8 md:h-12 " // Add padding to the left for the icon
+              className="w-full pl-10 h-10 md:h-12 " // Add padding to the left for the icon
             />
             {/* Magnifying glass icon */}
             <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm" />
@@ -260,7 +242,7 @@ const Paginated = () => {
           </div>
         </div>
 
-        <div className={`flex h-auto min-h-screen mt-24  ${sticky ? "" : ""}`}>
+        <div className={`flex h-auto min-h-screen mt-24  `}>
           <div className="hidden md:block w-[223px] lg:w-[310px] flex-shrink-0 h-full sticky top-[306px] ">
             <div className="w-[193px] lg:w-[270px]  rounded-md border border-thirdBgColor ">
               <CategoryMenu categories={categories} setCategory={setCategory} />
@@ -321,7 +303,7 @@ const Paginated = () => {
         </div>
 
         {/* Pagination Controls */}
-        <div className="flex justify-center mt-11 ">
+        <div className="flex justify-center mt-14 ">
           <button
             onClick={() => {
               handlePrevPage();

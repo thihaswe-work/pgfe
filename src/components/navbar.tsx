@@ -54,7 +54,7 @@ const Navbar = () => {
       <div className="lg:hidden cursor-pointer">
         <button
           id="menu-button"
-          className="text-background"
+          className="text-navbarBgColor"
           onClick={() => setOpen(!open)} // Toggle open state
         >
           {open ? (

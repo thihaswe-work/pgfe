@@ -13,7 +13,7 @@ export default function Home() {
         <Testimonials />
       </div> */}
 
-      <div className="h-screen bg-blue"></div>
+      <div className="h-screen bg-blue-500"></div>
     </div>
   );
 }
