@@ -47,7 +47,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className={`relative select-none ${pathname === "/" ? "" : ""}`}>
+    <div className={`relative select-none `}>
       <div className="py-8 flex justify-between lg:justify-around w-full items-center container mx-auto">
         {/* <h1 className={` ${styles.testimonials} `}>Testimonials</h1> */}
         <div className="w-3/5 md:w-3/5 lg:w-2/5 h-9 md:h-10 lg:h-14 xl:h-20 relative">
@@ -78,99 +78,60 @@ const Testimonials = () => {
       >
         {/* swiper slide section */}
 
-        {!data ? (
-          <SwiperSlide className="w-[100vw] h-auto cursor-pointer ">
-            <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start lg:items-center">
-              <div className="md:w-2/5 lg:w-1/5 w-4/5">
-                <span className="justify-center flex flex-col mb-3">
-                  <span className="text-3xl font-bold">{"Carolyn Willms"}</span>
-                  <span>{"Global Accountability Officer"}</span>
-                </span>
-                <p>
-                  {`Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Velit quidem nulla excepturi necessitatibus. Dolore, odit
-                      aut? Necessitatibus, facere incidunt, quibusdam a
-                      consequuntur assumenda, at vero culpa et minus id est.`}
-                </p>
-              </div>
-              <div className="flex relative justify-center items-center md:h-[200px] md:w-[200px] lg:h-[400px] lg:w-[400px] ">
-                <Image
-                  src={"/unplash.png"}
-                  alt={"unplash"}
-                  height={300}
-                  width={300}
-                />
-              </div>
+        <SwiperSlide className=" h-auto cursor-pointer">
+          <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20  p-6 bg-navbarBgColor  w-[70vw]">
+            <div className="relative w-[485px] h-[257px]">
+              <Image src={"/unique.png"} alt="image" fill />
             </div>
-          </SwiperSlide>
-        ) : data.length === 0 ? (
-          <SwiperSlide className="w-[100vw] h-auto cursor-pointer">
-            <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start lg:items-center">
-              {/* Skeleton for text */}
-              <div className="md:w-2/5 lg:w-1/5 w-4/5">
-                <span className="justify-center flex flex-col mb-3">
-                  <div className="h-6 bg-gray-300 rounded w-3/4 animate-pulse"></div>
-                  {/* Name skeleton */}
-                  <div className="h-4 bg-gray-300 rounded w-1/2 animate-pulse mt-2"></div>
-                  {/* Title skeleton */}
-                </span>
-                <p className="h-24 bg-gray-300 rounded animate-pulse"></p>
-                {/* Description skeleton */}
-              </div>
-
-              {/* Skeleton for image */}
-              <div className="flex relative justify-center items-center md:h-[200px] md:w-[200px] lg:h-[400px] lg:w-[400px]">
-                <div className="h-full w-full bg-gray-300 animate-pulse rounded-full"></div>
-                {/* Image skeleton */}
-              </div>
+            <div>
+              <h3 className="text-background">Unique Call</h3>
+              <p className="text-thirdBgColor">
+                Nisl maecenas lectus quisque morbi vitae morbi id purus
+                ultricies. Cras mauris feugiat fusce eget dolor eu a dui
+                consequat. Nisl maecenas lectus quisque morbi vitae morbi id
+                purus ultricies. Cras mauris feugiat fusce eget dolor eu a dui
+                consequat. Nisl maecenas lectus quisque morbi vitae morbi id
+                purus ultricies.
+              </p>
             </div>
-          </SwiperSlide>
-        ) : (
-          data.map((item) => {
-            return (
-              <SwiperSlide
-                key={item.id}
-                className="w-[100vw] h-auto cursor-pointer"
-              >
-                <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20 md:flex-row-reverse flex-col-reverse items-center md:items-start lg:items-center">
-                  <div className="md:w-2/5 lg:w-1/5 w-4/5">
-                    <span className="justify-center flex flex-col mb-3">
-                      <span className="text-3xl font-bold">
-                        {item?.name ? item.name : "Carolyn Willms"}
-                      </span>
-                      <span>
-                        {item?.role
-                          ? item.role
-                          : "Global Accountability Officer"}
-                      </span>
-                    </span>
-                    <p>
-                      {item.content
-                        ? item.content
-                        : `
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Velit quidem nulla excepturi necessitatibus. Dolore, odit
-                      aut? Necessitatibus, facere incidunt, quibusdam a
-                      consequuntur assumenda, at vero culpa et minus id est.`}
-                    </p>
-                  </div>
-                  <div className="flex relative justify-center items-center md:h-[200px] md:w-[200px] lg:h-[400px] lg:w-[400px] ">
-                    <Image
-                      src={
-                        item?.image
-                          ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${item.image}`
-                          : "/unplash.png"
-                      }
-                      alt={"unplash"}
-                      height={300}
-                      width={300}
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })
-        )}
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className=" h-auto cursor-pointer ">
+          <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20  p-6 bg-navbarBgColor">
+            <div className="relative w-[485px] h-[257px]">
+              <Image src={"/unique.png"} alt="image" fill />
+            </div>
+            <div>
+              <h3 className="text-background">Unique Call</h3>
+              <p className="text-thirdBgColor">
+                Nisl maecenas lectus quisque morbi vitae morbi id purus
+                ultricies. Cras mauris feugiat fusce eget dolor eu a dui
+                consequat. Nisl maecenas lectus quisque morbi vitae morbi id
+                purus ultricies. Cras mauris feugiat fusce eget dolor eu a dui
+                consequat. Nisl maecenas lectus quisque morbi vitae morbi id
+                purus ultricies.
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className=" h-auto cursor-pointer ">
+          <div className="flex justify-center mx-auto gap-20 md:gap-5 lg:gap-20  p-6 bg-navbarBgColor">
+            <div className="relative w-[485px] h-[257px]">
+              <Image src={"/unique.png"} alt="image" fill />
+            </div>
+            <div>
+              <h3 className="text-background">Unique Call</h3>
+              <p className="text-thirdBgColor">
+                Nisl maecenas lectus quisque morbi vitae morbi id purus
+                ultricies. Cras mauris feugiat fusce eget dolor eu a dui
+                consequat. Nisl maecenas lectus quisque morbi vitae morbi id
+                purus ultricies. Cras mauris feugiat fusce eget dolor eu a dui
+                consequat. Nisl maecenas lectus quisque morbi vitae morbi id
+                purus ultricies.
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
 
       {/* Navigation buttons */}

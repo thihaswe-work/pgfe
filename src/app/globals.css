@@ -39,6 +39,11 @@ body {
 }
 
 /* Custom style for pagination bullets */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--navbarBgColor) !important;
+}
 .swiper-pagination-bullet {
   background-color: #bbb !important; /* Grey color for inactive dots */
   width: 12px !important; /* Smaller size for inactive dots */

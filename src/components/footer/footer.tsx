@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import React from "react";
 import FooterNav from "./footerNav";
@@ -97,7 +98,7 @@ const Footer = ({ data }: { data?: any }) => {
           <FooterNav />
         </div>
       </div>
-      <span className="bg-sectionColor h-10 w-full  flex items-center justify-center">
+      <span className="bg-sectionColor h-10 w-full  flex items-center justify-center text-xs sm:text-sm md:text-base">
         Copyright © PassionGeek | Powered by PassionGeek
       </span>
     </div>

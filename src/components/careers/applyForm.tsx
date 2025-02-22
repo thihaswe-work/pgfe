@@ -181,26 +181,30 @@ const ApplyForm = () => {
           control={form.control}
           name="terms"
           render={({ field }) => (
-            <FormItem className="flex items-center space-x-2">
-              <FormControl>
-                <Checkbox
-                  className="border-navbarBgColor translate-y-1"
-                  checked={field.value}
-                  onCheckedChange={(checked) =>
-                    field.onChange(checked === true)
-                  }
-                />
-              </FormControl>
-              <FormLabel className="text-sm text-white">
-                {"I agree to the "}
-                <a href="/terms" className="text-textColor hover:underline">
-                  {" terms and conditions "}
-                </a>
-                {" & "}
-                <a href="/privacy" className="text-textColor hover:underline">
-                  {"  privacy policy "}
-                </a>
-              </FormLabel>
+            <FormItem className="flex flex-col gap-1">
+              <div className="flex items-center space-x-2">
+                <FormControl>
+                  <Checkbox
+                    className="border-navbarBgColor"
+                    checked={field.value}
+                    onCheckedChange={(checked) =>
+                      field.onChange(checked === true)
+                    }
+                  />
+                </FormControl>
+                <FormLabel className="text-sm text-white">
+                  {"I agree to the "}
+                  <a href="/terms" className="text-textColor hover:underline">
+                    {" terms and conditions "}
+                  </a>
+                  {" & "}
+                  <a href="/privacy" className="text-textColor hover:underline">
+                    {"  privacy policy "}
+                  </a>
+                  <br />
+                </FormLabel>
+              </div>
+
               <FormMessage />
             </FormItem>
           )}
