@@ -2,7 +2,6 @@ import HeroSection from "@/components/aboutus/heroSection";
 import IconSection from "@/components/aboutus/iconSection";
 import ProfileAndYear from "@/components/aboutus/profileAndYear";
 import Banner from "@/components/banner";
-import Testimonials from "@/components/home/testimonials";
 import {
   aboutSectionOneData,
   aboutSectionThreeData,
@@ -108,9 +107,7 @@ export default async function AboutPage() {
           />
         </div>
         {/* {testimonials section} */}
-        <div className=" px-[14px] lg:px-[45px] w-full h-full">
-          <Testimonials />
-        </div>
+        <div className=" px-[14px] lg:px-[45px] w-full h-full"></div>
         {/* {icon section} */}
         <IconSection />
       </div>
