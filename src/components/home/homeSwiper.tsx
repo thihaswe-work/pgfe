@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useRef, useState } from "react";
 
@@ -17,7 +18,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const HomeSwiper = () => {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<any | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const slides = [
     {
@@ -51,13 +52,12 @@ const HomeSwiper = () => {
 
     // Add more slides if needed
   ];
-  console.log(swiperRef);
+
   return (
-    <>
-      <div className="text-navbarBgColor text-center mb-10 text-2xl font-bold">
+    <div className="h-screen flex justify-center items-center flex-col gap-24">
+      <div className="text-navbarBgColor text-center mb-10 text-3xl font-bold">
         MILES STONE
       </div>
-
       <Swiper
         className="container mx-auto"
         modules={[Pagination, Scrollbar, A11y, Navigation, Parallax]}
@@ -68,71 +68,79 @@ const HomeSwiper = () => {
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         navigation={true}
       >
-        <SwiperSlide className="cursor-pointer">
-          <div className="flex justify-center  p-6 bg-navbarBgColor w-[70%] mx-auto max-w-[978px] gap-5 rounded-md">
-            <div>
-              <div className="relative w-[485px] h-[257px]">
-                <Image
-                  src={"/unique.png"}
-                  alt="image"
-                  fill
-                  className="object-cover"
-                />
+        {slides.map((item) => {
+          return (
+            <SwiperSlide className="cursor-pointer" key={item.id}>
+              <div className="flex justify-center  p-6 bg-navbarBgColor w-[70%] mx-auto max-w-[978px] gap-5 rounded-md ">
+                <div>
+                  <div className="relative w-[285px] xl:w-[485px] h-[257px]">
+                    <Image
+                      src={"/unique.png"}
+                      alt="image"
+                      fill
+                      className="object-cover rounded-md"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-background text-lg font-semibold mb-3">
+                    Unique Call
+                  </h3>
+                  <p className="text-thirdBgColor text-sm">
+                    Nisl maecenas lectus quisque morbi vitae morbi id purus
+                    ultricies. Cras mauris feugiat fusce eget dolor eu a dui
+                    consequat. Nisl maecenas lectus quisque morbi vitae morbi id
+                    purus ultricies. Cras mauris feugiat fusce eget dolor eu a
+                    dui consequat. Nisl maecenas lectus quisque morbi vitae
+                    morbi id purus ultricies.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 className="text-background">Unique Call</h3>
-              <p className="text-thirdBgColor">
-                Nisl maecenas lectus quisque morbi vitae morbi id purus
-                ultricies. Cras mauris feugiat fusce eget dolor eu a dui
-                consequat. Nisl maecenas lectus quisque morbi vitae morbi id
-                purus ultricies. Cras mauris feugiat fusce eget dolor eu a dui
-                consequat. Nisl maecenas lectus quisque morbi vitae morbi id
-                purus ultricies.
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       {/* Custom Pagination */}
-      <div className="flex justify-center gap-24 mt-4  border-b border-b-navbarBgColor overflow-hidden">
-        {slides.map((slide, index) => {
-          const isActive = index === activeIndex;
+      <div className="flex justify-center gap-24 mt-4  border-b border-b-navbarBgColor overflow-hidden w-full">
+        {[...slides.flatMap((slide) => [slide, slide])].map((slide, index) => {
+          const isSecondChild = index % 2 !== 0; // Check if it's the second occurrence
+          const isActive = Math.floor(index / 2) === activeIndex; // Adjust index for active check
+
           return (
             <button
-              key={slide.id}
-              onClick={() => swiperRef.current?.slideTo(index)}
+              key={`${slide.id}-${index}`}
+              onClick={() => swiperRef.current?.slideTo(Math.floor(index / 2))}
               className={cn(
-                "relative flex flex-col items-center transition-all duration-300"
+                "relative flex flex-col items-center transition-all duration-300 gap-3"
+                // Hide the second occurrence
               )}
             >
               {/* Floating Image Icon */}
               <div
                 className={`${
-                  isActive ? "opacity-100" : "opacity-0"
+                  isActive && !isSecondChild ? "opacity-100" : "opacity-0"
                 } transition-all duration-1000`}
               >
                 <img
                   src="/unique.png" // Replace with actual icon path
-                  alt={`Slide ${index + 1}`}
-                  className={`w-6 h-6   rounded-full `}
+                  alt={`Slide ${Math.floor(index / 2) + 1}`}
+                  className={`w-6 h-6 rounded-full`}
                 />
               </div>
 
               <div
                 className={`${
-                  isActive ? "translate-y-0" : " translate-y-[10px]"
-                } h-[30px] w-1 bg-navbarBgColor transition-transform duration-1000 `}
+                  isActive && !isSecondChild
+                    ? "translate-y-0"
+                    : "translate-y-[10px]"
+                } h-[30px] w-[2px] bg-navbarBgColor transition-transform duration-1000`}
               ></div>
             </button>
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ImpactCard from "./impactCard";
-import HomeCard from "./homeCard";
 
 const Upper = () => {
   const photoRef1 = useRef<HTMLDivElement>(null);
@@ -46,20 +45,19 @@ const Upper = () => {
           </div>
         </div>
       </div>
+      {/* Image 1 */}
+      <div className=" flex justify-center" ref={photoRef1}>
+        <Image
+          src="/home.svg"
+          alt="home image"
+          width={100}
+          height={100}
+          className="object-cover w-full h-[672px]"
+          style={{ transform: `scale(${scale1})` }}
+        />
+      </div>
 
       <div className="container mx-auto">
-        {/* Image 1 */}
-        <div className=" flex justify-center" ref={photoRef1}>
-          <Image
-            src="/home.svg"
-            alt="home image"
-            width={100}
-            height={100}
-            className="object-cover w-full h-[672px]"
-            style={{ transform: `scale(${scale1})` }}
-          />
-        </div>
-
         {/* impact */}
         <div ref={photoRef2} className="flex">
           <div className="w-[50%]  flex justify-center items-center text-xl font-semibold">
@@ -86,32 +84,6 @@ const Upper = () => {
         </div>
 
         {/* blogs */}
-        <div className="py-11">
-          <h3 className="mb-5">Popular Blog</h3>
-          <div className="flex justify-between">
-            <div className="w-1/4">
-              <HomeCard
-                img={"/home1.svg"}
-                title={"User Center Design"}
-                desc={"UI/UX"}
-              />
-            </div>
-            <div className="w-1/4">
-              <HomeCard
-                img={"/home1.svg"}
-                title={"User Center Design"}
-                desc={"UI/UX"}
-              />
-            </div>
-            <div className="w-1/4">
-              <HomeCard
-                img={"/home1.svg"}
-                title={"User Center Design"}
-                desc={"UI/UX"}
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

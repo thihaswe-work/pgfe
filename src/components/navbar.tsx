@@ -41,7 +41,7 @@ const Navbar = () => {
     >
       <Link href={"/"}>
         <h3 className="relative h-12 w-40 cursor-pointer">
-          <Image src={"/logo.png"} alt="logo" fill />
+          <Image src={"/logo.svg"} alt="logo" fill />
         </h3>
       </Link>
 

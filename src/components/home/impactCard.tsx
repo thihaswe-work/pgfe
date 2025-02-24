@@ -22,12 +22,14 @@ const ImpactCard = ({
   return (
     <div
       className={cn(
-        "w-full h-full pt-12 border-t border-b border-thirdBgColor pb-16",
+        "w-full h-full pt-12 border-t  border-thirdBgColor pb-16",
         className
       )}
       {...props}
     >
-      <h3 className={cn("font-bold text-xl mb-2", countClassName)}>{count}</h3>
+      <h3 className={cn("font-bold text-2xl mb-1", countClassName)}>
+        {count}+
+      </h3>
       <div className="flex items-center gap-2">
         <span className={cn(labelClassName)}>{label}</span>
         {icon}
