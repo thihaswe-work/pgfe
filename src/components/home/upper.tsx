@@ -57,13 +57,13 @@ const Upper = () => {
         />
       </div>
 
+      {/* impact */}
       <div className="container mx-auto">
-        {/* impact */}
-        <div ref={photoRef2} className="flex">
-          <div className="w-[50%]  flex justify-center items-center text-xl font-semibold">
+        <div ref={photoRef2} className="flex justify-between">
+          <div className="w-[50%] max-w-[648px] flex justify-center items-center text-xl font-semibold">
             OUR IMPACT
           </div>
-          <div className="grid grid-cols-2 grid-rows-2 w-[50%] gap-3">
+          <div className="grid grid-cols-2 grid-rows-2 w-[50%] gap-3 max-w-[648px]">
             <div className="col-span-1 row-span-1">
               <ImpactCard count={1000} label={"labels"} />
             </div>
@@ -82,8 +82,6 @@ const Upper = () => {
             </div>
           </div>
         </div>
-
-        {/* blogs */}
       </div>
     </div>
   );

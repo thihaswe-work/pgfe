@@ -22,7 +22,7 @@ const ImpactCard = ({
   return (
     <div
       className={cn(
-        "w-full h-full pt-12 border-t  border-thirdBgColor pb-16",
+        "w-full h-full pt-10 border-t  border-thirdBgColor pb-14",
         className
       )}
       {...props}

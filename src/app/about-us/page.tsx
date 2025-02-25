@@ -1,116 +1,51 @@
-import HeroSection from "@/components/aboutus/heroSection";
-import IconSection from "@/components/aboutus/iconSection";
-import ProfileAndYear from "@/components/aboutus/profileAndYear";
-import Banner from "@/components/banner";
-import {
-  aboutSectionOneData,
-  aboutSectionThreeData,
-  aboutSectionTwoData,
-} from "@/lib/data";
+import ImpactCard from "@/components/home/impactCard";
 
-import Image from "next/image";
+import PageScroll from "./pageScroll";
 
-export default async function AboutPage() {
-  const rectangleImage = "/about1.png";
-  const maskGroupImage = "/about2.png";
-
-  const sectionOneResponse = await aboutSectionOneData();
-  const sectionTwoResponse = await aboutSectionTwoData();
-  const sectionThreeResponse = await aboutSectionThreeData();
-
+export default function AboutPage() {
   return (
-    <div className="overflow-hidden">
-      <div>
-        <Banner
-          image={
-            sectionOneResponse?.data?.image
-              ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${sectionOneResponse.data.image}`
-              : maskGroupImage
-          }
-          title={
-            sectionOneResponse?.data?.title
-              ? sectionOneResponse.data.title
-              : "About Us"
-          }
-        />
+    <div>
+      {/* text */}
+      <div className="container mx-auto">
+        <div className="max-h-[436px] py-[88px] flex justify-center text-xl font-bold">
+          <div className="max-w-[900px] max-h-[260px] text-center">
+            We are passionate web developer with a knack for creating engaging
+            user experiences. My portfolio showcases a variety of projects that
+            highlight my skills in front-end development and design.
+          </div>
+        </div>
+        <div></div>
       </div>
-      {/* hero section */}
-      <div className="container mx-auto px-2 md:px-3 lg:px-0 ">
-        <div className="flex flex-col lg:gap-[120px] my-[120px] relative  ">
-          <HeroSection
-            layout={"right"}
-            image={
-              sectionTwoResponse?.data?.image
-                ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${sectionTwoResponse.data.image}`
-                : rectangleImage
-            }
-            title={
-              sectionTwoResponse?.data?.title
-                ? sectionTwoResponse.data.ttile
-                : "What We’re Doing?"
-            }
-            desc={
-              sectionTwoResponse?.data?.desc
-                ? sectionTwoResponse.data.desc
-                : `Lorem ipsum dolor sit amet consectetur. Natoque phasellus ultricies sed habitant malesuada in.
-      Lectus eu imperdiet in at sed. Vel nunc tortor adipiscing ultrices id. Dis imperdiet egestas non
-      faucibus quis fames cras. Lorem ac tellus tincidunt tempor nam odio imperdiet. Neque parturient
-      vestibulum vestibulum in turpis urna cursus est cras. Proin at id vulputate pulvinar. Fames sapien ac quis suscipit.
-      Vitae at sed euismod nunc. Scelerisque etiam viverra consequat viverra duis.
+      {/* impact */}
+      <div className="container mx-auto py-11">
+        <div className="flex justify-between">
+          <div className="w-[50%] max-w-[648px] flex justify-center items-center text-xl font-semibold">
+            OUR IMPACT
+          </div>
+          <div className="grid grid-cols-2 grid-rows-2 w-[50%]  max-w-[648px] gap-3">
+            <div className="col-span-1 row-span-1">
+              <ImpactCard count={1000} label={"labels"} />
+            </div>
+            <div className="col-span-1 row-span-1">
+              <ImpactCard
+                count={1000}
+                label={"labels"}
+                countClassName="text-textColor"
+              />
+            </div>
+            <div className="col-span-1 row-span-1">
+              <ImpactCard count={1000} label={"labels"} />
+            </div>
+            <div className="col-span-1 row-span-1">
+              <ImpactCard count={1000} label={"labels"} />
+            </div>
+          </div>
+        </div>
+      </div>
 
-      Nisl maecenas lectus quisque morbi vitae morbi id purus ultricies.
-      Cras mauris feugiat fusce eget dolor eu a dui consequat. Et pretium
-      viverra quam et nisi vestibulum vel. Faucibus aliquet risus massa tristique ultricies.
-      Nulla aliquam scelerisque lacus id feugiat. Nec senectus urna proin proin sit. Accumsan id amet sit quam.
-      Interdum elit ullamcorper imperdiet non neque dictum egestas massa lorem.`
-            }
-          />
-          <HeroSection
-            layout={"left"}
-            image={
-              sectionThreeResponse?.data?.image
-                ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${sectionThreeResponse.data.image}`
-                : maskGroupImage
-            }
-            title={
-              sectionThreeResponse?.data?.title
-                ? sectionThreeResponse.data.ttile
-                : "How Did We Build Our Team?"
-            }
-            desc={
-              sectionThreeResponse?.data?.desc
-                ? sectionThreeResponse.data.desc
-                : `Lorem ipsum dolor sit amet consectetur. Natoque phasellus ultricies sed habitant malesuada in. Lectus eu
-        imperdiet in at sed. Vel nunc tortor adipiscing ultrices id. Dis imperdiet egestas non faucibus quis fames cras.
-        Lorem ac tellus tincidunt tempor nam odio imperdiet. Neque parturient vestibulum vestibulum in turpis urna cursus est cras.
-        Proin at id vulputate pulvinar. Fames sapien ac quis suscipit. Vitae at sed euismod nunc. Scelerisque etiam viverra consequat
-        viverra duis.`
-            }
-          />
-          <Image
-            src={"/gradient.png"}
-            alt={"gradient image"}
-            className="w-[945px] h-[386px] absolute -right-52 -bottom-10"
-            width={0}
-            height={0}
-          />
-        </div>
-        {/* profile and year section */}
-        <div className="relative ">
-          <ProfileAndYear />
-          <Image
-            src={"/gradientLeft.png"}
-            alt="gradient left"
-            width={0}
-            height={0}
-            className=" w-[945px] h-[386px] absolute top-32 -left-56"
-          />
-        </div>
-        {/* {testimonials section} */}
-        <div className=" px-[14px] lg:px-[45px] w-full h-full"></div>
-        {/* {icon section} */}
-        <IconSection />
-      </div>
+      <PageScroll />
+
+      <div className="h-screen bg-yellow-500"></div>
     </div>
   );
 }

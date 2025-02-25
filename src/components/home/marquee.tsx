@@ -11,7 +11,7 @@ const CustomMarquee = ({ direction }: { direction?: boolean }) => {
         direction={`${direction ? "right" : "left"}`}
         speed={50}
       >
-        <div className="flex items-center gap-10   pr-10">
+        <div className="flex items-center gap-10 pr-10">
           {/* Add pr-40 */}
           {[1, 2, 3, 4, 5].map((item) => {
             return (
@@ -31,9 +31,9 @@ const CustomMarquee = ({ direction }: { direction?: boolean }) => {
                     fill
                   />
                 </div>
-                <div className="text-thirdBgColor flex flex-col gap-1 h-full">
-                  <h3 className="flex-shrink-0">Smallest Htet</h3>
-                  <span className="text-xs flex-shrink overflow-hidden">
+                <div className=" flex flex-col gap-1 h-full">
+                  <h3 className="flex-shrink-0 text-thirdBgColor">tut p</h3>
+                  <span className="text-xs flex-shrink overflow-hidden text-secondary">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Unde dolorum ex molestiae ratione necessitatibus cumque
                     illum quae, commodi eligendi dolorem amet cupiditate !

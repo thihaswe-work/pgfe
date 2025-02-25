@@ -1,21 +1,21 @@
-"use client";
-import { IoMdArrowRoundUp } from "react-icons/io";
-const FooterNav = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scrolling effect
-    });
-  };
+import Link from "next/link";
+
+interface Prop {
+  title: string;
+  links: { label: string; href: string }[];
+}
+const FooterNav = ({ title, links }: Prop) => {
   return (
-    <span className="cursor-pointer">
-      <p
-        onClick={scrollToTop}
-        className="text-black p-2 bg-white rounded-full text-md w-10 flex justify-center items-center"
-      >
-        <IoMdArrowRoundUp />
-      </p>
-    </span>
+    <div className="flex flex-col gap-4">
+      <h3 className="text-lg font-semibold text-thirdBgColor">{title}</h3>
+      {links.map((item) => {
+        return (
+          <Link href={item.href} key={item.label}>
+            <span>{item.label}</span>
+          </Link>
+        );
+      })}
+    </div>
   );
 };
 

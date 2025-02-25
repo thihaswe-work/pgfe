@@ -1,105 +1,112 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import Link from "next/link";
-import React from "react";
+import Image from "next/image";
 import FooterNav from "./footerNav";
 
-const Footer = ({ data }: { data?: any }) => {
-  const FOOTER_LINK = [
+const Footer = () => {
+  const QUICK_LINKS = [
     {
       href: "/",
-      label: "Home /",
+      label: "Home",
     },
     {
       href: "/about-us",
-      label: "About Us /",
+      label: "About Us",
     },
     {
       href: "/product",
-      label: "Product /",
+      label: "Product",
     },
     {
       href: "/careers",
-      label: "Careers /",
+      label: "Careers",
+    },
+
+    {
+      href: "/contact",
+      label: "Contacts ",
+    },
+  ];
+  const BLOGS = [
+    {
+      href: "/",
+      label: "All",
     },
     {
-      href: "/blogs",
-      label: "Blogs /",
+      href: "/about-us",
+      label: "Information Technology",
+    },
+    {
+      href: "/product",
+      label: "Ui/Ux Design",
+    },
+    {
+      href: "/careers",
+      label: "Web Development",
+    },
+
+    {
+      href: "/contact",
+      label: "Mobile DevelopMent",
     },
     {
       href: "/contact",
-      label: "Contacts  /",
+      label: "Others :",
     },
   ];
-  const response = data;
+  const LEGAL = [
+    {
+      href: "/",
+      label: "Privacy Policy",
+    },
+    {
+      href: "/about-us",
+      label: "Terms of Service",
+    },
+    {
+      href: "/product",
+      label: "Terms & Conditions",
+    },
+    {
+      href: "/careers",
+      label: "Cookie Preferences",
+    },
+  ];
   return (
-    <div
-      className="
-    "
-    >
-      <div
-        className="flex gap-5 my-5  flex-col lg:flex-row container mx-auto px-3 md:px-2 lg:px-0
-      "
-      >
-        {/* {left side} */}
-        <div className="flex flex-1 flex-col gap-10 ">
-          <div className="flex gap-2">
-            <span className="text-3xl">PassionGeek</span>
-            <span className="flex items-start">&#129109;</span>
+    <div className="">
+      <div className="flex gap-5 my-5  flex-col lg:flex-row container mx-auto px-3 md:px-2 lg:px-0 justify-between py-11">
+        <div>
+          <div className="relative w-[311px] h-[85px]">
+            <Image fill src={"/logo.svg"} alt="logo" />
           </div>
-          <span className="lg:flex-1"></span>
-          <div className="flex flex-1 flex-wrap">
-            {FOOTER_LINK.map((item) => {
-              return (
-                <Link href={item.href} className="w-1/3" key={item.href}>
-                  <span>{item.label}</span>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* {mid side} */}
-        <div className="flex flex-1 lg:gap-10">
-          <div className="flex flex-1 flex-col gap:10 ">
-            <span className="lg:flex-1"></span>
-            <div className="flex flex-col flex-1">
-              <span className="text-[12px] text-gray-600">CONTACT US</span>
-              <span className="">
-                {response?.data?.contact ?? "+09998876554"}
-              </span>
+          <div className="flex gap-3">
+            <div className="relative w-[25px] h-[25px]">
+              <Image fill src={"/facebook.png"} alt="logo" />
             </div>
-            <div className="flex flex-col flex-1">
-              <span className="text-[12px] text-gray-600">EMAIL</span>
-              <span className="">
-                {response?.data?.email ?? "passiongeek@logoipsum.com"}
-              </span>
+            <div className="relative w-[25px] h-[25px]">
+              <Image fill src={"/linkedin.png"} alt="logo" />
             </div>
           </div>
         </div>
 
-        {/* {right side} */}
-        <div className="flex  flex-1 flex-col  ">
-          <span className=" justify-end hidden lg:flex">
-            <FooterNav />
-          </span>
-          <div className="flex flex-col flex-1">
-            <span className="text-[12px] text-gray-600">ADDRESS</span>
-            <span className="">
-              {response?.data?.address ??
-                " 2118 Thornridge Cir. Syracuse, Connecticut 35624"}
-            </span>
-          </div>
-          <div className="flex flex-col flex-1">
-            <span className="text-[12px] text-gray-600">OPENING HOURS</span>
-            <span className="">{response?.data?.openhour ?? "9am—6pm"}</span>
-          </div>
+        {/* quick links */}
+        <div>
+          <FooterNav title="QUICK LINKS" links={QUICK_LINKS} />
         </div>
-        <div className="justify-end flex lg:hidden">
-          <FooterNav />
+
+        {/* blogs */}
+        <div>
+          <FooterNav title="BLOGS" links={BLOGS} />
+        </div>
+
+        {/* api */}
+        <div>
+          <FooterNav title="LEGAL" links={LEGAL} />
         </div>
       </div>
-      <span className="bg-sectionColor h-10 w-full  flex items-center justify-center text-xs sm:text-sm md:text-base">
-        Copyright © PassionGeek | Powered by PassionGeek
+      <span className=" h-14 w-full gap-3 flex items-center justify-center text-xs sm:text-sm md:text-base border-t border-thirdBgColor">
+        © 2012-2025
+        <span className="text-textColor text-md font-semibold">
+          PassionGeek
+        </span>
       </span>
     </div>
   );

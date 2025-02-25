@@ -36,10 +36,24 @@ export default function Home() {
         </div>
       </div>
       <HomeSwiper />
-      <div className="flex flex-col gap-10  pb-20 ">
+      <div className="flex flex-col gap-10  pb-20 relative overflow-hidden">
         <CustomMarquee />
         <CustomMarquee direction={true} />
         <CustomMarquee />
+        <Image
+          src={"/homebg.svg"}
+          alt="homeleft"
+          width={100}
+          height={100}
+          className="h-full absolute w-[774px] left-0 object-cover -translate-x-[50%] z-10"
+        />
+        <Image
+          src={"/homebg.svg"}
+          alt="homeleft"
+          width={100}
+          height={100}
+          className="h-full absolute w-[774px] right-0 object-cover translate-x-[50%] z-10"
+        />
       </div>
       <div className="border-b border-t border-thirdBgColor py-6">
         <div className="container mx-auto flex justify-between ">
@@ -47,7 +61,7 @@ export default function Home() {
             <h1 className="font-bold text-[40px] ">
               Get a booking schedule with us.
             </h1>
-            <Button className="py-5 px-10 rounded-md bg-textColor w-fit h-fit flex gap-3">
+            <Button className="py-5 px-10 rounded-md bg-textColor w-fit h-fit flex gap-3 hover:bg-textColor font-semibold">
               <Image src={"/book.png"} alt="" width={10} height={10} />
               <span> Book Now</span>
             </Button>

@@ -32,7 +32,7 @@ const ClientLayout = ({
         <Navbar />
       </div>
 
-      <div className="mt-20">{children}</div>
+      <div className="mt-20 bg-background">{children}</div>
       <Footer data={footerdata} />
     </div>
   );
