@@ -46,8 +46,8 @@ const PageScroll = () => {
             alt="aboutus"
             width={100}
             height={100}
-            className={`object-cover w-full h-[calc(100vh-168px)] -z-10 transition-opacity duration-500 ${
-              isScrolled ? "opacity-50" : "opacity-100"
+            className={`object-cover w-full h-[calc(100vh-168px)] transition-opacity duration-500 ${
+              isScrolled ? "opacity-30" : "opacity-100"
             }`} // Apply opacity change based on visibility of "hello" div
           />
         </div>
