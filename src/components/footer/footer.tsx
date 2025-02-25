@@ -72,7 +72,7 @@ const Footer = () => {
   ];
   return (
     <div className="bg-background">
-      <div className="flex gap-5 my-5  flex-col lg:flex-row container mx-auto px-3 md:px-2 lg:px-0 justify-between py-11">
+      <div className="flex gap-5 my-5 flex-col lg:flex-row container mx-auto px-3 md:px-2 lg:px-0 justify-between py-11">
         <div>
           <div className="relative w-[311px] h-[85px]">
             <Image fill src={"/logo.svg"} alt="logo" />

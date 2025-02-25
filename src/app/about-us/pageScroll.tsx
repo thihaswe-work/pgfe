@@ -74,7 +74,7 @@ const PageScroll = () => {
 
           {/* Background Image with dynamic opacity */}
           <Image
-            src={"/aboutus.svg"}
+            src={"/aboutusbg.svg"}
             alt="aboutus"
             width={100}
             height={100}
@@ -86,13 +86,13 @@ const PageScroll = () => {
 
         {/* Scrollable Content */}
         <div className="relative z-10 flex flex-col">
-          {[...Array(2)].map((_, index) => (
+          {[...Array(3)].map((_, index) => (
             <div
               key={index}
               ref={(el: HTMLDivElement | null) => {
                 helloRefs.current[index] = el;
               }}
-              className="h-[calc(100vh-168px)] flex justify-center text-5xl font-bold gap-11 items-centerborder-t border-red-500 transition-opacity duration-500"
+              className="h-[calc(100vh-168px)] flex justify-center text-5xl font-bold gap-11 items-center transition-opacity duration-500"
               style={{ opacity: opacityStates[index] }}
             >
               <div className="flex justify-center items-center w-[50%] max-w-[648px] text-3xl font-bold">
