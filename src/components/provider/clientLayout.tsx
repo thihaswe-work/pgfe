@@ -1,29 +1,12 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar";
-import { footerData } from "@/lib/data";
+import React from "react";
 
 const ClientLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const [footerdata, setFooterData] = useState();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await footerData();
-        setFooterData(response.data);
-      } catch (error) {
-        console.error("Error fetching footer data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <div>
       <div
@@ -33,7 +16,7 @@ const ClientLayout = ({
       </div>
 
       <div className="mt-20 bg-background">{children}</div>
-      <Footer data={footerdata} />
+      <Footer />
     </div>
   );
 };

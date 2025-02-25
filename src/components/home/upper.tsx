@@ -60,7 +60,7 @@ const Upper = () => {
       {/* impact */}
       <div className="container mx-auto">
         <div ref={photoRef2} className="flex justify-between">
-          <div className="w-[50%] max-w-[648px] flex justify-center items-center text-xl font-semibold">
+          <div className="w-[50%] max-w-[648px] flex justify-center items-center text-2xl font-semibold">
             OUR IMPACT
           </div>
           <div className="grid grid-cols-2 grid-rows-2 w-[50%] gap-3 max-w-[648px]">

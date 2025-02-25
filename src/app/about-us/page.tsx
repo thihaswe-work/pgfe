@@ -7,45 +7,60 @@ export default function AboutPage() {
     <div>
       {/* text */}
       <div className="container mx-auto">
-        <div className="max-h-[436px] py-[88px] flex justify-center text-xl font-bold">
-          <div className="max-w-[900px] max-h-[260px] text-center">
+        <div className=" flex justify-center text-2xl font-bold h-screen items-center ">
+          <div className="max-w-[1000px] text-center ">
             We are passionate web developer with a knack for creating engaging
             user experiences. My portfolio showcases a variety of projects that
-            highlight my skills in front-end development and design.
+            highlight my skills in front-end development and design. highlight
           </div>
         </div>
         <div></div>
       </div>
       {/* impact */}
-      <div className="container mx-auto py-11">
+      <div className="container mx-auto py-11 ">
         <div className="flex justify-between">
-          <div className="w-[50%] max-w-[648px] flex justify-center items-center text-xl font-semibold">
+          <div className="w-[50%] max-w-[648px] flex justify-center items-center text-2xl font-semibold">
             OUR IMPACT
           </div>
           <div className="grid grid-cols-2 grid-rows-2 w-[50%]  max-w-[648px] gap-3">
             <div className="col-span-1 row-span-1">
-              <ImpactCard count={1000} label={"labels"} />
+              <ImpactCard count={500} />
             </div>
             <div className="col-span-1 row-span-1">
-              <ImpactCard
-                count={1000}
-                label={"labels"}
-                countClassName="text-textColor"
-              />
+              <ImpactCard count={500} countClassName="text-textColor" />
             </div>
             <div className="col-span-1 row-span-1">
-              <ImpactCard count={1000} label={"labels"} />
+              <ImpactCard count={500} />
             </div>
             <div className="col-span-1 row-span-1">
-              <ImpactCard count={1000} label={"labels"} />
+              <ImpactCard count={500} />
             </div>
           </div>
         </div>
       </div>
 
       <PageScroll />
-
-      <div className="h-screen bg-yellow-500"></div>
+      <div className="container mx-auto py-11">
+        <div className="flex justify-between">
+          <div className="w-[50%] max-w-[648px] flex justify-center items-center text-2xl font-semibold">
+            WHAT WE DO
+          </div>
+          <div className="grid grid-cols-2 grid-rows-2 w-[50%]  max-w-[648px] gap-3">
+            <div className="col-span-1 row-span-1">
+              <ImpactCard count={"UI/UX designer"} countClassName="text-lg" />
+            </div>
+            <div className="col-span-1 row-span-1">
+              <ImpactCard count={"UI/UX designer"} countClassName="text-lg" />
+            </div>
+            <div className="col-span-1 row-span-1">
+              <ImpactCard count={"UI/UX designer"} countClassName="text-lg" />
+            </div>
+            <div className="col-span-1 row-span-1">
+              <ImpactCard count={"UI/UX designer"} countClassName="text-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
