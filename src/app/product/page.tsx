@@ -1,4 +1,4 @@
-export default function ProductPage() {
+export default function Page() {
   return (
     <div className="">
       Product Page

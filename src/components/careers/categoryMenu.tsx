@@ -96,12 +96,13 @@ export function CategoryMenu({ setCategory, categories, category }: Prop) {
                       />
                     </FormControl>
                     <FormLabel
-                      className={`-translate-y-1
+                      className={`-translate-y-1 w-full flex justify-between
                          font-normal text-sm lg:text-base ${
                            isChecked ? "text-textColor" : ""
                          }`}
                     >
-                      {item.label}
+                      <span> {item.label}</span>
+                      <span>(5) </span>
                     </FormLabel>
                   </FormItem>
                 );

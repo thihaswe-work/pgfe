@@ -1,6 +1,6 @@
 import ImpactCard from "@/components/home/impactCard";
 
-import PageScroll from "./pageScroll";
+import PageScroll from "../../components/aboutus/pageScroll";
 
 export default function AboutPage() {
   return (
@@ -8,10 +8,10 @@ export default function AboutPage() {
       {/* text */}
       <div className="container mx-auto">
         <div className=" flex justify-center text-2xl font-bold h-screen items-center ">
-          <div className="max-w-[1000px] text-center ">
+          <div className="max-w-[950px] text-center ">
             We are passionate web developer with a knack for creating engaging
             user experiences. My portfolio showcases a variety of projects that
-            highlight my skills in front-end development and design. highlight
+            highlight my skills in front-end development and design.
           </div>
         </div>
         <div></div>
