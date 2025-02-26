@@ -55,9 +55,12 @@ const HomeSwiper = () => {
 
   return (
     <div className="h-screen flex justify-center items-center flex-col gap-24">
+      {/* header */}
       <div className="text-navbarBgColor text-center mb-10 text-3xl font-bold">
-        MILES STONE
+        MILESTONE
       </div>
+
+      {/* swiper body */}
       <Swiper
         className="container mx-auto"
         modules={[Pagination, Scrollbar, A11y, Navigation, Parallax]}
@@ -101,7 +104,7 @@ const HomeSwiper = () => {
         })}
       </Swiper>
 
-      {/* Custom Pagination */}
+      {/*  Pagination controls */}
       <div className="flex justify-center gap-24 mt-4  border-b border-b-navbarBgColor overflow-hidden w-full">
         {[...slides.flatMap((slide) => [slide, slide])].map((slide, index) => {
           const isSecondChild = index % 2 !== 0; // Check if it's the second occurrence
@@ -112,20 +115,19 @@ const HomeSwiper = () => {
               key={`${slide.id}-${index}`}
               onClick={() => swiperRef.current?.slideTo(Math.floor(index / 2))}
               className={cn(
-                "relative flex flex-col items-center transition-all duration-300 gap-3"
-                // Hide the second occurrence
+                "relative flex flex-col items-center transition-all duration-300 gap-3 w-6 flex-shrink-0"
               )}
             >
               {/* Floating Image Icon */}
               <div
                 className={`${
                   isActive && !isSecondChild ? "opacity-100" : "opacity-0"
-                } transition-all duration-1000`}
+                } transition-all duration-1000 `}
               >
                 <img
-                  src="/unique.png" // Replace with actual icon path
+                  src="/unique.png"
                   alt={`Slide ${Math.floor(index / 2) + 1}`}
-                  className={`w-6 h-6 rounded-full`}
+                  className={`w-6 h-6 rounded-full flex-shrink-0`}
                 />
               </div>
 

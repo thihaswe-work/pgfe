@@ -3,17 +3,17 @@
 import { CategoryMenu } from "@/components/careers/categoryMenu";
 import { JobCard } from "@/components/careers/jobCard";
 import { Input } from "@/components/ui/input";
-import { FaAngleLeft } from "react-icons/fa6";
-import { GiSettingsKnobs } from "react-icons/gi";
 import { Search } from "lucide-react";
 import { StaticImageData } from "next/image";
+import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import * as React from "react";
 import { useState } from "react";
+import { FaAngleLeft } from "react-icons/fa6";
+import { GiSettingsKnobs } from "react-icons/gi";
 import { useDebouncedCallback } from "use-debounce";
-import Link from "next/link";
 import BannerCareer from "./bannerCareer";
-import { SelectDemo } from "./country";
+import { Region } from "./country";
 
 const Paginated = () => {
   const pathname = usePathname();
@@ -490,6 +490,7 @@ const Paginated = () => {
   return (
     <div className={``}>
       <div className="container mx-auto w-full px-2 md:px-3 lg:px-0 ">
+        {/* input box */}
         <div className=" sticky top-0 z-10">
           <BannerCareer />
           <div className="flex bg-background ">
@@ -513,7 +514,7 @@ const Paginated = () => {
               />
             </div>
             <div className="h-10 md:h-12">
-              <SelectDemo
+              <Region
                 countries={countries}
                 country={country}
                 setCountry={setCountry}
@@ -522,7 +523,8 @@ const Paginated = () => {
           </div>
         </div>
 
-        <div className={`flex h-auto min-h-screen mt-24  `}>
+        {/* paginated */}
+        <div className={`flex h-auto min-h-screen mt-12 `}>
           <div className="hidden md:block w-[223px] lg:w-[310px] flex-shrink-0 h-full sticky top-[306px] ">
             <div className="w-[193px] lg:w-[270px]  rounded-md border border-thirdBgColor ">
               <CategoryMenu categories={categories} setCategory={setCategory} />
@@ -562,24 +564,6 @@ const Paginated = () => {
               <p>Not found</p>
             )}
           </div>
-          {/* <Image
-            src={"/gradient.png"}
-            alt={"gradient image"}
-            className={`w-[945px] h-[386px] -right-72 ${
-              sticky ? `fixed top-14 lg:top-[140px]` : "fixed top-[240px]"
-            }`}
-            width={0}
-            height={0}
-          />
-          <Image
-            src={"/gradientLeft.png"}
-            alt="gradient left"
-            width={0}
-            height={0}
-            className={` w-[945px] h-[386px]   -left-56 ${
-              sticky ? "absolute bottom-0" : "fixed  bottom-0 "
-            }`}
-          /> */}
         </div>
 
         {/* Pagination Controls */}
@@ -627,6 +611,7 @@ const Paginated = () => {
         </div>
       </div>
 
+      {/* filter for mobile */}
       <div
         className={`fixed md:hidden inset-0 w-full h-full bg-background z-40 transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"

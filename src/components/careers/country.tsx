@@ -16,7 +16,7 @@ interface Prop {
   setCountry: (para: string) => void;
 }
 
-export function SelectDemo({ countries, country, setCountry }: Prop) {
+export function Region({ countries, country, setCountry }: Prop) {
   return (
     <Select
       defaultValue={country}

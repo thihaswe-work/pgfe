@@ -9,10 +9,9 @@ const CustomMarquee = ({ direction }: { direction?: boolean }) => {
       <Marquee
         className="text-lg font-bold w-full"
         direction={`${direction ? "right" : "left"}`}
-        speed={50}
+        speed={30}
       >
         <div className="flex items-center gap-10 pr-10">
-          {/* Add pr-40 */}
           {[1, 2, 3, 4, 5].map((item) => {
             return (
               <div

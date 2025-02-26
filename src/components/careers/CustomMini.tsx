@@ -1,20 +1,5 @@
 import React from "react";
 
-// interface MiniCardType {
-//   title: string;
-//   realTitle: string;
-// }
-
-// export const MiniCard = ({ title, realTitle }: MiniCardType) => {
-//   return (
-//     <div className="w-full flex">
-//       <div className="w-1/3">{title}</div>
-//       <div className="">:</div>
-//       <div className="w-2/3 pl-2">{realTitle}</div>
-//     </div>
-//   );
-// };
-
 interface MinilistType {
   title: string;
   list: string[];
