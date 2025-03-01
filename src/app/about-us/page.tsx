@@ -7,38 +7,19 @@ export default function AboutPage() {
     <div>
       {/* text */}
       <div className="container mx-auto">
-        <div className=" flex justify-center text-2xl font-bold h-screen items-center ">
-          <div className="max-w-[950px] text-center ">
+        <div className=" flex flex-col justify-center text-2xl font-bold items-center max-w-[900px] mx-auto py-20">
+          <div className=" text-[60px] text-textColor text-center ">
+            Why the company name is passionGeek?
+          </div>
+          <div className="text-secondBgColor text-center text-md mx-auto">
             We are passionate web developer with a knack for creating engaging
             user experiences. My portfolio showcases a variety of projects that
             highlight my skills in front-end development and design.
           </div>
         </div>
-        <div></div>
       </div>
       {/* impact */}
-      <div className="container mx-auto py-11 ">
-        <div className="flex justify-between">
-          <div className="w-[50%] max-w-[648px] flex justify-center items-center text-2xl font-semibold">
-            OUR IMPACT
-          </div>
-          <div className="grid grid-cols-2 grid-rows-2 w-[50%]  max-w-[648px] gap-3">
-            <div className="col-span-1 row-span-1">
-              <ImpactCard count={500} />
-            </div>
-            <div className="col-span-1 row-span-1">
-              <ImpactCard count={500} countClassName="text-textColor" />
-            </div>
-            <div className="col-span-1 row-span-1">
-              <ImpactCard count={500} />
-            </div>
-            <div className="col-span-1 row-span-1">
-              <ImpactCard count={500} />
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <div></div>
       <PageScroll />
       <div className="container mx-auto py-11">
         <div className="flex justify-between">
