@@ -14,9 +14,10 @@ interface Prop {
   title: string;
   desc: string;
   img: string | StaticImageData;
+  reverse: boolean;
 }
 
-const FirstCard = ({ header, title, desc, img }: Prop) => {
+const FirstCard = ({ header, title, desc, img, reverse }: Prop) => {
   const [maxLength, setMaxLength] = useState(230);
 
   const descRef = useRef<HTMLDivElement>(null);
@@ -43,23 +44,28 @@ const FirstCard = ({ header, title, desc, img }: Prop) => {
   }, [desc]); // Depend on desc to recalculate when the description changes
 
   return (
-    <Card className="flex flex-col md:flex-row rounded-none bg-transparent shadow-none border-0 p-0 m-0 gap-8 h-[395px] ">
-      <CardHeader className="relative flex-1 h-full md:w-[55%] p-0 m-0 ">
+    <Card
+      className={`flex flex-col rounded-none bg-transparent shadow-none border-0 p-0 m-0 gap-8 h-[706px] ${
+        reverse ? "flex-row-reverse" : "flex-row"
+      }`}
+    >
+      <CardHeader className="relative flex-1 h-full p-0 m-0 ">
         <Image src={img} alt="image" fill className="object-cover rounded-md" />
       </CardHeader>
-      <CardContent className="flex-1 p-0 m-0 flex flex-col gap-2 mt-5 overflow-hidden text-white">
+      <CardContent className="flex-1 p-0 m-0 flex flex-col gap-2 mt-5 overflow-hidden text-white justify-center">
         <h6>{header}</h6>
-        <CardTitle className="text-md lg:text-lg font-bold">{title}</CardTitle>
+        <CardTitle className="text-md lg:text-xl font-bold">{title}</CardTitle>
         <CardDescription
           ref={descRef}
-          className="text-sm text-white transition-all duration-300 overflow-hidden"
+          className="text-md text-secondary transition-all duration-300 overflow-hidden"
         >
           {`${desc.slice(0, maxLength)}${desc.length > maxLength ? "..." : ""}`}
-          {desc.length > maxLength && (
-            <span className="text-red-500 cursor-pointer ml-1">
-              {` ${desc.length > maxLength && "Read more..."}`}
-            </span>
-          )}
+          {
+            desc.length > maxLength && ""
+            // <span className="text-red-500 cursor-pointer ml-1">
+            //   {` ${desc.length > maxLength && "Read more..."}`}
+            // </span>
+          }
         </CardDescription>
       </CardContent>
     </Card>

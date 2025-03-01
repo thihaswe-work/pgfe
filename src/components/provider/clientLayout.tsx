@@ -9,14 +9,14 @@ const ClientLayout = ({
 }>) => {
   return (
     <div>
-      <div
-        className={`fixed w-full top-0 z-30 bg-background border-b border-[#424242]  `}
-      >
+      <div className={`fixed w-full top-0 z-30 bg-background  `}>
         <Navbar />
       </div>
 
       <div className="mt-20 bg-background">{children}</div>
-      <Footer />
+      <div className="bg-color">
+        <Footer />
+      </div>
     </div>
   );
 };

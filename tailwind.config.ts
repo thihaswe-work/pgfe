@@ -31,6 +31,7 @@ export default {
         thirdBgColor: "var(--thirdBgColor)",
         navbarBgColor: "var(--navbarBgColor)",
         secondary: "var(--secondary)",
+        color: "var(--color)",
       },
       screens: {
         "1xl": "1440px",

@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { Region } from "./country";
 import { Search } from "lucide-react";
-import BannerCareer from "./bannerCareer";
+import Banner from "../banner";
 
 interface Prop {
   handleSearch: (para: string) => void;
@@ -25,7 +25,8 @@ const CareerSearch = ({
 }: Prop) => {
   return (
     <div className=" sticky top-0 z-10">
-      <BannerCareer />
+      <Banner text={["BECOME", "PASSIONGEEK", "MEMBER"]} />
+
       <div className="flex bg-background ">
         <div className="relative  w-full ">
           <Input

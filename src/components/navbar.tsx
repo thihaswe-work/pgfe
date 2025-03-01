@@ -37,7 +37,7 @@ const Navbar = () => {
     <div
       className={`${
         isNavbarVisible ? "translate-y-0 h-20 " : "-translate-y-20 h-0"
-      } transition-all duration-300 ease-in-out  items-center flex justify-between container mx-auto px-2 md:px-3 lg:px-0`}
+      } transition-all duration-300 ease-in-out  items-center flex justify-between px-10 bg-background`}
     >
       <Link href={"/"}>
         <h3 className="relative h-12 w-40 cursor-pointer">
@@ -54,7 +54,7 @@ const Navbar = () => {
       <div className="lg:hidden cursor-pointer">
         <button
           id="menu-button"
-          className="text-navbarBgColor"
+          className=""
           onClick={() => setOpen(!open)} // Toggle open state
         >
           {open ? (
@@ -82,7 +82,7 @@ const Navbar = () => {
         {navbarList.map((item) => (
           <Link href={item.href} key={item.id}>
             <div
-              className={`hover:text-textColor text-navbarBgColor font-bold ${
+              className={`hover:text-textColor  font-bold ${
                 pathname === item.href ? "text-textColor" : ""
               }`}
             >

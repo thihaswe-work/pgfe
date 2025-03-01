@@ -9,6 +9,7 @@ interface Prop {
 const HomeCard = ({ img, title, desc }: Prop) => {
   return (
     <div className=" space-y-2 w-full h-full   ">
+      <h3 className="font-semibold">Ui/Ux</h3>
       <Image
         src={img}
         alt={""}
@@ -16,8 +17,8 @@ const HomeCard = ({ img, title, desc }: Prop) => {
         height={100}
         className="rounded-sm h-[277px] object-cover w-full "
       />
-      <h3>{title}</h3>
-      <span className="text-thirdBgColor">{desc}</span>
+      <h3 className="font-semibold">{title}</h3>
+      <span className="text-thirdBgColor text-sm">{desc}</span>
     </div>
   );
 };

@@ -25,51 +25,18 @@ body {
 body {
   box-sizing: border-box;
   background-color: #06090d;
-  color: white;
+  color: #06090d;
 }
 
 :root {
-  --background: #080808;
+  --background: #f5f5f5;
   --secondBgColor: #101010;
   --thirdBgColor: #424242;
   --textColor: #ed1c24;
   --sectionColor: #ed1c24;
   --navbarBgColor: #e8e8e8;
   --secondary: #c5c5c5;
-}
-
-/* Custom style for pagination bullets */
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--navbarBgColor) !important;
-}
-.swiper-pagination-bullet {
-  background-color: #bbb !important; /* Grey color for inactive dots */
-  width: 12px !important; /* Smaller size for inactive dots */
-  height: 12px !important; /* Equal height for the dots */
-  border-radius: 50% !important; /* Make the dots circular */
-  opacity: 1 !important; /* Full opacity for inactive dots */
-  transition: transform 0.3s ease, background-color 0.3s ease !important;
-}
-
-/* Custom style for the active pagination dot */
-.swiper-pagination-bullet-active {
-  background-color: var(--textColor) !important; /* Red for active dot */
-}
-
-/* Optional: Add a red bar beneath the active dot */
-.swiper-pagination {
-  position: relative !important;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-
-.swiper-pagination .swiper-pagination-bullet-active {
-  /* Red bar beneath the active dot */
-  border-radius: 5px !important;
-  width: 30px !important; /* Make the active dot's width larger */
-  /* Larger height for active dot */
+  --color: #06090d;
 }
 
 @layer base {
@@ -95,4 +62,25 @@ li::before {
   color: var(--secondary); /* Set the color of the bullet */
   font-size: 20px; /* Adjust size of the bullet */
   margin-right: 10px; /* Space between the bullet and text */
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+/* Increase bullet size */
+.swiper-pagination-bullet {
+  width: 16px !important; /* Default is 8px */
+  height: 16px !important;
+  background: #999999 !important; /* Change to a new color (e.g., orange) */
+  opacity: 0.6; /* Make it slightly transparent */
+  transform: translateY(-30px); /* Move the bullet slightly upwards */
+}
+
+/* Active bullet (current slide) */
+.swiper-pagination-bullet-active {
+  background: #424242 !important; /* Change to another custom color (e.g., blue) */
+  opacity: 1; /* Full opacity */
+  /* Slight zoom effect with more upward movement */
 }

@@ -12,8 +12,9 @@ import { useState } from "react";
 import { FaAngleLeft } from "react-icons/fa6";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { useDebouncedCallback } from "use-debounce";
-import BannerCareer from "./bannerCareer";
+
 import { Region } from "./country";
+import Banner from "../banner";
 
 const Paginated = () => {
   const pathname = usePathname();
@@ -492,7 +493,7 @@ const Paginated = () => {
       <div className="container mx-auto w-full px-2 md:px-3 lg:px-0 ">
         {/* input box */}
         <div className=" sticky top-0 z-10">
-          <BannerCareer />
+          <Banner text={["BECOME", "PASSIONGEEK", "MEMBER"]} />
           <div className="flex bg-background ">
             <div className="relative  w-full ">
               <Input

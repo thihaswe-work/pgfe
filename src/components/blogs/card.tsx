@@ -9,35 +9,34 @@ import {
 } from "@/components/ui/card";
 
 interface Prop {
-  header: string;
   title: string;
   desc: string;
   img: string | StaticImageData;
+  category: string;
 }
 
-const BlogCard = ({ header, title, desc, img }: Prop) => {
+const BlogCard = ({ title, desc, img, category }: Prop) => {
   const maxLength = 220;
   return (
     <Card
-      className={`flex rounded-none bg-transparent shadow-none border-0 p-0 m-0 ${"flex-col"}  `}
+      className={`flex rounded-none bg-transparent shadow-none border-0 p-0 m-0 flex-col  gap-3`}
     >
-      <CardHeader
-        className={` relative w-full p-0  m-0 h-[200px] md:h-[300px]  `}
-      >
+      <div className="text-thirdBgColor text-md">{category}</div>
+      <CardHeader className={` relative  p-0  m-0 h-[277px] w-full  `}>
         <Image src={img} alt="image" fill className="object-cover rounded-md" />
       </CardHeader>
       <CardContent
-        className={`flex-1 p-0 m-0 flex flex-col gap-3 mt-5 overflow-hidden text-white ${""}`}
+        className={`flex-1 p-0  flex flex-col overflow-hidden text-white ${""}`}
       >
-        <h6>{header}</h6>
         <CardTitle className="text-lg  text-white">{title}</CardTitle>
-        <CardDescription className="text-sm text-white">
+        <CardDescription className="text-sm text-secondary">
           {`${desc.slice(0, maxLength)}${desc.length > maxLength ? "..." : ""}`}
-          {desc.length > maxLength && (
-            <span className="text-red-500 cursor-pointer ml-1">
-              {` ${desc.length > maxLength && "Read more..."}`}
-            </span>
-          )}
+          {
+            desc.length > maxLength && ""
+            // <span className="text-red-500 cursor-pointer ml-1">
+            //   {` ${desc.length > maxLength && "Read more..."}`}
+            // </span>
+          }
         </CardDescription>
       </CardContent>
     </Card>
