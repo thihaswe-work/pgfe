@@ -74,8 +74,8 @@ const Footer = () => {
     <div className="">
       <div className="flex gap-5 flex-col lg:flex-row container mx-auto px-3 md:px-2 lg:px-0 justify-between py-11 text-background">
         <div>
-          <div className="relative w-[311px] h-[85px]">
-            <Image fill src={"/logo.svg"} alt="logo" />
+          <div className="relative w-[311px] h-[85px] ">
+            <Image fill src={"/logo.svg"} alt="logo" className="" />
           </div>
           <div className="flex gap-3">
             <div className="relative w-[25px] h-[25px]">
@@ -102,7 +102,7 @@ const Footer = () => {
           <FooterNav title="LEGAL" links={LEGAL} />
         </div>
       </div>
-      <span className=" h-14 w-full gap-3 flex items-center justify-center text-xs sm:text-sm md:text-base border-t border-thirdBgColor">
+      <span className=" h-14 w-full text-background gap-3 flex items-center justify-center text-xs sm:text-sm md:text-base border-t border-thirdBgColor">
         © 2012-2025
         <span className="text-textColor text-md font-semibold">
           PassionGeek

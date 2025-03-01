@@ -3,26 +3,27 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 
 const PageScroll = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const helloRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [opacityStates, setOpacityStates] = useState<number[]>(
     Array(2).fill(1)
   );
+  const [isBlurred, setIsBlurred] = useState(false); // State to manage blur effect
+
+  // Intersection Observer to handle when elements come into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries: IntersectionObserverEntry[]) => {
-        console.log(entries);
-
         const isAnyHelloInView = entries.some(
           (entry: IntersectionObserverEntry) => entry.isIntersecting
         );
-        setIsScrolled(isAnyHelloInView);
+
+        // Apply blur when any div is in view
+        setIsBlurred(isAnyHelloInView);
       },
       {
         root: null, // Use the viewport as the root
-        //Set a top margin of 168px
-        threshold: 0, // Trigger when 10% of the element is visible
-      } // Adjust how much of the "hello" section needs to be visible to trigger
+        threshold: 0, // Trigger when any part of the element is visible
+      }
     );
 
     // Observe each "hello" div
@@ -35,7 +36,9 @@ const PageScroll = () => {
         if (ref) observer.unobserve(ref);
       });
     };
-  }, []);
+  }, []); // Empty dependency array ensures it runs only once
+
+  // Scroll handler for opacity change
   useEffect(() => {
     const handleScroll = () => {
       const updatedOpacities = [...opacityStates];
@@ -52,13 +55,14 @@ const PageScroll = () => {
       setOpacityStates(updatedOpacities);
     };
 
+    // Attach scroll event listener
     window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    handleScroll(); // Call it once to initialize
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); // Empty dependency array ensures it runs only once
 
   return (
     <div>
@@ -72,33 +76,34 @@ const PageScroll = () => {
             <span className="text-textColor">Geek?</span>
           </h1>
 
-          {/* Background Image with dynamic opacity */}
+          {/* Background Image with dynamic blur effect */}
           <Image
             src={"/aboutusbg.svg"}
             alt="aboutus"
             width={100}
             height={100}
-            className={`object-cover w-full h-[calc(100vh-168px)] transition-opacity duration-500 ${
-              isScrolled ? "opacity-30" : "opacity-100"
-            }`}
+            className={`object-cover w-full h-[calc(100vh-168px)] transition-all duration-500`}
+            style={{
+              filter: isBlurred ? "blur(8px)" : "none", // Apply blur when in view
+            }}
           />
         </div>
 
         {/* Scrollable Content */}
         <div className="relative z-10 flex flex-col">
-          {[...Array(3)].map((_, index) => (
+          {[...Array(2)].map((_, index) => (
             <div
               key={index}
               ref={(el: HTMLDivElement | null) => {
                 helloRefs.current[index] = el;
               }}
-              className="h-[calc(100vh-168px)] flex justify-center text-5xl font-bold gap-11 items-center transition-opacity duration-500"
+              className="h-[calc(100vh-168px)] flex  text-background justify-center text-5xl font-bold gap-11 items-center transition-opacity duration-500"
               style={{ opacity: opacityStates[index] }}
             >
               <div className="flex justify-center items-center w-[50%] max-w-[648px] text-3xl font-bold">
                 Our Vision
               </div>
-              <div className="flex justify-center items-center w-[50%] max-w-[648px] text-md text-secondary">
+              <div className="flex justify-center items-center w-[50%] max-w-[648px] text-md ">
                 Lorem ipsum dolor sit amet consectetur. Natoque phasellus
                 ultricies sed habitant malesuada in. Lectus eu imperdiet in at
                 sed. Vel nunc tortor adipiscing ultrices id. Dis imperdiet
