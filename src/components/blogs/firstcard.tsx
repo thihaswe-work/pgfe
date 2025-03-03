@@ -52,12 +52,14 @@ const FirstCard = ({ header, title, desc, img, reverse }: Prop) => {
       <CardHeader className="relative flex-1 h-full p-0 m-0 ">
         <Image src={img} alt="image" fill className="object-cover rounded-md" />
       </CardHeader>
-      <CardContent className="flex-1 p-0 m-0 flex flex-col gap-2 mt-5 overflow-hidden text-white justify-center">
+      <CardContent className="flex-1 p-0 m-0 flex flex-col gap-2 mt-5 overflow-hidden text-secondColor justify-center font-medium">
         <h6>{header}</h6>
-        <CardTitle className="text-md lg:text-xl font-bold">{title}</CardTitle>
+        <CardTitle className="text-lg  text-color lg:text-2xl ">
+          {title}
+        </CardTitle>
         <CardDescription
           ref={descRef}
-          className="text-md text-secondary transition-all duration-300 overflow-hidden"
+          className="text-lg text-secondColor transition-all duration-300 overflow-hidden"
         >
           {`${desc.slice(0, maxLength)}${desc.length > maxLength ? "..." : ""}`}
           {
@@ -67,6 +69,9 @@ const FirstCard = ({ header, title, desc, img, reverse }: Prop) => {
             // </span>
           }
         </CardDescription>
+        <span className="text-red-500 cursor-pointer underline">
+          Read full article
+        </span>
       </CardContent>
     </Card>
   );

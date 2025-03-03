@@ -32,6 +32,7 @@ export default {
         navbarBgColor: "var(--navbarBgColor)",
         secondary: "var(--secondary)",
         color: "var(--color)",
+        secondColor: "var(--secondColor)",
       },
       screens: {
         "1xl": "1440px",

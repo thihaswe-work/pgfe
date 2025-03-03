@@ -16,7 +16,7 @@ const CustomMarquee = ({ direction }: { direction?: boolean }) => {
             return (
               <div
                 key={item}
-                className="flex items-center gap-3 text-base w-[487px] h-[103px] p-2 rounded-lg border border-thirdBgColor"
+                className="flex items-center gap-3 w-[487px] h-[103px] p-2 rounded-lg border border-thirdBgColor"
               >
                 <div className="relative w-[62px] h-[72px] flex-shrink-0">
                   <Image
@@ -30,9 +30,9 @@ const CustomMarquee = ({ direction }: { direction?: boolean }) => {
                     fill
                   />
                 </div>
-                <div className=" flex flex-col gap-1 h-full">
-                  <h3 className="flex-shrink-0 text-thirdBgColor">tut p</h3>
-                  <span className="text-xs flex-shrink overflow-hidden text-secondary">
+                <div className=" flex flex-col gap-1 h-full text-secondColor">
+                  <h3 className="flex-shrink-0 text-base">tut p</h3>
+                  <span className="text-sm flex-shrink overflow-hidden ">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Unde dolorum ex molestiae ratione necessitatibus cumque
                     illum quae, commodi eligendi dolorem amet cupiditate !

@@ -37,6 +37,7 @@ body {
   --navbarBgColor: #e8e8e8;
   --secondary: #c5c5c5;
   --color: #06090d;
+  --secondColor: #999999;
 }
 
 @layer base {

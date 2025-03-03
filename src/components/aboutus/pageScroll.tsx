@@ -5,7 +5,7 @@ import React, { useEffect, useState, useRef } from "react";
 const PageScroll = () => {
   const helloRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [opacityStates, setOpacityStates] = useState<number[]>(
-    Array(2).fill(1)
+    Array(3).fill(1)
   );
   const [isBlurred, setIsBlurred] = useState(false); // State to manage blur effect
 
@@ -69,7 +69,7 @@ const PageScroll = () => {
       <div className="relative py-[88px]">
         {/* Sticky Section */}
         <div className="flex flex-col gap-11 h-screen sticky top-0">
-          <h1 className="text-[80px] font-bold flex gap-5 justify-center tracking-wider h-32">
+          <h1 className="text-[120px] font-bold flex gap-5 justify-center tracking-wider h-32">
             <span>What </span>
             <span>is</span>
             <span className="text-textColor">Passion</span>
@@ -84,34 +84,31 @@ const PageScroll = () => {
             height={100}
             className={`object-cover w-full h-[calc(100vh-168px)] transition-all duration-500`}
             style={{
-              filter: isBlurred ? "blur(8px)" : "none", // Apply blur when in view
+              filter: isBlurred ? "blur(2px)" : "none", // Apply blur when in view
             }}
           />
         </div>
 
         {/* Scrollable Content */}
         <div className="relative z-10 flex flex-col">
-          {[...Array(2)].map((_, index) => (
-            <div
-              key={index}
-              ref={(el: HTMLDivElement | null) => {
-                helloRefs.current[index] = el;
-              }}
-              className="h-[calc(100vh-168px)] flex  text-background justify-center text-5xl font-bold gap-11 items-center transition-opacity duration-500"
-              style={{ opacity: opacityStates[index] }}
-            >
-              <div className="flex justify-center items-center w-[50%] max-w-[648px] text-3xl font-bold">
-                Our Vision
-              </div>
-              <div className="flex justify-center items-center w-[50%] max-w-[648px] text-md ">
-                Lorem ipsum dolor sit amet consectetur. Natoque phasellus
-                ultricies sed habitant malesuada in. Lectus eu imperdiet in at
-                sed. Vel nunc tortor adipiscing ultrices id. Dis imperdiet
-                egestas non faucibus quis fames cras. Lorem ac tellus tincidunt
-                tempor nam odio imperdiet. Neque parturient vestibulum
-                vestibulum in turpis urna cursus est cras. Proin at id vulputate
-                pulvinar. Fames sapien ac quis suscipit. Vitae at sed euismod
-                nunc. Scelerisque etiam viverra consequat viverra duis.
+          {[...Array(3)].map((_, index) => (
+            <div key={index} className="h-[calc(100vh)]">
+              <div
+                ref={(el: HTMLDivElement | null) => {
+                  helloRefs.current[index] = el;
+                }}
+                className=" flex flex-col  h-full max-h-[672px] text-background justify-center text-5xl font-bold gap-11 items-center transition-opacity duration-500"
+                style={{ opacity: opacityStates[index] }}
+              >
+                <div className="flex justify-center items-center w-[50%] max-w-[648px] text-3xl text-textColor">
+                  Our Vision
+                </div>
+                <div className="flex justify-center items-center w-[50%] max-w-[648px] text-md text-color">
+                  We are passionate web developer with a knack for creating
+                  engaging user experiences. My portfolio showcases a variety of
+                  projects that highlight my skills in front-end development and
+                  design.
+                </div>
               </div>
             </div>
           ))}

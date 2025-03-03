@@ -4,8 +4,8 @@ import FirstCard from "@/components/blogs/firstcard";
 
 export default function BlogsPage() {
   return (
-    <div className="">
-      <Banner text={["EXPLORE       YOUR", "TECHNOLOGIES", "KNOWLEDGE"]} />
+    <div className="pb-[108px]">
+      <Banner text={["EXPLORE", "YOUR", "TECHNOLOGIES", "KNOWLEDGE"]} />
       <div className="container mx-auto">
         <div className="flex flex-col gap-16 mb-16">
           {Array.from({ length: 3 }).map((item, index) => {

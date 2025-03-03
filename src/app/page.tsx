@@ -17,7 +17,7 @@ export default function Home() {
               key={i}
               className={`${
                 i % 2 ? "flex-row-reverse" : "flex-row"
-              } flex gap-16 items-center h-[50vh] flex-shrink-0`}
+              } flex gap-16 items-center justify-between h-[50vh] flex-shrink-0`}
             >
               <div className="h-[585px] flex items-center">
                 <Image
@@ -29,7 +29,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className={`flex flex-col  w-[25%] `}>
+              <div className={`flex flex-col  w-[25%] px-10`}>
                 <h3 className="text-xl font-bold ">300+</h3>
                 <span className="text-lg font-bold">IN HOUSE STAFFS</span>
                 <p className="text-thirdBgColor">
@@ -45,9 +45,8 @@ export default function Home() {
 
       <VerticalTimelineSwiper />
 
-      <div className="py-11 container mx-auto">
-        {/* <h3 className="mb-5">Popular Blog</h3> */}
-        <div className="flex justify-between flex-wrap max-w-[1126px] mx-auto">
+      <div className="py-11 ">
+        <div className="flex justify-around flex-wrap  mx-auto">
           <div className="w-[30%] max-w-[315px]">
             <HomeCard
               img={"/blog.svg"}
@@ -78,15 +77,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" py-6">
-        <div className="items-center text-center max-w-[800px] gap-10 mx-auto flex flex-col justify-center">
-          <h1 className="font-bold text-[40px] ">
+      <div className=" py-[68px]">
+        <div className="items-center text-center max-w-[1300px] gap-10 mx-auto flex flex-col justify-center">
+          <h1 className="font-bold text-[62px] ">
             We’d like to ask you a few questions to better understand your
             software development needs.
           </h1>
-          <Button className="py-5 px-10 rounded-md bg-textColor w-fit h-fit flex gap-3 hover:bg-textColor font-semibold">
-            <Image src={"/book.png"} alt="" width={10} height={10} />
+          <Button className="py-3 px-12 text-md rounded-lg bg-textColor w-fit h-fit flex gap-3 hover:bg-textColor">
             <span> Contact Now</span>
+            <Image src={"/book.png"} alt="" width={10} height={10} />
           </Button>
         </div>
       </div>

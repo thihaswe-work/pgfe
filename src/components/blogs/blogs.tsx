@@ -108,10 +108,10 @@ const Blogs = () => {
             return (
               <Button
                 key={item}
-                className={` px-6 py-4  w-fit  ${
+                className={` px-6 py-4  w-fit text-secondColor ${
                   item === category
-                    ? "bg-textColor hover:bg-textColor"
-                    : "bg-transparent border border-thirdBgColor "
+                    ? "bg-textColor hover:bg-textColor text-background"
+                    : "bg-background hover:bg-background border border-thirdBgColor "
                 }`}
                 onClick={() => {
                   setCategory(item);

@@ -111,7 +111,7 @@ const VerticalTimelineSwiper = () => {
       <div className="flex w-full h-[80vh] justify-center relative ">
         {/* Timeline (Left Side) */}
         <div className="w-[15%] flex flex-col gap-3 items-center justify-center relative ">
-          {getVisibleIcons().map((slide, index) => (
+          {getVisibleIcons().map((slide) => (
             <button
               key={slide.id}
               onClick={() => swiperRef.current?.slideTo(slides.indexOf(slide))}
@@ -163,13 +163,13 @@ const VerticalTimelineSwiper = () => {
             <SwiperSlide key={slide.id} className="relative w-full p-0 m-0">
               <div className="flex justify-center items-center w-full">
                 <div
-                  className={`relative flex items-center bg-background p-8 rounded-xl w-full max-w-[1000px] -top-3 h-[433px]`}
-                  style={{ boxShadow: `0 0 110px ${slide.colorCode}80` }}
+                  className={`relative flex items-center bg-background rounded-xl w-full max-w-[1000px] -top-3 h-[433px] `}
+                  style={{ boxShadow: `0 0 50px ${slide.colorCode}80` }}
                 >
                   {/* <div className="absolute inset-0 bg-gradient-to-b rounded-xl"></div> */}
 
                   {/* Text Content */}
-                  <div className="w-[50%]">
+                  <div className="w-[52%] flex flex-col gap-4 p-10">
                     <h2 className="text-xl font-bold">{slide.title}</h2>
                     <p className="mt-4 text-lg">{slide.description}</p>
                     <a
@@ -181,13 +181,13 @@ const VerticalTimelineSwiper = () => {
                   </div>
 
                   {/* Slide Image */}
-                  <div className="w-[50%] flex justify-end">
+                  <div className="w-[48%] flex justify-end h-full">
                     <Image
                       src={slide.image}
                       alt="Slide Image"
-                      width={300}
-                      height={300}
-                      className="rounded-md drop-shadow-xl"
+                      width={100}
+                      height={100}
+                      className="rounded-md drop-shadow-xl h-full w-full object-cover"
                     />
                   </div>
                 </div>

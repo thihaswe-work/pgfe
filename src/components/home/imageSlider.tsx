@@ -35,7 +35,7 @@ export default function ImageSlider() {
         {/* Slide 2 */}
         <SwiperSlide>
           <Image
-            src="/home2.svg"
+            src="/home.svg"
             alt="Home Image 2"
             width={100}
             height={100}

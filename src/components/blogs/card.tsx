@@ -21,15 +21,13 @@ const BlogCard = ({ title, desc, img, category }: Prop) => {
     <Card
       className={`flex rounded-none bg-transparent shadow-none border-0 p-0 m-0 flex-col  gap-3`}
     >
-      <div className="text-thirdBgColor text-md">{category}</div>
+      <div className="text-secondColor text-md">{category}</div>
       <CardHeader className={` relative  p-0  m-0 h-[277px] w-full  `}>
         <Image src={img} alt="image" fill className="object-cover rounded-md" />
       </CardHeader>
-      <CardContent
-        className={`flex-1 p-0  flex flex-col overflow-hidden text-white ${""}`}
-      >
-        <CardTitle className="text-lg  text-white">{title}</CardTitle>
-        <CardDescription className="text-sm text-secondary">
+      <CardContent className={`flex-1 p-0  flex flex-col overflow-hidden `}>
+        <CardTitle className="text-lg  text-color">{title}</CardTitle>
+        <CardDescription className="text-sm text-secondColor">
           {`${desc.slice(0, maxLength)}${desc.length > maxLength ? "..." : ""}`}
           {
             desc.length > maxLength && ""
