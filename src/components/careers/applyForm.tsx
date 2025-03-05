@@ -109,7 +109,7 @@ const ApplyForm = () => {
           name="resume"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white font-semibold">
+              <FormLabel className=" font-semibold">
                 Resume <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
@@ -192,7 +192,7 @@ const ApplyForm = () => {
                     }
                   />
                 </FormControl>
-                <FormLabel className="text-sm text-white">
+                <FormLabel className="text-sm ">
                   {"I agree to the "}
                   <a href="/terms" className="text-textColor hover:underline">
                     {" terms and conditions "}

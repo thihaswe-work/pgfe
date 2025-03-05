@@ -16,7 +16,7 @@ const ApplyFormTitle = () => {
           <span className="font-semibold">Developer</span>
         </div>
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 text-secondColor">
         <div className=" w-fit sm:w-[110px]  md:w-[140px] flex gap-1 md:gap-2">
           <SlLocationPin className="md:text-md" />
           <p>Remote</p>

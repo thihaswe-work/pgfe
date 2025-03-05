@@ -45,9 +45,9 @@ export default function Home() {
 
       <VerticalTimelineSwiper />
 
-      <div className="py-11 ">
+      <div className="py-11 container mx-auto">
         <div className="flex justify-around flex-wrap  mx-auto">
-          <div className="w-[30%] max-w-[315px]">
+          <div className="w-[30%] max-w-[415px]">
             <HomeCard
               img={"/blog.svg"}
               title={"User Center Design"}
@@ -56,7 +56,7 @@ export default function Home() {
               }
             />
           </div>
-          <div className="w-[30%] max-w-[315px]">
+          <div className="w-[30%] max-w-[415px]">
             <HomeCard
               img={"/blog.svg"}
               title={"User Center Design"}
@@ -65,7 +65,7 @@ export default function Home() {
               }
             />
           </div>
-          <div className="w-[30%] max-w-[315px]">
+          <div className="w-[30%] max-w-[415px]">
             <HomeCard
               img={"/blog.svg"}
               title={"User Center Design"}

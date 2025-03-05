@@ -495,6 +495,13 @@ const Paginated = () => {
         <div className=" sticky top-0 z-10">
           <Banner text={["BECOME", "PASSIONGEEK", "MEMBER"]} />
           <div className="flex bg-background ">
+            <div className="h-10 md:h-12">
+              <Region
+                countries={countries}
+                country={country}
+                setCountry={setCountry}
+              />
+            </div>
             <div className="relative  w-full ">
               <Input
                 onChange={(e) => {
@@ -512,13 +519,6 @@ const Paginated = () => {
                 onClick={() => {
                   setOpen(!open);
                 }}
-              />
-            </div>
-            <div className="h-10 md:h-12">
-              <Region
-                countries={countries}
-                country={country}
-                setCountry={setCountry}
               />
             </div>
           </div>
@@ -575,7 +575,7 @@ const Paginated = () => {
             }}
             disabled={currentPage === 1}
             className={`p-2   rounded-md mr-2 ${
-              currentPage === 1 ? "text-gray-700" : "text-textColor"
+              currentPage === 1 ? "hidden" : "text-textColor"
             }`}
           >
             {"<"}
@@ -604,7 +604,7 @@ const Paginated = () => {
             }}
             disabled={currentPage === totalPages}
             className={`p-2  rounded-md ml-2 ${
-              currentPage === totalPages ? "text-gray-700" : "text-textColor"
+              currentPage === totalPages ? "hidden" : "text-textColor"
             }`}
           >
             {">"}

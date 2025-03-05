@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useRef, useState } from "react";
 import "swiper/css";
@@ -125,12 +126,7 @@ const VerticalTimelineSwiper = () => {
                   alt="icon"
                   className={`w-10 h-10 object-contain  transition-all 
                     
-                    ${
-                      ""
-                      // slide.id === slides[activeIndex].id
-                      //   ? "ring-4 ring-orange-500"
-                      //   : "ring-2 ring-gray-400"
-                    }
+                    ${""}
                     `}
                 />
                 <span

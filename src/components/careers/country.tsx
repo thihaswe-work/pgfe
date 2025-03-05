@@ -25,7 +25,7 @@ export function Region({ countries, country, setCountry }: Prop) {
         setCountry(e);
       }}
     >
-      <SelectTrigger className="w-[300px] h-full bg-background lg:ml-10 text-sm lg:text-base border-thirdBgColor">
+      <SelectTrigger className="w-[270px] h-full bg-background lg:mr-10 text-sm lg:text-base border-thirdBgColor">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

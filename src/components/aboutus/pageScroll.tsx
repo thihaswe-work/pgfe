@@ -22,7 +22,7 @@ const PageScroll = () => {
       },
       {
         root: null, // Use the viewport as the root
-        threshold: 0, // Trigger when any part of the element is visible
+        threshold: 0.6, // Trigger when any part of the element is visible
       }
     );
 
@@ -84,7 +84,7 @@ const PageScroll = () => {
             height={100}
             className={`object-cover w-full h-[calc(100vh-168px)] transition-all duration-500`}
             style={{
-              filter: isBlurred ? "blur(2px)" : "none", // Apply blur when in view
+              filter: isBlurred ? "blur(5px)" : "none", // Apply blur when in view
             }}
           />
         </div>

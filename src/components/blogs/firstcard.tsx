@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 interface Prop {
   header: string;
@@ -69,9 +70,11 @@ const FirstCard = ({ header, title, desc, img, reverse }: Prop) => {
             // </span>
           }
         </CardDescription>
-        <span className="text-red-500 cursor-pointer underline">
-          Read full article
-        </span>
+        <Link href="/blogs/1">
+          <span className="text-red-500 cursor-pointer underline">
+            Read full article
+          </span>
+        </Link>
       </CardContent>
     </Card>
   );

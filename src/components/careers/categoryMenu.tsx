@@ -88,17 +88,17 @@ export function CategoryMenu({ setCategory, categories, category }: Prop) {
                               : field.value.filter((i) => i.id !== item.id) // Remove by id
                           );
                         }}
-                        className={`${
+                        className={`shadow-none border border-thirdBgColor ${
                           isChecked
-                            ? "data-[state=checked]:text-textColor border-red-500"
-                            : "border-white "
+                            ? "data-[state=checked]:text-background"
+                            : " "
                         }`}
                       />
                     </FormControl>
                     <FormLabel
                       className={`-translate-y-1 w-full flex justify-between
                          font-normal text-sm lg:text-base ${
-                           isChecked ? "text-textColor" : ""
+                           isChecked ? "" : ""
                          }`}
                     >
                       <span> {item.label}</span>

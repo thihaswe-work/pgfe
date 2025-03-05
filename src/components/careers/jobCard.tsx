@@ -23,12 +23,12 @@ export function JobCard({ image, title, desc }: Prop) {
           alt="category image"
           width={31}
           height={24}
-          className="object-cover"
+          className="object-cover "
         />
       </div>
       <div className="h-full flex flex-col">
         <h3 className={"font-bold text-md md:text-lg"}>{title}</h3>
-        <span className={"text-secondary text-sm md:text-base md:hidden"}>
+        <span className={"text-secondColor text-sm md:text-base md:hidden"}>
           {`${desc.slice(0, maxLength1)}`}
           {desc.length > maxLength1 && (
             <span className=" cursor-pointer ml-1">
@@ -36,7 +36,9 @@ export function JobCard({ image, title, desc }: Prop) {
             </span>
           )}
         </span>
-        <span className={"text-secondary text-sm md:text-base hidden md:block"}>
+        <span
+          className={"text-secondColor text-sm md:text-base hidden md:block"}
+        >
           {`${desc.slice(0, maxLength2)}`}
           {desc.length > maxLength2 && (
             <span className=" cursor-pointer ml-1">
@@ -44,7 +46,7 @@ export function JobCard({ image, title, desc }: Prop) {
             </span>
           )}
         </span>
-        <div className="mt-8 flex w-full text-sm sm:text-base md:text-base gap-2 md:gap-0">
+        <div className="mt-8 text-secondColor flex w-full text-sm sm:text-base md:text-base gap-2 md:gap-0">
           <div className=" w-fit sm:w-[110px]  md:w-[140px] flex gap-2">
             <SlLocationPin className="md:text-md" />
             <p>Remote</p>

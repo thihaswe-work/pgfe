@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-7 grid-rows-2 h-[354px] gap-3 py-3">
           {/* s1 */}
           <div className="col-span-2 row-span-2 grid gird-cols-2 gap-3 gird-rows-2">
-            <div className="col-span-2 row-span-1 bg-yellow-600 ">
+            <div className="col-span-2 row-span-1  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -36,7 +36,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-yellow-600 ">
+            <div className="col-span-1 row-span-1  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -45,7 +45,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-yellow-600 ">
+            <div className="col-span-1 row-span-1  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -58,7 +58,7 @@ export default function AboutPage() {
 
           {/* s2 */}
           <div className="col-span-2 row-span-2 grid grid-cols-2 grid-rows-4 gap-3">
-            <div className="col-span-1 row-span-1 bg-yellow-600 ">
+            <div className="col-span-1 row-span-1  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-2 bg-yellow-600 ">
+            <div className="col-span-1 row-span-2  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -76,7 +76,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-yellow-600 ">
+            <div className="col-span-1 row-span-1  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-2 row-span-2 bg-yellow-600 ">
+            <div className="col-span-2 row-span-2  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -97,7 +97,7 @@ export default function AboutPage() {
           </div>
 
           {/* s3 */}
-          <div className="col-span-1 row-span-2  bg-yellow-600">
+          <div className="col-span-1 row-span-2  ">
             <Image
               alt="image"
               src="/home1.svg"
@@ -109,7 +109,7 @@ export default function AboutPage() {
 
           {/* s4 */}
           <div className="col-span-2 row-span-2 grid grid-cols-5 grid-rows-4 gap-3">
-            <div className="col-span-2 row-span-2 bg-yellow-600 ">
+            <div className="col-span-2 row-span-2  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -118,7 +118,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-2 row-span-2 bg-yellow-600 ">
+            <div className="col-span-2 row-span-2  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-yellow-600 ">
+            <div className="col-span-1 row-span-1  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-yellow-600 ">
+            <div className="col-span-1 row-span-1  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-5 row-span-2 bg-yellow-600 ">
+            <div className="col-span-5 row-span-2  ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -169,7 +169,7 @@ export default function AboutPage() {
 
         {/* photo 2 */}
         <div className="grid grid-cols-6 grid-rows-2 py-3 gap-3 h-[354px]">
-          <div className="col-span-1 row-span-2  bg-slate-400  ">
+          <div className="col-span-1 row-span-2   ">
             <Image
               alt="image"
               src="/home1.svg"
@@ -179,7 +179,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="col-span-3 row-span-2  grid grid-cols-3 grid-rows-2 gap-3">
-            <div className="col-span-3 row-span-1  bg-slate-400">
+            <div className="col-span-3 row-span-1 ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -188,7 +188,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1  bg-slate-400">
+            <div className="col-span-1 row-span-1 ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -197,7 +197,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1  bg-slate-400">
+            <div className="col-span-1 row-span-1 ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -206,7 +206,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1  bg-slate-400">
+            <div className="col-span-1 row-span-1 ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -217,7 +217,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className=" col-span-2 row-span-2 grid grid-cols-5 grid-rows-4 gap-3">
-            <div className="col-span-1 row-span-1  bg-slate-400">
+            <div className="col-span-1 row-span-1 ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -226,7 +226,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-2 row-span-2  bg-slate-400">
+            <div className="col-span-2 row-span-2 ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -235,7 +235,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-2 row-span-2  bg-slate-400">
+            <div className="col-span-2 row-span-2 ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -244,7 +244,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-1 row-span-1  bg-slate-400">
+            <div className="col-span-1 row-span-1 ">
               <Image
                 alt="image"
                 src="/home1.svg"
@@ -253,7 +253,7 @@ export default function AboutPage() {
                 className="rounded-xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-5 row-span-2  bg-slate-400">
+            <div className="col-span-5 row-span-2 ">
               <Image
                 alt="image"
                 src="/home1.svg"

@@ -9,7 +9,7 @@ const MiniList = ({ title, list }: MinilistType) => {
   return (
     <div>
       <div className="font-bold text-lg">{title ?? "Requirement"}</div>
-      <ul className="flex flex-col gap-3 mt-5 text-secondary careers">
+      <ul className="flex flex-col gap-3 mt-5 text-secondColor careers">
         {list.map((item, index) => {
           return <li key={index}>{item}</li>;
         })}

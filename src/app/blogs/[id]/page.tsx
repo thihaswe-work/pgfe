@@ -38,10 +38,8 @@ export default async function Page({
               </div>
             </div>
 
-            <div className="text-secondary">
-              <h6 className="text-md text-thirdBgColor mb-3">
-                26 February 2026
-              </h6>
+            <div className="text-secondColor">
+              <h6 className="text-md font-bold mb-3">26 February 2026</h6>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros. Fames sapien ac quis suscipit.
@@ -56,7 +54,7 @@ export default async function Page({
                 ac quis suscipit.
               </p>
             </div>
-            <ul className="text-secondary">
+            <ul className="text-secondColor">
               <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit.Suspendisse varius enim in eros. Fames sapien ac quis
@@ -90,7 +88,7 @@ export default async function Page({
                 sapien ac quis suscipit.
               </li>
             </ul>
-            <div className="text-secondary">
+            <div className="text-secondColor">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros. Fames sapien ac quis suscipit.
               Vitae at sed euismod nunc. Scelerisque etiam viverra consequat

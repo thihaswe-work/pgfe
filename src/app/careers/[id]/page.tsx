@@ -59,7 +59,7 @@ export default function Page() {
       {/* requirement */}
       <div className="flex mt-16 flex-col md:flex-row justify-between h-full gap-10 relative">
         <div className="flex flex-col gap-16">
-          <div className="text-secondary">
+          <div className="text-secondColor">
             Lorem ipsum dolor sit amet consectetur. Natoque phasellus ultricies
             sed habitant malesuada in. Lectus eu imperdiet in at sed. Cras
             mauris feugiat fusce eget dolor eu a dui consequat. Nisl maecenas

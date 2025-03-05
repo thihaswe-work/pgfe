@@ -43,29 +43,29 @@ const FormField = () => {
         className="flex flex-col items-start w-[450px] 1xl:w-[610px] gap-2 box-border"
         action={formAction}
       >
-        <label htmlFor="fullname" className="text-lg font-semibold">
-          Full Name
+        <label htmlFor="fullname" className="font-semibold">
+          Full Name<span className="text-red-500">*</span>
         </label>
         <input
           name="fullname"
           placeholder="Enter Your Name"
-          className="w-full p-5 bg-transparent border-[1px] border-gray-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full p-2 bg-transparent border-[1px] border-thirdBgColor rounded-md focus:ring-2 focus:outline-none"
         />
-        <label htmlFor="email" className="text-lg font-semibold">
-          E-Mail Address
+        <label htmlFor="email" className="font-semibold">
+          Email<span className="text-red-500">*</span>
         </label>
         <input
           name="email"
           placeholder=".....@gmail.com"
-          className="w-full p-5 bg-transparent border-[1px] border-gray-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full p-2 bg-transparent border-[1px] border-thirdBgColor rounded-md focus:ring-2 focus:outline-none"
         />
 
-        <label htmlFor="message" className="text-lg font-semibold">
-          Message
+        <label htmlFor="message" className=" font-semibold">
+          Cover Letter
         </label>
         <div className="relative w-full">
           <textarea
-            className=" w-full p-4 bg-transparent border-[1px] border-gray-500 rounded-md resize-none h-[253px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=" w-full p-4 bg-transparent border-[1px] border-thirdBgColor rounded-md resize-none h-[253px] focus:outline-none focus:ring-2 "
             id="message"
             name="message"
             placeholder="You can sent whatever you want"
@@ -79,7 +79,7 @@ const FormField = () => {
 
         <button
           type="submit"
-          className=" px-[24px] py-[18px] bg-textColor rounded-md"
+          className=" px-[24px] py-[18px] bg-textColor text-background rounded-md"
         >
           Send Message
         </button>
