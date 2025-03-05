@@ -60,7 +60,7 @@ const Blogs = () => {
       a duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismod nun
       c. Scelerisque etiam viverra consequat viverra duis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendiss
       e varius enim in eros. Fames sapien ac quis suscipit. Vitae at sed euismSee more`,
-    img: `/blog${index + 1}.svg`,
+    img: `/blog${index % 6 === 0 ? "" : index % 6}.svg`,
     category: categories.find((cat, i) => index % 6 === i) || "Ui/Ux",
   }));
 

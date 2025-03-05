@@ -60,7 +60,7 @@ const VerticalTimelineSwiper = () => {
       description: "Description 5",
       link: "www.example.com",
       image: "/iphone.svg",
-      icon: "/icon5.png",
+      icon: "/halal.svg",
       colorCode: "#f43f5e", // Red
     },
     {
@@ -70,7 +70,8 @@ const VerticalTimelineSwiper = () => {
       description: "Description 6",
       link: "www.example.com",
       image: "/iphone.svg",
-      icon: "/icon6.png",
+      icon: "/fresh.svg",
+
       colorCode: "#f97316", // Dark Orange
     },
     {
@@ -80,7 +81,8 @@ const VerticalTimelineSwiper = () => {
       description: "Description 7",
       link: "www.example.com",
       image: "/iphone.svg",
-      icon: "/icon7.png",
+      icon: "/unique.png",
+
       colorCode: "#14b8a6", // Teal
     },
     {
@@ -90,7 +92,8 @@ const VerticalTimelineSwiper = () => {
       description: "Description 8",
       link: "www.example.com",
       image: "/iphone.svg",
-      icon: "/icon8.png",
+      icon: "/door.svg",
+
       colorCode: "#eab308", // Yellow
     },
   ];
